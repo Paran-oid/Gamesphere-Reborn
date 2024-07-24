@@ -1,0 +1,7 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+
+.container {
+  height: calc(100vh - 100px);
+  background-color: $secondary-color;
+}

@@ -2,6 +2,6 @@
 @import "../../../sass/_variables.scss";
 
 .container {
-  height: 100%;
+  height: calc(100vh - 100px);
   background-color: $secondary-color;
 }

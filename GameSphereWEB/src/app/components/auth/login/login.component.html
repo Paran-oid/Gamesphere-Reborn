@@ -1,1 +1,33 @@
-<div class="container"></div>
+<div class="container">
+  <main>
+    <div class="title">Sign in</div>
+    <div class="form">
+      <form action="post">
+        <div class="form-group">
+          <label for="usernameOrEmail">Username/Email</label>
+          <input name="usernameOrEmail" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input name="password" type="text" />
+        </div>
+        <div class="remember-me">
+          <input name="remember-me" type="checkbox" />
+          <span for="remember-me">Remember me</span>
+        </div>
+        <button type="submit">Sign in</button>
+        <div class="help">
+          <small>Help, I lost my password</small>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Don't have an account?
+      <button class="register-btn" [routerLink]="'/register'">
+        Create an account
+      </button>
+    </p>
+  </footer>
+</div>

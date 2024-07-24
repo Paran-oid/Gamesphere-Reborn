@@ -10,6 +10,7 @@ export class AuthService {
   get isLoggedIn(): Observable<boolean> {
     return this.loggedIn.asObservable();
   }
+
   Login() {
     this.loggedIn.next(true);
   }

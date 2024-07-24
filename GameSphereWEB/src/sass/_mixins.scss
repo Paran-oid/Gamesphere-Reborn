@@ -1,8 +1,9 @@
-@mixin flex($justify, $align, $direction: row) {
+@mixin flex($justify, $align, $direction: row, $gap: 0px) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+  gap: $gap;
 }
 
 @mixin logo() {
@@ -12,4 +13,11 @@
 @mixin logo-img() {
   width: 15rem;
   object-fit: cover;
+}
+
+@mixin grid($rows: 3, $columns: 3, $gap: 0px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, auto);
+  gap: $gap;
 }

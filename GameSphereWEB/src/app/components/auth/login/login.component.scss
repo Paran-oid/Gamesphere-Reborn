@@ -1,7 +1,106 @@
 @import "../../../../sass/mixins";
 @import "../../../../sass/variables";
+@import "../../../../sass/buttons";
 
 .container {
-  height: 100%;
+  height: calc(100vh - 100px);
   background-color: $secondary-color;
+  overflow: hidden;
+
+  @include grid(2, 1);
+  place-items: center;
+}
+
+.form {
+  margin-top: 40px;
+  width: 550px;
+  padding: 20px;
+  border-radius: 5px;
+
+  background-color: $primary-color;
+
+  @include flex(center, center);
+
+  form {
+    width: 100%;
+  }
+
+  label,
+  button {
+    display: block;
+    user-select: none;
+  }
+
+  label {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+
+    padding: 10px;
+    background-color: $secondary-color;
+
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .remember-me {
+    @include flex("start", "center");
+    margin-bottom: 10px;
+    user-select: none;
+
+    input {
+      width: 20px;
+    }
+  }
+
+  button {
+    @include next-button(70%, 30px, 20px);
+  }
+
+  .help {
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+
+    small {
+      color: $gray-color;
+      user-select: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 26px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+footer {
+  background-color: $primary-color;
+  width: 100%;
+
+  @include flex(center, center);
+
+  position: absolute;
+  bottom: 0px;
+
+  height: 100px;
+}
+
+.register-btn {
+  margin-top: 10px !important;
+  display: block;
+  @include next-button(150px, 0px, 10px);
 }
