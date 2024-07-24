@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="/Images/Logo/logo-no-background.png" />
+  </div>
+  <div class="items">
+    <ul class="items-list">
+      <li
+        [routerLink]="'/'"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Store
+      </li>
+      <li [routerLink]="'library'" *ngIf="isLoggedIn" routerLinkActive="active">
+        Library
+      </li>
+      <li [routerLink]="'community'" routerLinkActive="active">Community</li>
+      <li [routerLink]="'support'" routerLinkActive="active">Support</li>
+      <li
+        [routerLink]="isLoggedIn ? 'profile' : 'login'"
+        routerLinkActive="active"
+      >
+        {{ isLoggedIn ? "Profile" : "Login" }}
+      </li>
+    </ul>
+  </div>
+</nav>

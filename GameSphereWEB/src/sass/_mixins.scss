@@ -1,0 +1,15 @@
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin logo() {
+  width: 15rem;
+}
+
+@mixin logo-img() {
+  width: 15rem;
+  object-fit: cover;
+}
