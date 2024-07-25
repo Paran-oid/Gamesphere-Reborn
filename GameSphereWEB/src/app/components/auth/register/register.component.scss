@@ -1,7 +1,100 @@
 @import "../../../../sass/mixins";
 @import "../../../../sass/variables";
+@import "../../../../sass/components";
 
-.container {
-  height: calc(100vh - 100px);
-  background-color: $secondary-color;
+@media (min-width: 768px) {
+  .container {
+    height: calc(100vh - 100px);
+    background-color: $secondary-color;
+
+    @include grid(2, 1);
+    place-items: center;
+
+    .title {
+      font-size: 26px;
+    }
+
+    form {
+      margin-top: 20px;
+      background-color: $primary-color;
+
+      padding: 20px 20px 50px 20px;
+      border-radius: 5px;
+
+      width: 768px;
+      position: relative;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+
+        font-size: 18px;
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      input {
+        outline: none;
+        background-color: $secondary-color;
+        border: none;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .btns {
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    .form-name-group {
+      @include flex(end, center, 10px);
+      width: 100%;
+
+      .form-group {
+        width: 100%;
+      }
+    }
+
+    .form-inputs {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+footer {
+  background-color: $light-primary-color;
+  padding: 25px;
+  height: 100px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+
+  .filler {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.next-btn {
+  @extend %next-button;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $cyan-color;
+
+  &:hover {
+    background-color: $light-cyan-color;
+  }
+}
+
+.back-btn {
+  @extend .next-btn;
+  background-color: $dark-gray-color;
+  margin-right: 10px;
 }

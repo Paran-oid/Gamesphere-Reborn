@@ -6,8 +6,13 @@ export interface AppUser {
   location: string;
   userName: string;
   email: string;
-  password: string;
+  passwordHash: string;
   nickname?: string;
   summary?: string;
   profilePicturePath?: string;
+}
+
+export interface LoginUser {
+  usernameOrEmail: string;
+  password: string;
 }

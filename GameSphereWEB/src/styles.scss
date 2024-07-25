@@ -1,23 +1,10 @@
-@import url("./sass/_fonts.scss");
+@import "./sass/fonts";
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
   color: white;
-}
 
-html,
-body {
-  height: 100%;
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "MotivaSans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
 }

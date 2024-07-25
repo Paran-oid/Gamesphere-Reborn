@@ -1,7 +1,9 @@
 @import "../../../sass/_mixins.scss";
 @import "../../../sass/_variables.scss";
 
-.container {
-  height: calc(100vh - 100px);
-  background-color: $secondary-color;
+@media (min-width: 768px) {
+  .container {
+    height: calc(100vh - 100px);
+    background-color: $secondary-color;
+  }
 }

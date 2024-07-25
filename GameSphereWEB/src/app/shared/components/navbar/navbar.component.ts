@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import { AppUser } from '../../../models/auth/user.model';
 
 @Component({
   selector: 'app-navbar',
@@ -13,34 +14,21 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
+  user: AppUser | null = null;
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.authService.isLoggedIn.subscribe((status: boolean) => {
-      this.isLoggedIn = status;
+    localStorage.getItem('Token')
+      ? (this.isLoggedIn = true)
+      : (this.isLoggedIn = false);
+
+    this.authService.user.subscribe((user) => {
+      this.user = user;
+      console.log(user);
     });
   }
 
-  Logout() {
-    this.authService.Logout();
+  get UserName() {
+    return this.user?.userName;
   }
-
-  // dropdownShown: boolean = false;
-  // input: string = '';
-
-  // HidePlaceholder(event: Event) {
-  //   let input = event.target as HTMLInputElement;
-  //   if (input.value === '') {
-  //     input.classList.remove('hidden-placeholder');
-  //   } else {
-  //     input.classList.add('hidden-placeholder');
-  //   }
-  // }
-
-  // toggleMenu() {
-  //   this.dropdownShown = !this.dropdownShown;
-  // }
-  // clickedOutside() {
-  //   this.dropdownShown = false;
-  // }
 }

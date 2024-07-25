@@ -1,1 +1,66 @@
-<div class="container"></div>
+<div class="container">
+  <div class="first-step" *ngIf="step === 1">
+    <div class="title">Create Your Account</div>
+    <form [formGroup]="form">
+      <div class="form-inputs">
+        <div class="form-name-group">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" name="fname" formControlName="fname" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" formControlName="lname" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birth">Birthday</label>
+          <input type="date" name="birth" formControlName="birth" />
+        </div>
+      </div>
+      <div class="btns">
+        <button
+          type="button"
+          id="1"
+          class="next-btn"
+          (click)="FormNext($event)"
+        >
+          next
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="second-step" *ngIf="step === 2">
+    <div class="title">Add Your Credentials</div>
+    <form>
+      <div class="form-inputs">
+        <div class="form-name-group">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" name="fname" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birth">Birthday</label>
+          <input type="date" />
+        </div>
+      </div>
+      <div class="btns">
+        <button type="button" class="back-btn">back</button>
+        <button type="button" class="next-btn">next</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="filler">
+      Enjoy all our games, communicate with your friends and meet new people
+      <br />
+      Games ranging from cute games like Animal Crossing to the iconic Doom
+      series
+    </div>
+  </footer>
+</div>

@@ -9,18 +9,18 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        Store
+        STORE
       </li>
       <li [routerLink]="'library'" *ngIf="isLoggedIn" routerLinkActive="active">
-        Library
+        LIBRARY
       </li>
-      <li [routerLink]="'community'" routerLinkActive="active">Community</li>
-      <li [routerLink]="'support'" routerLinkActive="active">Support</li>
+      <li [routerLink]="'community'" routerLinkActive="active">COMMUNITY</li>
+      <li [routerLink]="'support'" routerLinkActive="active">SUPPORT</li>
       <li
         [routerLink]="isLoggedIn ? 'profile' : 'login'"
         routerLinkActive="active"
       >
-        {{ isLoggedIn ? "Profile" : "Login" }}
+        {{ isLoggedIn ? (user?.userName | uppercase) : "LOGIN" }}
       </li>
     </ul>
   </div>

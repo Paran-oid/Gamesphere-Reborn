@@ -1,6 +1,30 @@
 @font-face {
-  font-family: "Rubik";
-  src: url(/Fonts/Rubik-VariableFont_wght.ttf) format(truetype);
+  font-family: "MotivaSansBold";
+  src: url("/Fonts/MotivaSans/MotivaSansBold.woff.ttf") format("Truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MotivaSans";
+  src: url("/Fonts/MotivaSans/MotivaSansRegular.woff.ttf") format("Truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MotivaSansExtraBold";
+  src: url("/Fonts/MotivaSans/MotivaSansExtraBold.woff.ttf") format("Truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MotivaSansBlack";
+  src: url("/Fonts/MotivaSans/MotivaSansBlack.woff.ttf") format("Truetype");
 
   font-weight: normal;
   font-style: normal;

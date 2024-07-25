@@ -1,106 +1,157 @@
 @import "../../../../sass/mixins";
 @import "../../../../sass/variables";
-@import "../../../../sass/buttons";
+@import "../../../../sass/components";
 
-.container {
-  height: calc(100vh - 100px);
-  background-color: $secondary-color;
-  overflow: hidden;
-
-  @include grid(2, 1);
-  place-items: center;
-}
-
-.form {
-  margin-top: 40px;
-  width: 550px;
-  padding: 20px;
-  border-radius: 5px;
-
-  background-color: $primary-color;
-
-  @include flex(center, center);
-
-  form {
-    width: 100%;
-  }
-
-  label,
-  button {
-    display: block;
-    user-select: none;
-  }
-
-  label {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-
-    padding: 10px;
+@media (min-width: 768px) {
+  .container {
+    height: calc(100vh - 100px);
     background-color: $secondary-color;
+    overflow: hidden;
 
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
+    @include grid(2, 1);
+    place-items: center;
   }
 
-  .remember-me {
-    @include flex("start", "center");
-    margin-bottom: 10px;
-    user-select: none;
+  .form {
+    margin-top: 40px;
+    width: 550px;
+    padding: 20px;
+    border-radius: 5px;
 
+    background-color: $primary-color;
+
+    @include flex(center, center);
+
+    form {
+      width: 100%;
+    }
+
+    label,
+    button {
+      display: block;
+      user-select: none;
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
     input {
-      width: 20px;
+      width: 100%;
+      margin-bottom: 10px;
+
+      padding: 10px;
+      background-color: $secondary-color;
+
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
     }
-  }
 
-  button {
-    @include next-button(70%, 30px, 20px);
-  }
-
-  .help {
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-
-    small {
-      color: $gray-color;
+    .remember-me {
+      @include flex(start, start);
+      margin-bottom: 10px;
       user-select: none;
 
-      &:hover {
-        color: white;
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        appearance: none;
+        cursor: pointer;
+
+        @include flex(center, center);
+        outline: none;
+
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 15px;
+          font-weight: 900;
+
+          content: "\f00c";
+          color: white;
+          display: none;
+        }
+
+        &:hover {
+          background-color: $light-secondary-color;
+        }
+
+        &:checked:after {
+          display: block;
+        }
+      }
+    }
+
+    .help {
+      text-align: center;
+      text-decoration: underline;
+      cursor: pointer;
+
+      small {
+        color: $gray-color;
+        user-select: none;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  footer {
+    background-color: $primary-color;
+    width: 100%;
+
+    @include flex(center, center);
+
+    position: absolute;
+    bottom: 0px;
+
+    height: 100px;
+  }
 }
 
-.title {
-  font-size: 26px;
-}
+.submit-btn {
+  @extend %next-button;
+  background-color: $cyan-color;
+  padding: 10px;
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 5px;
 
-.form-group {
-  width: 100%;
-}
-
-footer {
-  background-color: $primary-color;
-  width: 100%;
-
-  @include flex(center, center);
-
-  position: absolute;
-  bottom: 0px;
-
-  height: 100px;
+  &:hover {
+    background-color: $light-cyan-color;
+  }
 }
 
 .register-btn {
+  @extend %next-button;
   margin-top: 10px !important;
+  background-color: $cyan-color;
   display: block;
-  @include next-button(150px, 0px, 10px);
+  width: 100%;
+
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error-text {
+  @extend %error-text;
+  margin: 10px 0px 20px 0px;
+}
+
+.error-input {
+  border: 1px solid red !important;
 }

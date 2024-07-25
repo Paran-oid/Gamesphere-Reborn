@@ -14,7 +14,6 @@ using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using GameSphereAPI.Models.Viewmodels.Registration;
-using GameSphereAPI.Models.Viewmodels.Registration___Authentication;
 using Microsoft.EntityFrameworkCore;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -22,7 +21,8 @@ using GameSphereAPI.Models.Viewmodels.User_Informations___Other;
 using GameSphereAPI.Data.Services.Cache;
 using Microsoft.AspNetCore.Authorization;
 using AutoMapper;
-using GameSphereAPI.Controllers.Extra;
+using Microsoft.AspNetCore.WebUtilities;
+using GameSphereAPI.Models.Viewmodels.Registration___Authentication;
 
 namespace GameSphereAPI.Controllers.UserController
 {
@@ -63,11 +63,16 @@ namespace GameSphereAPI.Controllers.UserController
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<AppUser>> GetUser()
+        [HttpPost]
+        public async Task<ActionResult<AppUser>> GetUser([FromBody] string code)
         {
-            var userID = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var user = await _userManager.FindByIdAsync(userID);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.ReadToken(code) as JwtSecurityToken;
+
+            var claims = token!.Claims;
+
+            var name = claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == name);
 
             if (user == null)
             {
@@ -165,12 +170,12 @@ namespace GameSphereAPI.Controllers.UserController
         {
             //We create a claim list that contains the name of user
             var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.UserName),
-            };
+                {
+                    new Claim(ClaimTypes.Name, user.UserName!),
+                };
 
             //We get the key
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JwtSettings:SecretKey").Value));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JwtSettings:SecretKey").Value!));
 
             //We use the algorithm needed for the key
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -280,11 +285,11 @@ namespace GameSphereAPI.Controllers.UserController
         [HttpPost]
         public async Task<ActionResult<string>> SendPasswordReset([FromBody] EntryRequest model)
         {
-            var user = await _userManager.Users.Where(u => u.Email == model.entry).FirstOrDefaultAsync();
+            var user = await _userManager.Users.Where(u => u.Email == model.Entry).FirstOrDefaultAsync();
             string op = "email";
             if (user == null)
             {
-                user = await _userManager.Users.Where(u => u.PhoneNumber == model.entry).FirstOrDefaultAsync();
+                user = await _userManager.Users.Where(u => u.PhoneNumber == model.Entry).FirstOrDefaultAsync();
                 if (user == null)
                 {
                     return NotFound("We couldn't find your account we are sorry");
