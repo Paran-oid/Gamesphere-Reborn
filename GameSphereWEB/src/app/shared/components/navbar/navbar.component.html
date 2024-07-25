@@ -20,6 +20,7 @@
         [routerLink]="isLoggedIn ? 'profile' : 'login'"
         routerLinkActive="active"
       >
+        <!-- Test -->
         {{ isLoggedIn ? (user?.userName | uppercase) : "LOGIN" }}
       </li>
     </ul>
