@@ -2,6 +2,7 @@
 using GameSphereAPI.Models.Site_Models.Game_Related;
 using GameSphereAPI.Models.Viewmodels.Game___Related;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace GameSphereAPI.Data.Services.LanguageServices
 {
@@ -33,6 +34,8 @@ namespace GameSphereAPI.Data.Services.LanguageServices
             _context.Languages.Add(language);
             await _context.SaveChangesAsync();
 
+            Log.Information($"{language.Name} was created");
+
             return language;
         }
 
@@ -46,8 +49,9 @@ namespace GameSphereAPI.Data.Services.LanguageServices
             }
 
             _mapper.Map(model, language);
-
             await _context.SaveChangesAsync();
+
+            Log.Information($"{language.Name} was updated");
 
             return language;
         }
@@ -63,6 +67,8 @@ namespace GameSphereAPI.Data.Services.LanguageServices
 
             _context.Languages.Remove(language);
             await _context.SaveChangesAsync();
+
+            Log.Information($"{language.Name} was deleted");
 
             return "Successfully deleted";
         }

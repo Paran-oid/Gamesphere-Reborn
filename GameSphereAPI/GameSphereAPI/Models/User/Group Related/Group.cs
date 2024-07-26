@@ -7,9 +7,9 @@ namespace GameSphereAPI.Models.User.Group_Related
     public class Group
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string PicturePath { get; set; }
-        public string Description { get; set; }
-        public ICollection<UserGroup> UserGroups { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string PicturePath { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public ICollection<UserGroup>? UserGroups { get; set; }
     }
 }

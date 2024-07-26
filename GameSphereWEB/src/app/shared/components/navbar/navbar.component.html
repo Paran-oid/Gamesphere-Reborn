@@ -24,4 +24,23 @@
       </li>
     </ul>
   </div>
+  <div class="global-actions">
+    <button class="install-btn">
+      <i class="fa-solid fa-download"></i> Install Gamesphere
+    </button>
+    <button class="bell-btn" *ngIf="isLoggedIn">
+      <i class="fa-solid fa-bell"></i>
+    </button>
+    <div class="user-profile" (click)="Logout()" *ngIf="isLoggedIn">
+      <img
+        class="user-profile-img"
+        [src]="
+          user?.profilePicturePath == null
+            ? '/Images/User/default_avatar.jpg'
+            : user?.profilePicturePath
+        "
+        alt="Profile image"
+      />
+    </div>
+  </div>
 </nav>

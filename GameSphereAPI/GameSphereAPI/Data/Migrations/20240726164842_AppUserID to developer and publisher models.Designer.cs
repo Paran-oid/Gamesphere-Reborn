@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using GameSphereAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GameSphereAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240726164842_AppUserID to developer and publisher models")]
+    partial class AppUserIDtodeveloperandpublishermodels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,7 +96,10 @@ namespace GameSphereAPI.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("AppUserID")
+                    b.Property<int>("AppUserID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -106,32 +112,9 @@ namespace GameSphereAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AppUserID");
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Developers", "gam");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Developer X",
-                            Rating = 4.2m
-                        },
-                        new
-                        {
-                            ID = 2,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Developer Y",
-                            Rating = 4.1m
-                        },
-                        new
-                        {
-                            ID = 3,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Developer Z",
-                            Rating = 4.3m
-                        });
                 });
 
             modelBuilder.Entity("GameSphereAPI.Models.Site_Models.Game_Related.Game", b =>
@@ -335,7 +318,10 @@ namespace GameSphereAPI.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("AppUserID")
+                    b.Property<int>("AppUserID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -351,34 +337,11 @@ namespace GameSphereAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AppUserID");
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("GameID");
 
                     b.ToTable("Publishers", "gam");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Publisher X",
-                            Rating = 2.1m
-                        },
-                        new
-                        {
-                            ID = 2,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Publisher Y",
-                            Rating = 3.8m
-                        },
-                        new
-                        {
-                            ID = 3,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Publisher Z",
-                            Rating = 4.2m
-                        });
                 });
 
             modelBuilder.Entity("GameSphereAPI.Models.Site_Models.Game_Related.Relationships.GameDeveloper", b =>
@@ -1080,7 +1043,7 @@ namespace GameSphereAPI.Migrations
                 {
                     b.HasOne("GameSphereAPI.Models.User.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserID")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1117,7 +1080,7 @@ namespace GameSphereAPI.Migrations
                 {
                     b.HasOne("GameSphereAPI.Models.User.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserID")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

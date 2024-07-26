@@ -12,6 +12,7 @@ using GameSphereAPI.Data.Services.Cache;
 using GameSphereAPI.Data.Services.GameServices;
 using GameSphereAPI.Data.Services.LanguageServices;
 using GameSphereAPI.Data.Services.PublisherServices;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +55,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = false
         };
     });
-
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.Name = "cookie";
@@ -63,12 +63,9 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/UserRegistration/Login";
     options.SlidingExpiration = true;
 });
-
 //process of verifying that someone has access to an account
 builder.Services.AddAuthorization();
-
 //in real life projects store these tokens in service specific design for storing tokens
-
 builder.Services.AddIdentityApiEndpoints<AppUser>()
     .AddRoles<AppRole>()
     .AddEntityFrameworkStores<AppDbContext>()
@@ -82,6 +79,17 @@ builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.AddScoped<IGameService, GameService>();
 builder.Services.AddScoped<ILanguageService, LanguageService>();
 builder.Services.AddScoped<IPublisherService, PublisherService>();
+
+//Logger
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.File("Utilities/Logs/LogDay.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("Utilities/Logs/LogMonth.txt", rollingInterval: RollingInterval.Month)
+    .WriteTo.File("Utilities/Logs/LogYear.txt", rollingInterval: RollingInterval.Year)
+    .WriteTo.Console()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 //Cores so the application could work
 builder.Services.AddCors(options =>
@@ -112,6 +120,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Logger
+app.UseSerilogRequestLogging();
 
 app.Run();
 

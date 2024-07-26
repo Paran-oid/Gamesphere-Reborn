@@ -1,0 +1,221 @@
+2024-07-25 18:03:26.150 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-25 18:03:27.498 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-25 18:03:27.498 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-25 18:03:27.500 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-25 18:03:27.500 +01:00 [INF] Hosting environment: Development
+2024-07-25 18:03:27.500 +01:00 [INF] Content root path: C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI
+2024-07-25 18:15:26.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/index.html - null null
+2024-07-25 18:15:27.003 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/index.html - 200 null text/html;charset=utf-8 309.9787ms
+2024-07-25 18:15:27.046 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-25 18:15:27.052 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.6743ms
+2024-07-25 18:15:27.067 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_vs/browserLink - null null
+2024-07-25 18:15:27.120 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.0174ms
+2024-07-25 18:15:27.181 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/favicon-16x16.png - null null
+2024-07-25 18:15:27.200 +01:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-07-25 18:15:27.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/favicon-16x16.png - 499 665 image/png 19.0104ms
+2024-07-25 18:15:27.216 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - null null
+2024-07-25 18:15:27.348 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.7575ms
+2024-07-25 18:28:44.654 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-25 18:28:44.866 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-25 18:28:44.867 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-25 18:28:44.869 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-25 18:28:44.870 +01:00 [INF] Hosting environment: Development
+2024-07-25 18:28:44.871 +01:00 [INF] Content root path: C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI
+2024-07-25 18:30:17.892 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Game/Post - application/json 274
+2024-07-25 18:30:17.945 +01:00 [INF] CORS policy execution failed.
+2024-07-25 18:30:17.947 +01:00 [INF] Request origin https://localhost:7108 does not have permission to access the resource.
+2024-07-25 18:30:19.391 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-25 18:30:20.280 +01:00 [INF] Executed DbCommand (89ms) [Parameters=[@__p_0='70f43d2e-6a91-4793-918e-7b2f3d29f8c2'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2024-07-25 18:30:20.414 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__user_Id_0='70f43d2e-6a91-4793-918e-7b2f3d29f8c2'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2024-07-25 18:30:20.440 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='70f43d2e-6a91-4793-918e-7b2f3d29f8c2'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2024-07-25 18:30:20.451 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='USER'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2024-07-25 18:30:20.472 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='4'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2024-07-25 18:30:20.482 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:30:20.502 +01:00 [INF] Route matched with {action = "Post", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Post(GameSphereAPI.Models.Viewmodels.Game___Related.CreateGameDTO) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-25 18:30:20.813 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'GameSphereAPI.Data.AppDbContext'.
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-07-25 18:30:21.001 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI) in 494.6452ms
+2024-07-25 18:30:21.004 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:30:21.007 +01:00 [ERR] HTTP POST /Game/Post responded 500 in 525.9749 ms
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GameSphereAPI.Data.Services.GameServices.GameService.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Data\Services\GameServices\GameService.cs:line 39
+   at GameSphereAPI.Controllers.GameController.GameController.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Controllers\AppControllers\GameController.cs:line 48
+   at lambda_method414(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-07-25 18:30:21.033 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GameSphereAPI.Data.Services.GameServices.GameService.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Data\Services\GameServices\GameService.cs:line 39
+   at GameSphereAPI.Controllers.GameController.GameController.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Controllers\AppControllers\GameController.cs:line 48
+   at lambda_method414(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-25 18:30:21.065 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Game/Post - 500 null text/plain; charset=utf-8 3176.1861ms
+2024-07-25 18:31:46.157 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Game/Post - application/json 274
+2024-07-25 18:31:46.162 +01:00 [INF] CORS policy execution failed.
+2024-07-25 18:31:46.166 +01:00 [INF] Request origin https://localhost:7108 does not have permission to access the resource.
+2024-07-25 18:31:46.176 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:31:46.177 +01:00 [INF] Route matched with {action = "Post", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Post(GameSphereAPI.Models.Viewmodels.Game___Related.CreateGameDTO) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-25 18:31:46.215 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'GameSphereAPI.Data.AppDbContext'.
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-07-25 18:31:46.280 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI) in 101.6842ms
+2024-07-25 18:31:46.281 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:31:46.282 +01:00 [ERR] HTTP POST /Game/Post responded 500 in 106.4778 ms
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GameSphereAPI.Data.Services.GameServices.GameService.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Data\Services\GameServices\GameService.cs:line 39
+   at GameSphereAPI.Controllers.GameController.GameController.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Controllers\AppControllers\GameController.cs:line 48
+   at lambda_method414(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-07-25 18:31:46.289 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The primitive collection property 'Game.PicturesPaths' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.<PrepareToSave>g__CheckForNullCollection|111_1(IProperty property, <>c__DisplayClass111_0&)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GameSphereAPI.Data.Services.GameServices.GameService.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Data\Services\GameServices\GameService.cs:line 39
+   at GameSphereAPI.Controllers.GameController.GameController.Post(CreateGameDTO model) in C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI\Controllers\AppControllers\GameController.cs:line 48
+   at lambda_method414(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-25 18:31:46.296 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Game/Post - 500 null text/plain; charset=utf-8 138.7952ms
+2024-07-25 18:32:02.480 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-25 18:32:02.668 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-25 18:32:02.669 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-25 18:32:02.671 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-25 18:32:02.672 +01:00 [INF] Hosting environment: Development
+2024-07-25 18:32:02.672 +01:00 [INF] Content root path: C:\Users\azizh\source\repos\Solo Development\Projects\Gamesphere Reborn\GameSphereAPI\GameSphereAPI
+2024-07-25 18:32:08.346 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Game/Post - application/json 274
+2024-07-25 18:32:08.393 +01:00 [INF] CORS policy execution failed.
+2024-07-25 18:32:08.395 +01:00 [INF] Request origin https://localhost:7108 does not have permission to access the resource.
+2024-07-25 18:32:08.530 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:32:08.546 +01:00 [INF] Route matched with {action = "Post", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Post(GameSphereAPI.Models.Viewmodels.Game___Related.CreateGameDTO) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-25 18:32:09.194 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-25 18:32:09.806 +01:00 [INF] Executed DbCommand (119ms) [Parameters=[@p0='string' (Nullable = false), @p1='addicting ass game' (Nullable = false), @p2={  } (Nullable = false) (DbType = Object), @p3='29.99', @p4='07/25/2024' (DbType = Date), @p5='20gb' (Nullable = false), @p6='shit computer (cap)' (Nullable = false), @p7='Europa Universallis 4' (Nullable = false), @p8='string' (Nullable = false)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Games" ("BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "ID";
+2024-07-25 18:32:09.848 +01:00 [INF] Europa Universallis 4 was created
+2024-07-25 18:32:09.856 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-07-25 18:32:09.880 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI) in 1327.7966ms
+2024-07-25 18:32:09.884 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Post (GameSphereAPI)'
+2024-07-25 18:32:09.887 +01:00 [INF] HTTP POST /Game/Post responded 200 in 1357.0728 ms
+2024-07-25 18:32:09.898 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Game/Post - 200 null application/json; charset=utf-8 1555.1726ms

@@ -18,9 +18,8 @@ namespace GameSphereAPI.Models.User
         public string? ProfilePicturePath { get; set; }
         public List<Review>? Reviews { get; set; }
         public Group? FavoriteGroup { get; set; }
-        public ICollection<UserGroup> UserGroups { get; set; }
+        public ICollection<UserGroup>? UserGroups { get; set; }
         public List<UserGame>? UserGames { get; set; }
         public List<UserNotification>? UserNotifications { get; set; }
-
     }
 }

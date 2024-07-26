@@ -33,6 +33,8 @@ namespace GameSphereAPI.Data.Services.PublisherServices
             _context.Publishers.Add(publisher);
             await _context.SaveChangesAsync();
 
+            Console.WriteLine($"{publisher.Name} was created");
+
             return publisher;
         }
 
@@ -46,8 +48,9 @@ namespace GameSphereAPI.Data.Services.PublisherServices
             }
 
             _mapper.Map(model, publisher);
-
             await _context.SaveChangesAsync();
+
+            Console.WriteLine($"{publisher.Name} was updated");
 
             return publisher;
         }
@@ -63,6 +66,8 @@ namespace GameSphereAPI.Data.Services.PublisherServices
 
             _context.Publishers.Remove(publisher);
             await _context.SaveChangesAsync();
+
+            Console.WriteLine($"{publisher.Name} was deleted");
 
             return "Successfully deleted";
         }

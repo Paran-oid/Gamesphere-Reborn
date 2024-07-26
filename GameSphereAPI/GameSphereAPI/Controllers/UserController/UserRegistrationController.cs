@@ -23,6 +23,7 @@ using Microsoft.AspNetCore.Authorization;
 using AutoMapper;
 using Microsoft.AspNetCore.WebUtilities;
 using GameSphereAPI.Models.Viewmodels.Registration___Authentication;
+using Microsoft.VisualStudio.Services.DelegatedAuthorization;
 
 namespace GameSphereAPI.Controllers.UserController
 {
@@ -95,7 +96,7 @@ namespace GameSphereAPI.Controllers.UserController
         }
 
         [HttpPost]
-        public async Task<ActionResult> Register([FromBody] AppRegisterRequest registration)
+        public async Task<ActionResult<AccessToken>> Register([FromBody] AppRegisterRequest registration)
         {
             if (!_userManager.SupportsUserEmail)
             {
@@ -104,6 +105,19 @@ namespace GameSphereAPI.Controllers.UserController
 
             var username = registration.Username;
             var email = registration.Email;
+
+            var dummyUser = await _userManager.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (dummyUser != null)
+            {
+                return Conflict("Email already exists.");
+            }
+
+            dummyUser = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == username);
+
+            if (dummyUser != null)
+            {
+                return Conflict("Username already exists.");
+            }
 
             if (string.IsNullOrEmpty(email) || !_emailAddressAttribute.IsValid(email))
             {
@@ -122,7 +136,11 @@ namespace GameSphereAPI.Controllers.UserController
             }
             var token = GenerateToken(user);
 
-            return Ok(token);
+            return Ok(new AccessTokenResponse
+            {
+                AccessToken = token,
+                ExpiresIn = (int)(DateTime.UtcNow.AddDays(1) - DateTime.UtcNow).TotalSeconds,
+            });
         }
 
         [HttpPost]

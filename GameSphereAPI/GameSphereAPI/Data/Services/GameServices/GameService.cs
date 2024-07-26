@@ -3,6 +3,7 @@ using GameSphereAPI.Models.Site_Models.Game_Related;
 using GameSphereAPI.Models.Site_Models.Game_Related.Relationships;
 using GameSphereAPI.Models.Viewmodels.Game___Related;
 using AutoMapper;
+using Serilog;
 
 namespace GameSphereAPI.Data.Services.GameServices
 {
@@ -37,6 +38,8 @@ namespace GameSphereAPI.Data.Services.GameServices
             _context.Games.Add(game);
             await _context.SaveChangesAsync();
 
+            Log.Information($"{game.Title} was created");
+
             return game;
         }
 
@@ -69,6 +72,8 @@ namespace GameSphereAPI.Data.Services.GameServices
 
                 _context.GamePublishers.Add(relationship);
                 await _context.SaveChangesAsync();
+
+                Log.Information($"{publisher.Name} was added to {game.Title}");
 
                 return "Relationship added successfully";
             }
@@ -106,6 +111,8 @@ namespace GameSphereAPI.Data.Services.GameServices
                 _context.GameLanguages.Add(relationship);
                 await _context.SaveChangesAsync();
 
+                Log.Information($"{language.Name} was added to {game.Title}");
+
                 return "Relationship added successfully";
             }
 
@@ -141,6 +148,8 @@ namespace GameSphereAPI.Data.Services.GameServices
 
                 _context.GameDevelopers.Add(relationship);
                 await _context.SaveChangesAsync();
+
+                Log.Information($"{developer.Name} was added to {game.Title}");
 
                 return "Relationship added successfully";
             }
@@ -178,6 +187,8 @@ namespace GameSphereAPI.Data.Services.GameServices
                 _context.GameTags.Add(relationship);
                 await _context.SaveChangesAsync();
 
+                Log.Information($"{tag.Name} was added to {game.Title}");
+
                 return "Relationship added successfully";
             }
 
@@ -214,11 +225,14 @@ namespace GameSphereAPI.Data.Services.GameServices
                 _context.GameGenres.Add(relationship);
                 await _context.SaveChangesAsync();
 
+                Log.Information($"{genre.Name} was added to {game.Title}");
+
                 return "Relationship added successfully";
             }
 
             return "Relationship already exists";
         }
+
         public async Task<Game?> Put(int ID, UpdateGameDTO model)
         {
             var game = await _context.Games.FirstOrDefaultAsync(g => g.ID == ID);
@@ -231,9 +245,10 @@ namespace GameSphereAPI.Data.Services.GameServices
             _mapper.Map<Game>(model);
             await _context.SaveChangesAsync();
 
+            Console.WriteLine($"{game.Title} was updated");
+
             return game;
         }
-
 
         public async Task<string?> RemovePublisherFromGame(int GameID, int PublisherID)
         {
@@ -326,6 +341,8 @@ namespace GameSphereAPI.Data.Services.GameServices
 
             _context.Games.Remove(game);
             await _context.SaveChangesAsync();
+
+            Log.Information($"{game.Title} was permanently deleted");
 
             return "Successfully deleted";
         }

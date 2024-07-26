@@ -6,16 +6,46 @@
         <div class="form-name-group">
           <div class="form-group">
             <label for="fname">First name</label>
-            <input type="text" name="fname" formControlName="fname" />
+            <input
+              type="text"
+              [ngClass]="{
+                'error-box': fname?.invalid && hasErrors
+              }"
+              name="fname"
+              formControlName="fname"
+            />
           </div>
           <div class="form-group">
             <label for="lname">Last name</label>
-            <input type="text" name="lname" formControlName="lname" />
+            <input
+              type="text"
+              name="lname"
+              formControlName="lname"
+              [ngClass]="{ 'error-box': lname?.invalid && hasErrors }"
+            />
           </div>
         </div>
         <div class="form-group">
           <label for="birth">Birthday</label>
-          <input type="date" name="birth" formControlName="birth" />
+          <input
+            type="date"
+            name="birth"
+            formControlName="birth"
+            [ngClass]="{
+              'error-box': birth?.invalid && hasErrors
+            }"
+          />
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <select
+            formControlName="location"
+            [ngClass]="{ 'error-box': location?.invalid && hasErrors }"
+          >
+            <option *ngFor="let country of countries" [value]="country.code">
+              {{ country.name }}
+            </option>
+          </select>
         </div>
       </div>
       <div class="btns">
@@ -32,35 +62,99 @@
   </div>
   <div class="second-step" *ngIf="step === 2">
     <div class="title">Add Your Credentials</div>
-    <form>
+    <form [formGroup]="form">
       <div class="form-inputs">
-        <div class="form-name-group">
-          <div class="form-group">
-            <label for="fname">First name</label>
-            <input type="text" name="fname" />
-          </div>
-          <div class="form-group">
-            <label for="lname">Last name</label>
-            <input type="text" name="lname" />
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            [ngClass]="{ 'error-box': username?.invalid && hasErrors }"
+            formControlName="username"
+            autocomplete="off"
+          />
+          <div class="errors">
+            <p *ngIf="username?.hasError('exists')" style="color: red">
+              Username already exists.
+            </p>
           </div>
         </div>
         <div class="form-group">
-          <label for="birth">Birthday</label>
-          <input type="date" />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            [ngClass]="{ 'error-box': email?.invalid && hasErrors }"
+            formControlName="email"
+          />
+          <div class="errors">
+            <p *ngIf="email?.hasError('exists')" style="color: red">
+              Email already exists.
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            [ngClass]="{ 'error-box': password?.invalid && hasErrors }"
+            formControlName="password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="reset-password">Reset Password</label>
+          <input
+            type="password"
+            name="reset-password"
+            [ngClass]="{
+              'error-box':
+                confirmPassword?.value != password?.value && hasErrors
+            }"
+            formControlName="confirmPassword"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label class="tos" for="tos">
+            <input name="tos" type="checkbox" formControlName="tos" />
+            I agree to Terms of Service and Privacy Policy
+            <span style="color: red">*</span>
+          </label>
         </div>
       </div>
       <div class="btns">
-        <button type="button" class="back-btn">back</button>
-        <button type="button" class="next-btn">next</button>
+        <button type="button" class="back-btn" (click)="FormBefore()">
+          back
+        </button>
+        <button
+          type="button"
+          class="next-btn"
+          id="2"
+          (click)="FormNext($event)"
+        >
+          submit
+        </button>
       </div>
     </form>
   </div>
   <footer>
     <div class="filler">
-      Enjoy all our games, communicate with your friends and meet new people
-      <br />
-      Games ranging from cute games like Animal Crossing to the iconic Doom
-      series
+      <p *ngIf="step === 1">
+        Enjoy all our games, communicate with your friends and meet new people
+        <br />
+        Games ranging from cute games like Animal Crossing to the iconic Doom
+        series
+      </p>
+      <p *ngIf="step === 2">
+        Don't like a game that you just bought? We got you covered, as long as
+        <br />
+        you have less than 2 hours of game time and less than 2 weeks purchase
+        <br />
+        we are more than happy to give you a refund.
+      </p>
+      <p *ngIf="step === 3">Gamesphere welcomes you anytime</p>
     </div>
   </footer>
 </div>

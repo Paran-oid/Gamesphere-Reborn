@@ -52,19 +52,19 @@ namespace GameSphereAPI.Data
         private static void SeedPublishers(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Publisher>().HasData(
-                new Publisher { ID = 1, Name = "Publisher X", Rating = 2.1M },
-                new Publisher { ID = 2, Name = "Publisher Y", Rating = 3.8M },
-                new Publisher { ID = 3, Name = "Publisher Z", Rating = 4.2M }
+                new Publisher { ID = 1, Name = "Publisher X", Rating = 2.1M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
+                new Publisher { ID = 2, Name = "Publisher Y", Rating = 3.8M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
+                new Publisher { ID = 3, Name = "Publisher Z", Rating = 4.2M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" }
             );
         }
 
         private static void SeedDevelopers(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Developer>().HasData(
-                new Developer { ID = 1, Name = "Developer X", Rating = 4.2M },
-                new Developer { ID = 2, Name = "Developer Y", Rating = 4.1M },
-                new Developer { ID = 3, Name = "Developer Z", Rating = 4.3M }
-);
+                new Developer { ID = 1, Name = "Developer X", Rating = 4.2M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
+                new Developer { ID = 2, Name = "Developer Y", Rating = 4.1M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
+                new Developer { ID = 3, Name = "Developer Z", Rating = 4.3M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" }
+              );
         }
 
         private static void SeedTags(ModelBuilder modelBuilder)

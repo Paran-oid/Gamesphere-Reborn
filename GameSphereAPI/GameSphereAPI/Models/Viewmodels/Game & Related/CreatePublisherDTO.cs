@@ -2,5 +2,6 @@
 {
     public record struct CreatePublisherDTO(
         string Name,
-        decimal Rating);
+        decimal Rating,
+        string UserID);
 }

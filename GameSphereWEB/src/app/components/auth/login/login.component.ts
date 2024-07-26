@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LoginUser } from '../../../models/auth/user.model';
 
@@ -21,7 +21,11 @@ import { LoginUser } from '../../../models/auth/user.model';
 export class LoginComponent {
   form: FormGroup = new FormGroup({});
   hasSubmitted: boolean = false;
-  constructor(private authService: AuthService, private fb: FormBuilder) {}
+  constructor(
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -52,9 +56,11 @@ export class LoginComponent {
       };
       this.authService.Login(model).subscribe({
         next: (response) => {
-          console.log('sucess!!');
-          console.log(response);
+          this.form.reset();
           localStorage.setItem('Token', response.accessToken);
+          this.router.navigate(['/']).then(() => {
+            window.location.reload();
+          });
         },
         error: (error) => {
           console.log(error);

@@ -1,4 +1,4 @@
-import { PhoneNumber } from '../../models/Misc/phoneNumber.model';
+import { PhoneNumber } from '../../models/misc/phoneNumber.model';
 
 export const phoneData: PhoneNumber[] = [
   { countryCode: '+226', url: '/Images/Flags/748001_faso_burkina_flag.png' },

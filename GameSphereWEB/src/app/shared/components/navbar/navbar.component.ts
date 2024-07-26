@@ -24,11 +24,15 @@ export class NavbarComponent implements OnInit {
 
     this.authService.user.subscribe((user) => {
       this.user = user;
-      console.log(user);
     });
   }
 
   get UserName() {
     return this.user?.userName;
+  }
+
+  Logout() {
+    this.authService.Logout();
+    window.location.reload();
   }
 }

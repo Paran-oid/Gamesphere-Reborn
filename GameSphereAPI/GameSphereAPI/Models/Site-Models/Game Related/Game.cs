@@ -17,7 +17,7 @@ namespace GameSphereAPI.Models.Site_Models.Game_Related
         public string Title { get; set; } = string.Empty;
         public string BackgroundPath { get; set; } = string.Empty;
         public string TrailerPath { get; set; } = string.Empty;
-        public List<string> PicturesPaths { get; set; }
+        public List<string> PicturesPaths { get; set; } = [];
         public DateOnly ReleaseDate { get; set; }
 
         [Column(TypeName = "numeric(18, 2)")]

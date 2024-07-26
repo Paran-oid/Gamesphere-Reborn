@@ -7,14 +7,62 @@
   height: 100px;
   background-color: $primary-color;
   user-select: none;
+
   @include flex(center, center);
-}
 
-.logo {
-  @include logo;
+  .logo {
+    @include logo;
 
-  img {
-    @include logo-img;
+    img {
+      @include logo-img;
+    }
+  }
+
+  .global-actions {
+    @include flex(start, center);
+    align-self: flex-start;
+
+    .install-btn {
+      background-color: $green-color;
+      padding: 5px;
+      border: none;
+
+      margin-right: 10px;
+      margin-bottom: 100%;
+      margin-top: 10px;
+
+      cursor: pointer;
+    }
+
+    .bell-btn {
+      background-color: $secondary-color;
+      padding: 5px;
+      width: 50px;
+      border: none;
+
+      margin-right: 10px;
+      margin-bottom: 100%;
+      margin-top: 5px;
+
+      cursor: pointer;
+
+      i {
+        color: $gray-color;
+      }
+    }
+
+    .user-profile {
+      margin-bottom: 100%;
+      margin-top: 20px;
+
+      width: 2.5rem;
+      cursor: pointer;
+
+      .user-profile-img {
+        width: 2.5rem;
+        object-fit: cover;
+      }
+    }
   }
 }
 

@@ -1,8 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment.development';
-import { AppUser, LoginUser } from '../models/auth/user.model';
-import { LoginResponse } from '../models/auth/registration.model';
+import { AppUser, LoginUser, RegisterUser } from '../models/auth/user.model';
+import {
+  LoginResponse,
+  RegisterResponse,
+} from '../models/auth/registration.model';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -52,5 +55,13 @@ export class AuthService {
     this.loggedIn = false;
     this.user.next(null);
     return this.http.get(this.baseUrl + '/UserRegistration/Logout');
+  }
+
+  public Register(model: RegisterUser) {
+    return this.http.post<RegisterResponse>(
+      this.baseUrl + '/UserRegistration/Register',
+      model,
+      {}
+    );
   }
 }

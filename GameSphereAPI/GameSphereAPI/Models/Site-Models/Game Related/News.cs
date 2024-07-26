@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using GameSphereAPI.Models.User;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
 namespace GameSphereAPI.Models.Site_Models.Game_Related
@@ -22,5 +23,10 @@ namespace GameSphereAPI.Models.Site_Models.Game_Related
         public int GameID { get; set; }
 
         public Game Game { get; set; }
+
+        [ForeignKey("ID")]
+        public int AppUserID { get; set; }
+
+        public AppUser AppUser { get; set; }
     }
 }

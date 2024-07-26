@@ -18,7 +18,7 @@
       margin-top: 20px;
       background-color: $primary-color;
 
-      padding: 20px 20px 50px 20px;
+      padding: 50px 100px 50px 100px;
       border-radius: 5px;
 
       width: 768px;
@@ -32,8 +32,15 @@
       }
 
       .form-group {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 80%;
+        margin-bottom: 15px;
+
+        select {
+          background-color: $secondary-color;
+          width: 100%;
+          padding: 10px;
+          border: none;
+        }
       }
 
       input {
@@ -52,15 +59,49 @@
 
     .form-name-group {
       @include flex(end, center, 10px);
-      width: 100%;
-
-      .form-group {
-        width: 100%;
-      }
+      width: 80%;
     }
 
     .form-inputs {
       margin-bottom: 20px;
+    }
+    .tos {
+      display: flex !important;
+      justify-content: start;
+      align-items: start;
+
+      margin-bottom: 10px;
+      user-select: none;
+
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        appearance: none;
+        cursor: pointer;
+
+        @include flex(center, center);
+        outline: none;
+
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 15px;
+          font-weight: 900;
+
+          content: "\f00c";
+          color: white;
+          display: none;
+        }
+
+        &:hover {
+          background-color: $light-secondary-color;
+        }
+
+        &:checked:after {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -97,4 +138,12 @@ footer {
   @extend .next-btn;
   background-color: $dark-gray-color;
   margin-right: 10px;
+}
+
+.error-box {
+  border: 1px solid $red-color !important;
+}
+
+.error-text {
+  color: $red-color !important;
 }

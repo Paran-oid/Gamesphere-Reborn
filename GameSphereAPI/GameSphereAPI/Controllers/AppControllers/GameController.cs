@@ -36,6 +36,7 @@ namespace GameSphereAPI.Controllers.GameController
                 return NotFound("Game not found");
             }
 
+
             return Ok(game);
         }
 
@@ -50,6 +51,7 @@ namespace GameSphereAPI.Controllers.GameController
                 {
                     return BadRequest("Please check your credentials");
                 }
+
 
                 return Ok(game);
             }
@@ -131,6 +133,7 @@ namespace GameSphereAPI.Controllers.GameController
             {
                 return NotFound("Game not found");
             }
+
 
             return Ok(game);
         }
