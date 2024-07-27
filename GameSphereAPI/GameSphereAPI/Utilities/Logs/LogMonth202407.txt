@@ -3578,3 +3578,2738 @@ FROM gam."Games" AS g
 2024-07-27 14:22:31.154 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
 2024-07-27 14:22:31.155 +01:00 [INF] HTTP GET /Game/GetAll responded 200 in 12.9409 ms
 2024-07-27 14:22:31.156 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/GetAll - 200 null application/json; charset=utf-8 17.7918ms
+2024-07-27 15:41:31.508 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-27 15:41:32.866 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-27 15:41:32.869 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-27 15:41:32.875 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-27 15:41:32.878 +01:00 [INF] Hosting environment: Development
+2024-07-27 15:41:32.881 +01:00 [INF] Content root path: C:\Users\azizh\OneDrive\Documents\Portfolio\Work\Programming\Projects\Solo Development\Projects\Gamesphere-Reborn\GameSphereAPI\GameSphereAPI
+2024-07-27 15:43:39.801 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-07-27 15:43:39.801 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/GetAll - null null
+2024-07-27 15:43:40.142 +01:00 [INF] CORS policy execution successful.
+2024-07-27 15:43:40.151 +01:00 [INF] CORS policy execution successful.
+2024-07-27 15:43:40.158 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 372.2142ms
+2024-07-27 15:43:40.169 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-07-27 15:43:40.192 +01:00 [INF] CORS policy execution successful.
+2024-07-27 15:43:40.213 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 15:43:40.213 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-07-27 15:43:40.268 +01:00 [INF] Route matched with {action = "GetAll", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]]] GetAll() on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-27 15:43:40.268 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-07-27 15:43:43.848 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 15:43:45.648 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+2024-07-27 15:43:46.192 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameSphereAPI.Models.Site_Models.Game_Related.Game, GameSphereAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-27 15:43:46.302 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI) in 6020.019ms
+2024-07-27 15:43:46.306 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 15:43:46.315 +01:00 [INF] HTTP GET /Game/GetAll responded 200 in 6103.2297 ms
+2024-07-27 15:43:46.343 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/GetAll - 200 null application/json; charset=utf-8 6559.6552ms
+2024-07-27 15:46:06.609 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-27 15:46:08.206 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-27 15:46:08.209 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-27 15:46:08.216 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-27 15:46:08.219 +01:00 [INF] Hosting environment: Development
+2024-07-27 15:46:08.221 +01:00 [INF] Content root path: C:\Users\azizh\OneDrive\Documents\Portfolio\Work\Programming\Projects\Solo Development\Projects\Gamesphere-Reborn\GameSphereAPI\GameSphereAPI
+2024-07-27 15:46:16.789 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/Register - null null
+2024-07-27 15:46:16.926 +01:00 [INF] CORS policy execution successful.
+2024-07-27 15:46:16.937 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/Register - 204 null null 156.4887ms
+2024-07-27 15:46:16.948 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/Register - application/json 149
+2024-07-27 15:46:16.964 +01:00 [INF] CORS policy execution successful.
+2024-07-27 15:46:17.004 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI)'
+2024-07-27 15:46:17.050 +01:00 [INF] Route matched with {action = "Register", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Microsoft.VisualStudio.Services.DelegatedAuthorization.AccessToken]] Register(GameSphereAPI.Models.Viewmodels.Registration.AppRegisterRequest) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-07-27 15:46:20.716 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 15:46:23.283 +01:00 [INF] Executed DbCommand (175ms) [Parameters=[@__email_0='azizhmid10000@gmail.com'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Email" = @__email_0
+LIMIT 1
+2024-07-27 15:46:23.554 +01:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2024-07-27 15:46:23.576 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI) in 6513.3212ms
+2024-07-27 15:46:23.581 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI)'
+2024-07-27 15:46:23.589 +01:00 [INF] HTTP POST /UserRegistration/Register responded 409 in 6586.0004 ms
+2024-07-27 15:46:23.625 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/Register - 409 null text/plain; charset=utf-8 6676.8753ms
+2024-07-27 15:47:11.639 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 15:47:12.621 +01:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:47:12.655 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 15:47:12.732 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:47:12.796 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:47:12.813 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 15:47:12.833 +01:00 [INF] Applying migration '20240726164842_AppUserID to developer and publisher models'.
+2024-07-27 15:47:13.067 +01:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" DROP CONSTRAINT "FK_Reviews_AspNetUsers_UserID";
+2024-07-27 15:47:13.087 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 1;
+2024-07-27 15:47:13.089 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 2;
+2024-07-27 15:47:13.090 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 3;
+2024-07-27 15:47:13.100 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 1;
+2024-07-27 15:47:13.102 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 2;
+2024-07-27 15:47:13.103 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 3;
+2024-07-27 15:47:13.106 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" RENAME COLUMN "UserID" TO "AppUserID";
+2024-07-27 15:47:13.107 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Reviews_UserID" RENAME TO "IX_Reviews_AppUserID";
+2024-07-27 15:47:13.117 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:47:13.119 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:47:13.121 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:47:13.122 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:47:13.124 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:47:13.125 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:47:13.131 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:47:13.132 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:47:13.143 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Publishers_AppUserId" ON gam."Publishers" ("AppUserId");
+2024-07-27 15:47:13.148 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_News_AppUserId" ON gam."News" ("AppUserId");
+2024-07-27 15:47:13.155 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Developers_AppUserId" ON gam."Developers" ("AppUserId");
+2024-07-27 15:47:13.178 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:47:13.399 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD CONSTRAINT "FK_News_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:47:13.403 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:47:13.413 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" ADD CONSTRAINT "FK_Reviews_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:47:13.415 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240726164842_AppUserID to developer and publisher models', '8.0.6');
+2024-07-27 15:47:13.429 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 15:47:13.542 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 15:47:13.544 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 15:47:13.545 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 15:47:13.546 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 15:47:13.547 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 15:47:13.548 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 15:47:13.548 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 15:47:13.549 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 15:47:13.557 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 15:47:13.558 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:47:13.559 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:47:13.562 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 15:47:13.579 +01:00 [ERR] Failed executing DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:50:39.025 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 15:50:39.977 +01:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:50:40.172 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:50:40.347 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2024-07-27 15:50:40.407 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 15:50:40.414 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 15:50:40.438 +01:00 [INF] Applying migration '20240621162840_initial migration'.
+2024-07-27 15:50:40.673 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'gam') THEN
+        CREATE SCHEMA gam;
+    END IF;
+END $EF$;
+2024-07-27 15:50:40.674 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'sho') THEN
+        CREATE SCHEMA sho;
+    END IF;
+END $EF$;
+2024-07-27 15:50:40.675 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'grp') THEN
+        CREATE SCHEMA grp;
+    END IF;
+END $EF$;
+2024-07-27 15:50:40.676 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usr') THEN
+        CREATE SCHEMA usr;
+    END IF;
+END $EF$;
+2024-07-27 15:50:40.677 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usg') THEN
+        CREATE SCHEMA usg;
+    END IF;
+END $EF$;
+2024-07-27 15:50:40.689 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Discriminator" character varying(13) NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2024-07-27 15:50:40.702 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Developers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(4,2) NOT NULL,
+    CONSTRAINT "PK_Developers" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.714 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Games" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "BackgroundPath" text NOT NULL,
+    "TrailerPath" text NOT NULL,
+    "PicturesPaths" text[] NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "Size" numeric(18,2) NOT NULL,
+    "Description" text NOT NULL,
+    "SysReq" text NOT NULL,
+    CONSTRAINT "PK_Games" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.725 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Genres" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Genres" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.736 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE grp."Groups" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Groups" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.747 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Publishers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(1,2) NOT NULL,
+    CONSTRAINT "PK_Publishers" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.760 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."ShoppingCarts" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "TotalPrice" numeric NOT NULL,
+    CONSTRAINT "PK_ShoppingCarts" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.772 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Tags" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Tags" PRIMARY KEY ("ID")
+);
+2024-07-27 15:50:40.789 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2024-07-27 15:50:40.802 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Achievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Achievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Achievements_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:40.815 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."DLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_DLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_DLCs_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:40.828 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameDevelopers" (
+    "DeveloperID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameDevelopers" PRIMARY KEY ("DeveloperID", "GameID"),
+    CONSTRAINT "FK_GameDevelopers_Developers_DeveloperID" FOREIGN KEY ("DeveloperID") REFERENCES gam."Developers" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameDevelopers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:40.841 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Languages" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Languages" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Languages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 15:50:40.853 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."News" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "Author" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastUpdatedAt" timestamp with time zone,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_News" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_News_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:40.860 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameGenres" (
+    "GenreID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameGenres" PRIMARY KEY ("GenreID", "GameID"),
+    CONSTRAINT "FK_GameGenres_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameGenres_Genres_GenreID" FOREIGN KEY ("GenreID") REFERENCES gam."Genres" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.909 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "Discriminator" character varying(13) NOT NULL,
+    "Fname" text,
+    "Lname" text,
+    "Nickname" text,
+    "Location" text,
+    "Summary" text,
+    "ProfilePicturePath" text,
+    "FavoriteGroupID" integer,
+    "UserName" character varying(256),
+    "NormalizedUserName" character varying(256),
+    "Email" character varying(256),
+    "NormalizedEmail" character varying(256),
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text,
+    "SecurityStamp" text,
+    "ConcurrencyStamp" text,
+    "PhoneNumber" text,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUsers_Groups_FavoriteGroupID" FOREIGN KEY ("FavoriteGroupID") REFERENCES grp."Groups" ("ID")
+);
+2024-07-27 15:50:44.917 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GamePublisher" (
+    "PublishersID" integer NOT NULL,
+    "gamesID" integer NOT NULL,
+    CONSTRAINT "PK_GamePublisher" PRIMARY KEY ("PublishersID", "gamesID"),
+    CONSTRAINT "FK_GamePublisher_Games_gamesID" FOREIGN KEY ("gamesID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GamePublisher_Publishers_PublishersID" FOREIGN KEY ("PublishersID") REFERENCES gam."Publishers" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.933 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."CartItems" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Price" numeric NOT NULL,
+    "Quantity" integer NOT NULL,
+    "SubTotal" numeric NOT NULL,
+    "GameID" integer NOT NULL,
+    "ShoppingCartID" integer NOT NULL,
+    CONSTRAINT "PK_CartItems" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_CartItems_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_CartItems_ShoppingCarts_ShoppingCartID" FOREIGN KEY ("ShoppingCartID") REFERENCES sho."ShoppingCarts" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.941 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameTags" (
+    "TagID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameTags" PRIMARY KEY ("TagID", "GameID"),
+    CONSTRAINT "FK_GameTags_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameTags_Tags_TagID" FOREIGN KEY ("TagID") REFERENCES gam."Tags" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.948 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameLanguages" (
+    "LanguageID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameLanguages" PRIMARY KEY ("LanguageID", "GameID"),
+    CONSTRAINT "FK_GameLanguages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameLanguages_Languages_LanguageID" FOREIGN KEY ("LanguageID") REFERENCES gam."Languages" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.962 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 15:50:44.977 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.497 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.509 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.523 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Reviews" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Content" text,
+    "Likes" integer NOT NULL,
+    "UserId" text,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Reviews" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Reviews_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_Reviews_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.538 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserGames" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "HoursPlayed" numeric,
+    "LastTimePlayed" date,
+    "AppUserId" text,
+    CONSTRAINT "PK_UserGames" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserGames_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id")
+);
+2024-07-27 15:50:47.549 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usg."UserGroups" (
+    "UserID" text NOT NULL,
+    "GroupID" integer NOT NULL,
+    CONSTRAINT "PK_UserGroups" PRIMARY KEY ("UserID", "GroupID"),
+    CONSTRAINT "FK_UserGroups_AspNetUsers_UserID" FOREIGN KEY ("UserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserGroups_Groups_GroupID" FOREIGN KEY ("GroupID") REFERENCES grp."Groups" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.561 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserNotification" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "UserId" text,
+    CONSTRAINT "PK_UserNotification" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserNotification_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id")
+);
+2024-07-27 15:50:47.569 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserAchievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "AchievementID" integer NOT NULL,
+    "IsAchieved" boolean NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserAchievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserAchievements_Achievements_AchievementID" FOREIGN KEY ("AchievementID") REFERENCES gam."Achievements" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAchievements_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:47.578 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserDLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "DLCID" integer NOT NULL,
+    "HasDLC" boolean NOT NULL,
+    "DatePurchased" timestamp with time zone NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserDLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserDLCs_DLCs_DLCID" FOREIGN KEY ("DLCID") REFERENCES gam."DLCs" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserDLCs_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:50:49.993 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Achievements_GameID" ON gam."Achievements" ("GameID");
+2024-07-27 15:50:49.996 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId");
+2024-07-27 15:50:50.000 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName");
+2024-07-27 15:50:50.004 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId");
+2024-07-27 15:50:50.008 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId");
+2024-07-27 15:50:50.012 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId");
+2024-07-27 15:50:50.016 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail");
+2024-07-27 15:50:50.020 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUsers_FavoriteGroupID" ON "AspNetUsers" ("FavoriteGroupID");
+2024-07-27 15:50:50.025 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName");
+2024-07-27 15:50:50.029 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CartItems_GameID" ON sho."CartItems" ("GameID");
+2024-07-27 15:50:50.033 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CartItems_ShoppingCartID" ON sho."CartItems" ("ShoppingCartID");
+2024-07-27 15:50:50.038 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_DLCs_GameID" ON gam."DLCs" ("GameID");
+2024-07-27 15:50:50.042 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameDevelopers_GameID" ON gam."GameDevelopers" ("GameID");
+2024-07-27 15:50:50.046 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameGenres_GameID" ON gam."GameGenres" ("GameID");
+2024-07-27 15:50:50.050 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameLanguages_GameID" ON gam."GameLanguages" ("GameID");
+2024-07-27 15:50:50.055 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GamePublisher_gamesID" ON gam."GamePublisher" ("gamesID");
+2024-07-27 15:50:50.059 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameTags_GameID" ON gam."GameTags" ("GameID");
+2024-07-27 15:50:50.063 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Languages_GameID" ON gam."Languages" ("GameID");
+2024-07-27 15:50:50.067 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_News_GameID" ON gam."News" ("GameID");
+2024-07-27 15:50:50.071 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Reviews_GameID" ON gam."Reviews" ("GameID");
+2024-07-27 15:50:50.075 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Reviews_UserId" ON gam."Reviews" ("UserId");
+2024-07-27 15:50:50.079 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAchievements_AchievementID" ON usr."UserAchievements" ("AchievementID");
+2024-07-27 15:50:53.382 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAchievements_GameID" ON usr."UserAchievements" ("GameID");
+2024-07-27 15:50:53.387 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserDLCs_DLCID" ON usr."UserDLCs" ("DLCID");
+2024-07-27 15:50:53.392 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserDLCs_GameID" ON usr."UserDLCs" ("GameID");
+2024-07-27 15:50:53.397 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserGames_AppUserId" ON usr."UserGames" ("AppUserId");
+2024-07-27 15:50:53.400 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserGroups_GroupID" ON usg."UserGroups" ("GroupID");
+2024-07-27 15:50:53.404 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserNotification_UserId" ON usr."UserNotification" ("UserId");
+2024-07-27 15:50:53.406 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240621162840_initial migration', '8.0.6');
+2024-07-27 15:50:53.417 +01:00 [INF] Applying migration '20240621163402_fix for data type of publisher and developer'.
+2024-07-27 15:50:53.527 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ALTER COLUMN "Rating" TYPE numeric(3,2);
+2024-07-27 15:50:53.540 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ALTER COLUMN "Rating" TYPE numeric(3,2);
+2024-07-27 15:50:53.541 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240621163402_fix for data type of publisher and developer', '8.0.6');
+2024-07-27 15:50:53.548 +01:00 [INF] Applying migration '20240621163704_seed-data #1'.
+2024-07-27 15:50:53.685 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Discriminator", "Name", "NormalizedName")
+VALUES ('1', NULL, 'AppRole', 'Admin', 'ADMIN');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Discriminator", "Name", "NormalizedName")
+VALUES ('2', NULL, 'AppRole', 'Publisher', 'PUBLISHER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Discriminator", "Name", "NormalizedName")
+VALUES ('3', NULL, 'AppRole', 'Developer', 'DEVELOPER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Discriminator", "Name", "NormalizedName")
+VALUES ('4', NULL, 'AppRole', 'User', 'USER');
+2024-07-27 15:50:53.688 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "Name", "Rating")
+VALUES (1, 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "Name", "Rating")
+VALUES (2, 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "Name", "Rating")
+VALUES (3, 'Developer Z', 4.3);
+2024-07-27 15:50:53.692 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (1, '/path/to/background1.jpg', 'Sample description for Game 1.', ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[], 49.99, DATE '2023-01-15', 15.5, 'Sample system requirements for Game 1.', 'Sample Game 1', '/path/to/trailer1.mp4');
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (2, '/path/to/background2.jpg', 'Sample description for Game 2.', ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[], 39.99, DATE '2023-03-20', 12.0, 'Sample system requirements for Game 2.', 'Sample Game 2', '/path/to/trailer2.mp4');
+2024-07-27 15:50:53.695 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (3, 'Role-playing');
+2024-07-27 15:50:54.971 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (1, NULL, 'English');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (2, NULL, 'French');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (3, NULL, 'Spanish');
+2024-07-27 15:50:54.974 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "Name", "Rating")
+VALUES (1, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "Name", "Rating")
+VALUES (2, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "Name", "Rating")
+VALUES (3, 'Publisher Z', 4.2);
+2024-07-27 15:50:54.977 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (3, 'RPG');
+2024-07-27 15:50:54.983 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (1, 1);
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (2, 1);
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (2, 2);
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (3, 2);
+2024-07-27 15:50:54.989 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (1, 1);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (1, 2);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (2, 2);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (2, 3);
+2024-07-27 15:50:54.996 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (1, 1);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (1, 2);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (2, 2);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (2, 3);
+2024-07-27 15:50:55.002 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (1, 1);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (1, 2);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (2, 2);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (2, 3);
+2024-07-27 15:50:55.008 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('gam."Developers"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Developers") + 1,
+        nextval(pg_get_serial_sequence('gam."Developers"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Games"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Games") + 1,
+        nextval(pg_get_serial_sequence('gam."Games"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Genres"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Genres") + 1,
+        nextval(pg_get_serial_sequence('gam."Genres"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Languages"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Languages") + 1,
+        nextval(pg_get_serial_sequence('gam."Languages"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Publishers"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Publishers") + 1,
+        nextval(pg_get_serial_sequence('gam."Publishers"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Tags"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Tags") + 1,
+        nextval(pg_get_serial_sequence('gam."Tags"', 'ID'))),
+    false);
+2024-07-27 15:50:57.414 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240621163704_seed-data #1', '8.0.6');
+2024-07-27 15:50:57.415 +01:00 [INF] Applying migration '20240624151916_update users model'.
+2024-07-27 15:50:57.455 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" DROP CONSTRAINT "FK_Reviews_AspNetUsers_UserId";
+2024-07-27 15:50:57.456 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE usr."UserNotification" DROP CONSTRAINT "FK_UserNotification_AspNetUsers_UserId";
+2024-07-27 15:50:57.457 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "AspNetUsers" DROP COLUMN "Discriminator";
+2024-07-27 15:50:57.458 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "AspNetRoles" DROP COLUMN "Discriminator";
+2024-07-27 15:50:57.465 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE usr."UserNotification" SET "UserId" = '' WHERE "UserId" IS NULL;
+ALTER TABLE usr."UserNotification" ALTER COLUMN "UserId" SET NOT NULL;
+ALTER TABLE usr."UserNotification" ALTER COLUMN "UserId" SET DEFAULT '';
+2024-07-27 15:50:57.469 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Reviews" SET "UserId" = '' WHERE "UserId" IS NULL;
+ALTER TABLE gam."Reviews" ALTER COLUMN "UserId" SET NOT NULL;
+ALTER TABLE gam."Reviews" ALTER COLUMN "UserId" SET DEFAULT '';
+2024-07-27 15:50:57.473 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_AspNetUsers_UserName" ON "AspNetUsers" ("UserName");
+2024-07-27 15:50:57.481 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" ADD CONSTRAINT "FK_Reviews_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:50:57.484 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE usr."UserNotification" ADD CONSTRAINT "FK_UserNotification_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:50:57.485 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240624151916_update users model', '8.0.6');
+2024-07-27 15:50:57.487 +01:00 [INF] Applying migration '20240702135939_birth and other field added for app user'.
+2024-07-27 15:50:57.526 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "Location" = '' WHERE "Location" IS NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Location" SET NOT NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Location" SET DEFAULT '';
+2024-07-27 15:50:57.528 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "Lname" = '' WHERE "Lname" IS NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Lname" SET NOT NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Lname" SET DEFAULT '';
+2024-07-27 15:50:57.529 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "Fname" = '' WHERE "Fname" IS NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Fname" SET NOT NULL;
+ALTER TABLE "AspNetUsers" ALTER COLUMN "Fname" SET DEFAULT '';
+2024-07-27 15:50:57.530 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "AspNetUsers" ADD "Birth" date NOT NULL DEFAULT DATE '-infinity';
+2024-07-27 15:50:57.531 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "AspNetUsers" ADD "NumberPrefix" text NOT NULL DEFAULT '';
+2024-07-27 15:50:57.531 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240702135939_birth and other field added for app user', '8.0.6');
+2024-07-27 15:50:57.533 +01:00 [INF] Applying migration '20240704135226_removed prefix column'.
+2024-07-27 15:51:01.555 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "AspNetUsers" DROP COLUMN "NumberPrefix";
+2024-07-27 15:51:01.555 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240704135226_removed prefix column', '8.0.6');
+2024-07-27 15:51:01.557 +01:00 [INF] Applying migration '20240709115932_mini-change in data structures'.
+2024-07-27 15:51:01.597 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:01.597 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:01.598 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240709115932_mini-change in data structures', '8.0.6');
+2024-07-27 15:51:01.599 +01:00 [INF] Applying migration '20240709124044_change from decimal to string for game size'.
+2024-07-27 15:51:01.643 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Games" ALTER COLUMN "Size" TYPE text;
+2024-07-27 15:51:01.645 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[], "Size" = '15.5m'
+WHERE "ID" = 1;
+2024-07-27 15:51:01.646 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[], "Size" = '12.0m'
+WHERE "ID" = 2;
+2024-07-27 15:51:01.647 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240709124044_change from decimal to string for game size', '8.0.6');
+2024-07-27 15:51:01.653 +01:00 [INF] Applying migration '20240709130646_added gamepublisher relationship table'.
+2024-07-27 15:51:01.692 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE gam."GamePublisher";
+2024-07-27 15:51:01.693 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD "GameID" integer;
+2024-07-27 15:51:01.701 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "GamePublishers" (
+    "PublisherID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GamePublishers" PRIMARY KEY ("PublisherID", "GameID"),
+    CONSTRAINT "FK_GamePublishers_Games_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GamePublishers_Publishers_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Publishers" ("ID") ON DELETE CASCADE
+);
+2024-07-27 15:51:01.704 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:01.704 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:01.706 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Publishers" SET "GameID" = NULL
+WHERE "ID" = 1;
+2024-07-27 15:51:01.707 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Publishers" SET "GameID" = NULL
+WHERE "ID" = 2;
+2024-07-27 15:51:01.707 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Publishers" SET "GameID" = NULL
+WHERE "ID" = 3;
+2024-07-27 15:51:01.713 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Publishers_GameID" ON gam."Publishers" ("GameID");
+2024-07-27 15:51:03.317 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD CONSTRAINT "FK_Publishers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID");
+2024-07-27 15:51:03.317 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240709130646_added gamepublisher relationship table', '8.0.6');
+2024-07-27 15:51:03.322 +01:00 [INF] Applying migration '20240709131824_added schema for publishers and game relationship that I forgot about'.
+2024-07-27 15:51:03.369 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "GamePublishers" SET SCHEMA gam;
+2024-07-27 15:51:03.371 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:03.372 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:03.372 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240709131824_added schema for publishers and game relationship that I forgot about', '8.0.6');
+2024-07-27 15:51:03.374 +01:00 [INF] Applying migration '20240709150411_mini-improvements to the database aka game related'.
+2024-07-27 15:51:03.424 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" DROP CONSTRAINT "FK_Reviews_AspNetUsers_UserId";
+2024-07-27 15:51:03.424 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" RENAME COLUMN "UserId" TO "UserID";
+2024-07-27 15:51:03.425 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" RENAME COLUMN "Id" TO "ID";
+2024-07-27 15:51:03.426 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Reviews_UserId" RENAME TO "IX_Reviews_UserID";
+2024-07-27 15:51:03.426 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:03.427 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:03.430 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" ADD CONSTRAINT "FK_Reviews_AspNetUsers_UserID" FOREIGN KEY ("UserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:51:03.430 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240709150411_mini-improvements to the database aka game related', '8.0.6');
+2024-07-27 15:51:03.431 +01:00 [INF] Applying migration '20240726164842_AppUserID to developer and publisher models'.
+2024-07-27 15:51:03.475 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" DROP CONSTRAINT "FK_Reviews_AspNetUsers_UserID";
+2024-07-27 15:51:03.476 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 1;
+2024-07-27 15:51:03.476 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 2;
+2024-07-27 15:51:03.477 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Developers"
+WHERE "ID" = 3;
+2024-07-27 15:51:03.480 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 1;
+2024-07-27 15:51:03.481 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 2;
+2024-07-27 15:51:05.067 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM gam."Publishers"
+WHERE "ID" = 3;
+2024-07-27 15:51:05.068 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" RENAME COLUMN "UserID" TO "AppUserID";
+2024-07-27 15:51:05.069 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Reviews_UserID" RENAME TO "IX_Reviews_AppUserID";
+2024-07-27 15:51:05.071 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:51:05.072 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:51:05.074 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:51:05.076 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:51:05.078 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD "AppUserID" integer NOT NULL DEFAULT 0;
+2024-07-27 15:51:05.079 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD "AppUserId" text NOT NULL DEFAULT '';
+2024-07-27 15:51:05.080 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:05.081 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:05.088 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Publishers_AppUserId" ON gam."Publishers" ("AppUserId");
+2024-07-27 15:51:05.092 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_News_AppUserId" ON gam."News" ("AppUserId");
+2024-07-27 15:51:05.097 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Developers_AppUserId" ON gam."Developers" ("AppUserId");
+2024-07-27 15:51:05.102 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:51:05.106 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."News" ADD CONSTRAINT "FK_News_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:51:05.110 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" ADD CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:51:05.113 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Reviews" ADD CONSTRAINT "FK_Reviews_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 15:51:05.114 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240726164842_AppUserID to developer and publisher models', '8.0.6');
+2024-07-27 15:51:05.115 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 15:51:05.154 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 15:51:06.781 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 15:51:06.782 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 15:51:06.782 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 15:51:06.783 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 15:51:06.784 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 15:51:06.785 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 15:51:06.785 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 15:51:06.789 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 15:51:06.789 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 15:51:06.790 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 15:51:06.793 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 15:51:06.804 +01:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 16:07:29.504 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:07:50.740 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:07:51.708 +01:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:07:51.738 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:07:51.813 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:07:51.868 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:07:51.869 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:07:51.885 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 16:07:52.018 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 16:07:52.019 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 16:07:52.021 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 16:07:52.023 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 16:07:52.023 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:07:52.024 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 16:07:52.025 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:07:52.026 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 16:07:52.034 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 16:07:52.038 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 16:07:52.039 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 16:07:52.042 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 16:07:52.064 +01:00 [ERR] Failed executing DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 16:08:58.360 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:08:59.308 +01:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:08:59.343 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:08:59.418 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:08:59.480 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:08:59.481 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:08:59.501 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 16:08:59.642 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 16:08:59.644 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 16:08:59.646 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 16:08:59.647 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 16:08:59.648 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:08:59.649 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 16:08:59.650 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:08:59.651 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 16:08:59.658 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 16:08:59.661 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 16:08:59.662 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 16:08:59.665 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 16:08:59.686 +01:00 [ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 16:10:03.859 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:10:31.864 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:10:57.664 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:10:58.674 +01:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:10:58.711 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:10:58.787 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:10:58.951 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:10:58.953 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:10:58.972 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 16:10:59.168 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 16:10:59.169 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 16:10:59.171 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 16:10:59.172 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 16:10:59.173 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:10:59.174 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 16:10:59.175 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:10:59.176 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 16:10:59.184 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 16:10:59.189 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 16:10:59.190 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 16:10:59.193 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 16:10:59.217 +01:00 [ERR] Failed executing DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 16:13:35.526 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:13:36.542 +01:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:13:36.585 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:13:36.672 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:13:36.738 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:13:36.739 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:13:36.757 +01:00 [INF] Applying migration '20240726165158_AppUserID to developer and publisher models #1'.
+2024-07-27 16:13:36.896 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP CONSTRAINT "FK_Developers_AspNetUsers_AppUserId";
+2024-07-27 16:13:36.898 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP CONSTRAINT "FK_Publishers_AspNetUsers_AppUserId";
+2024-07-27 16:13:36.900 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" DROP COLUMN "AppUserID";
+2024-07-27 16:13:36.901 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" DROP COLUMN "AppUserID";
+2024-07-27 16:13:36.902 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Publishers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:13:36.903 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Publishers_AppUserId" RENAME TO "IX_Publishers_AppUserID";
+2024-07-27 16:13:36.904 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" RENAME COLUMN "AppUserId" TO "AppUserID";
+2024-07-27 16:13:36.904 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX gam."IX_Developers_AppUserId" RENAME TO "IX_Developers_AppUserID";
+2024-07-27 16:13:36.912 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Y', 4.1);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', 'Developer Z', 4.3);
+2024-07-27 16:13:36.915 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[]
+WHERE "ID" = 1;
+2024-07-27 16:13:36.916 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE gam."Games" SET "PicturesPaths" = ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[]
+WHERE "ID" = 2;
+2024-07-27 16:13:36.919 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Y', 3.8);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (3, '0b8cff9b-07a7-40ba-973a-ccb0cd04927e', NULL, 'Publisher Z', 4.2);
+2024-07-27 16:13:36.945 +01:00 [ERR] Failed executing DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE gam."Developers" ADD CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE;
+2024-07-27 16:16:08.290 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:16:48.216 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:17:01.209 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:17:16.274 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:17:17.216 +01:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:17:17.249 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:17:17.320 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:17:17.375 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:17:17.376 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:17:17.392 +01:00 [INF] Applying migration '20240727151610_Initial Giga Migration'.
+2024-07-27 16:17:17.524 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "ConcurrencyStamp" = 'dd5b9dcb-05eb-4657-8241-0a4402bd14df', "SecurityStamp" = 'b7a5d6de-795c-4798-8884-140d0f3bc79c'
+WHERE "Id" = '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5';
+2024-07-27 16:17:17.525 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "ConcurrencyStamp" = '4ba9a8de-eba4-4253-8df0-19ea52091d32', "SecurityStamp" = '8ce29a09-011d-4197-b510-bc4ab8f3b284'
+WHERE "Id" = 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d';
+2024-07-27 16:17:17.542 +01:00 [ERR] Failed executing DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 'Developer Y', 4.1);
+2024-07-27 16:20:34.539 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:20:58.749 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:22:20.271 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:25:27.940 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:25:29.017 +01:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:25:29.045 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:25:29.116 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:25:29.186 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:25:29.188 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:25:29.203 +01:00 [INF] Applying migration '20240727152221_initial'.
+2024-07-27 16:25:29.421 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'gam') THEN
+        CREATE SCHEMA gam;
+    END IF;
+END $EF$;
+2024-07-27 16:25:29.422 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'sho') THEN
+        CREATE SCHEMA sho;
+    END IF;
+END $EF$;
+2024-07-27 16:25:29.423 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'grp') THEN
+        CREATE SCHEMA grp;
+    END IF;
+END $EF$;
+2024-07-27 16:25:29.423 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usr') THEN
+        CREATE SCHEMA usr;
+    END IF;
+END $EF$;
+2024-07-27 16:25:29.424 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usg') THEN
+        CREATE SCHEMA usg;
+    END IF;
+END $EF$;
+2024-07-27 16:25:29.433 +01:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2024-07-27 16:26:14.457 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:26:15.456 +01:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:26:15.636 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:26:15.913 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2024-07-27 16:26:15.980 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:26:15.992 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:26:16.016 +01:00 [INF] Applying migration '20240727152221_initial'.
+2024-07-27 16:26:16.252 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'gam') THEN
+        CREATE SCHEMA gam;
+    END IF;
+END $EF$;
+2024-07-27 16:26:16.253 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'sho') THEN
+        CREATE SCHEMA sho;
+    END IF;
+END $EF$;
+2024-07-27 16:26:16.255 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'grp') THEN
+        CREATE SCHEMA grp;
+    END IF;
+END $EF$;
+2024-07-27 16:26:16.256 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usr') THEN
+        CREATE SCHEMA usr;
+    END IF;
+END $EF$;
+2024-07-27 16:26:16.257 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usg') THEN
+        CREATE SCHEMA usg;
+    END IF;
+END $EF$;
+2024-07-27 16:26:16.266 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2024-07-27 16:26:16.280 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Games" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "BackgroundPath" text NOT NULL,
+    "TrailerPath" text NOT NULL,
+    "PicturesPaths" text[] NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "Size" text NOT NULL,
+    "Description" text NOT NULL,
+    "SysReq" text NOT NULL,
+    CONSTRAINT "PK_Games" PRIMARY KEY ("ID")
+);
+2024-07-27 16:26:16.291 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Genres" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Genres" PRIMARY KEY ("ID")
+);
+2024-07-27 16:26:16.301 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE grp."Groups" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Groups" PRIMARY KEY ("ID")
+);
+2024-07-27 16:26:16.311 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."ShoppingCarts" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "TotalPrice" numeric NOT NULL,
+    CONSTRAINT "PK_ShoppingCarts" PRIMARY KEY ("ID")
+);
+2024-07-27 16:26:16.322 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Tags" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Tags" PRIMARY KEY ("ID")
+);
+2024-07-27 16:26:16.335 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.346 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Achievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Achievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Achievements_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.692 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."DLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_DLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_DLCs_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.705 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Languages" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Languages" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Languages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:26:16.713 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameGenres" (
+    "GenreID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameGenres" PRIMARY KEY ("GenreID", "GameID"),
+    CONSTRAINT "FK_GameGenres_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameGenres_Genres_GenreID" FOREIGN KEY ("GenreID") REFERENCES gam."Genres" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.726 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "Fname" text NOT NULL,
+    "Lname" text NOT NULL,
+    "Birth" date NOT NULL,
+    "Location" text NOT NULL,
+    "Nickname" text,
+    "Summary" text,
+    "ProfilePicturePath" text,
+    "FavoriteGroupID" integer,
+    "UserName" character varying(256),
+    "NormalizedUserName" character varying(256),
+    "Email" character varying(256),
+    "NormalizedEmail" character varying(256),
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text,
+    "SecurityStamp" text,
+    "ConcurrencyStamp" text,
+    "PhoneNumber" text,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUsers_Groups_FavoriteGroupID" FOREIGN KEY ("FavoriteGroupID") REFERENCES grp."Groups" ("ID")
+);
+2024-07-27 16:26:16.739 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."CartItems" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Price" numeric NOT NULL,
+    "Quantity" integer NOT NULL,
+    "SubTotal" numeric NOT NULL,
+    "GameID" integer NOT NULL,
+    "ShoppingCartID" integer NOT NULL,
+    CONSTRAINT "PK_CartItems" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_CartItems_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_CartItems_ShoppingCarts_ShoppingCartID" FOREIGN KEY ("ShoppingCartID") REFERENCES sho."ShoppingCarts" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.745 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameTags" (
+    "TagID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameTags" PRIMARY KEY ("TagID", "GameID"),
+    CONSTRAINT "FK_GameTags_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameTags_Tags_TagID" FOREIGN KEY ("TagID") REFERENCES gam."Tags" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:16.753 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameLanguages" (
+    "LanguageID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameLanguages" PRIMARY KEY ("LanguageID", "GameID"),
+    CONSTRAINT "FK_GameLanguages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameLanguages_Languages_LanguageID" FOREIGN KEY ("LanguageID") REFERENCES gam."Languages" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.594 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.610 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.624 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.638 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.653 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Developers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    CONSTRAINT "PK_Developers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.666 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."News" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "Author" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastUpdatedAt" timestamp with time zone,
+    "GameID" integer NOT NULL,
+    "AppUserID" integer NOT NULL,
+    "AppUserId" text NOT NULL,
+    CONSTRAINT "PK_News" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_News_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_News_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:20.680 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Publishers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Publishers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Publishers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Publishers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:26:20.694 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Reviews" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Content" text,
+    "Likes" integer NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Reviews" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Reviews_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Reviews_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.553 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserGames" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "HoursPlayed" numeric,
+    "LastTimePlayed" date,
+    "AppUserId" text,
+    CONSTRAINT "PK_UserGames" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserGames_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id")
+);
+2024-07-27 16:26:23.566 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usg."UserGroups" (
+    "UserID" text NOT NULL,
+    "GroupID" integer NOT NULL,
+    CONSTRAINT "PK_UserGroups" PRIMARY KEY ("UserID", "GroupID"),
+    CONSTRAINT "FK_UserGroups_AspNetUsers_UserID" FOREIGN KEY ("UserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserGroups_Groups_GroupID" FOREIGN KEY ("GroupID") REFERENCES grp."Groups" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.579 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserNotification" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_UserNotification" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserNotification_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.587 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameDevelopers" (
+    "DeveloperID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameDevelopers" PRIMARY KEY ("DeveloperID", "GameID"),
+    CONSTRAINT "FK_GameDevelopers_Developers_DeveloperID" FOREIGN KEY ("DeveloperID") REFERENCES gam."Developers" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameDevelopers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.594 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GamePublishers" (
+    "PublisherID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GamePublishers" PRIMARY KEY ("PublisherID", "GameID"),
+    CONSTRAINT "FK_GamePublishers_Games_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GamePublishers_Publishers_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Publishers" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.605 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserAchievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "AchievementID" integer NOT NULL,
+    "IsAchieved" boolean NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserAchievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserAchievements_Achievements_AchievementID" FOREIGN KEY ("AchievementID") REFERENCES gam."Achievements" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAchievements_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.613 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserDLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "DLCID" integer NOT NULL,
+    "HasDLC" boolean NOT NULL,
+    "DatePurchased" timestamp with time zone NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserDLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserDLCs_DLCs_DLCID" FOREIGN KEY ("DLCID") REFERENCES gam."DLCs" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserDLCs_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:26:23.622 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('1', NULL, 'Admin', 'ADMIN');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('2', NULL, 'Publisher', 'PUBLISHER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('3', NULL, 'Developer', 'DEVELOPER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('4', NULL, 'User', 'USER');
+2024-07-27 16:26:26.377 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 0, DATE '1992-02-02', '66636d79-8f75-4044-a51c-40fc3fc20dfd', 'user2@example.com', FALSE, NULL, 'Jane', 'Doe', 'Los Angeles', FALSE, NULL, 'Janie', NULL, NULL, NULL, NULL, FALSE, '/images/user2.jpg', '0fff2174-a21d-4d48-9d86-e1f4fbed9804', 'Another gamer', FALSE, 'user2@example.com');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 0, DATE '1990-01-01', '85b9d828-f8d0-4cb0-a2ad-1f224926f9c8', 'user1@example.com', FALSE, NULL, 'John', 'Doe', 'New York', FALSE, NULL, 'Johnny', NULL, NULL, NULL, NULL, FALSE, '/images/user1.jpg', '81132f79-a892-41c9-b2a8-8bb02244ea05', 'A gamer', FALSE, 'user1@example.com');
+2024-07-27 16:26:26.380 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (1, '/path/to/background1.jpg', 'Sample description for Game 1.', ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[], 49.99, DATE '2023-01-15', '15.5m', 'Sample system requirements for Game 1.', 'Sample Game 1', '/path/to/trailer1.mp4');
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (2, '/path/to/background2.jpg', 'Sample description for Game 2.', ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[], 39.99, DATE '2023-03-20', '12.0m', 'Sample system requirements for Game 2.', 'Sample Game 2', '/path/to/trailer2.mp4');
+2024-07-27 16:26:26.383 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (3, 'Role-playing');
+2024-07-27 16:26:26.386 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (1, NULL, 'English');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (2, NULL, 'French');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (3, NULL, 'Spanish');
+2024-07-27 16:26:26.389 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (3, 'RPG');
+2024-07-27 16:26:26.392 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 'Developer Y', 4.1);
+2024-07-27 16:26:29.341 +01:00 [ERR] Failed executing DbCommand (167ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (3, 2);
+2024-07-27 16:29:14.024 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:30:07.063 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:30:08.085 +01:00 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:30:08.124 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:30:08.197 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:30:08.253 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:30:08.254 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:30:08.276 +01:00 [INF] Applying migration '20240727152221_initial'.
+2024-07-27 16:30:08.537 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'gam') THEN
+        CREATE SCHEMA gam;
+    END IF;
+END $EF$;
+2024-07-27 16:30:08.538 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'sho') THEN
+        CREATE SCHEMA sho;
+    END IF;
+END $EF$;
+2024-07-27 16:30:08.539 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'grp') THEN
+        CREATE SCHEMA grp;
+    END IF;
+END $EF$;
+2024-07-27 16:30:08.540 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usr') THEN
+        CREATE SCHEMA usr;
+    END IF;
+END $EF$;
+2024-07-27 16:30:08.541 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usg') THEN
+        CREATE SCHEMA usg;
+    END IF;
+END $EF$;
+2024-07-27 16:30:08.562 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2024-07-27 16:30:08.576 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Games" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "BackgroundPath" text NOT NULL,
+    "TrailerPath" text NOT NULL,
+    "PicturesPaths" text[] NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "Size" text NOT NULL,
+    "Description" text NOT NULL,
+    "SysReq" text NOT NULL,
+    CONSTRAINT "PK_Games" PRIMARY KEY ("ID")
+);
+2024-07-27 16:30:08.589 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Genres" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Genres" PRIMARY KEY ("ID")
+);
+2024-07-27 16:30:08.603 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE grp."Groups" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Groups" PRIMARY KEY ("ID")
+);
+2024-07-27 16:30:08.617 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."ShoppingCarts" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "TotalPrice" numeric NOT NULL,
+    CONSTRAINT "PK_ShoppingCarts" PRIMARY KEY ("ID")
+);
+2024-07-27 16:30:08.628 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Tags" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Tags" PRIMARY KEY ("ID")
+);
+2024-07-27 16:30:08.641 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:08.656 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Achievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Achievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Achievements_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:09.360 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."DLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_DLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_DLCs_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:09.375 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Languages" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Languages" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Languages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:30:09.383 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameGenres" (
+    "GenreID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameGenres" PRIMARY KEY ("GenreID", "GameID"),
+    CONSTRAINT "FK_GameGenres_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameGenres_Genres_GenreID" FOREIGN KEY ("GenreID") REFERENCES gam."Genres" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:09.397 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "Fname" text NOT NULL,
+    "Lname" text NOT NULL,
+    "Birth" date NOT NULL,
+    "Location" text NOT NULL,
+    "Nickname" text,
+    "Summary" text,
+    "ProfilePicturePath" text,
+    "FavoriteGroupID" integer,
+    "UserName" character varying(256),
+    "NormalizedUserName" character varying(256),
+    "Email" character varying(256),
+    "NormalizedEmail" character varying(256),
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text,
+    "SecurityStamp" text,
+    "ConcurrencyStamp" text,
+    "PhoneNumber" text,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUsers_Groups_FavoriteGroupID" FOREIGN KEY ("FavoriteGroupID") REFERENCES grp."Groups" ("ID")
+);
+2024-07-27 16:30:09.412 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."CartItems" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Price" numeric NOT NULL,
+    "Quantity" integer NOT NULL,
+    "SubTotal" numeric NOT NULL,
+    "GameID" integer NOT NULL,
+    "ShoppingCartID" integer NOT NULL,
+    CONSTRAINT "PK_CartItems" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_CartItems_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_CartItems_ShoppingCarts_ShoppingCartID" FOREIGN KEY ("ShoppingCartID") REFERENCES sho."ShoppingCarts" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:09.421 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameTags" (
+    "TagID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameTags" PRIMARY KEY ("TagID", "GameID"),
+    CONSTRAINT "FK_GameTags_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameTags_Tags_TagID" FOREIGN KEY ("TagID") REFERENCES gam."Tags" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:09.430 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameLanguages" (
+    "LanguageID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameLanguages" PRIMARY KEY ("LanguageID", "GameID"),
+    CONSTRAINT "FK_GameLanguages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameLanguages_Languages_LanguageID" FOREIGN KEY ("LanguageID") REFERENCES gam."Languages" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.465 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.478 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.490 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.504 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.519 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Developers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    CONSTRAINT "PK_Developers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.535 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."News" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "Author" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastUpdatedAt" timestamp with time zone,
+    "GameID" integer NOT NULL,
+    "AppUserID" integer NOT NULL,
+    "AppUserId" text NOT NULL,
+    CONSTRAINT "PK_News" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_News_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_News_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:13.550 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Publishers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Publishers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Publishers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Publishers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:30:13.564 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Reviews" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Content" text,
+    "Likes" integer NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Reviews" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Reviews_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Reviews_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.113 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserGames" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "HoursPlayed" numeric,
+    "LastTimePlayed" date,
+    "AppUserId" text,
+    CONSTRAINT "PK_UserGames" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserGames_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id")
+);
+2024-07-27 16:30:17.125 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usg."UserGroups" (
+    "UserID" text NOT NULL,
+    "GroupID" integer NOT NULL,
+    CONSTRAINT "PK_UserGroups" PRIMARY KEY ("UserID", "GroupID"),
+    CONSTRAINT "FK_UserGroups_AspNetUsers_UserID" FOREIGN KEY ("UserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserGroups_Groups_GroupID" FOREIGN KEY ("GroupID") REFERENCES grp."Groups" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.142 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserNotification" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_UserNotification" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserNotification_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.149 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameDevelopers" (
+    "DeveloperID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameDevelopers" PRIMARY KEY ("DeveloperID", "GameID"),
+    CONSTRAINT "FK_GameDevelopers_Developers_DeveloperID" FOREIGN KEY ("DeveloperID") REFERENCES gam."Developers" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameDevelopers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.155 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GamePublishers" (
+    "PublisherID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GamePublishers" PRIMARY KEY ("PublisherID", "GameID"),
+    CONSTRAINT "FK_GamePublishers_Games_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GamePublishers_Publishers_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Publishers" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.164 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserAchievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "AchievementID" integer NOT NULL,
+    "IsAchieved" boolean NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserAchievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserAchievements_Achievements_AchievementID" FOREIGN KEY ("AchievementID") REFERENCES gam."Achievements" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAchievements_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.172 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserDLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "DLCID" integer NOT NULL,
+    "HasDLC" boolean NOT NULL,
+    "DatePurchased" timestamp with time zone NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserDLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserDLCs_DLCs_DLCID" FOREIGN KEY ("DLCID") REFERENCES gam."DLCs" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserDLCs_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:30:17.180 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('1', NULL, 'Admin', 'ADMIN');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('2', NULL, 'Publisher', 'PUBLISHER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('3', NULL, 'Developer', 'DEVELOPER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('4', NULL, 'User', 'USER');
+2024-07-27 16:30:19.943 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 0, DATE '1992-02-02', '66636d79-8f75-4044-a51c-40fc3fc20dfd', 'user2@example.com', FALSE, NULL, 'Jane', 'Doe', 'Los Angeles', FALSE, NULL, 'Janie', NULL, NULL, NULL, NULL, FALSE, '/images/user2.jpg', '0fff2174-a21d-4d48-9d86-e1f4fbed9804', 'Another gamer', FALSE, 'user2@example.com');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 0, DATE '1990-01-01', '85b9d828-f8d0-4cb0-a2ad-1f224926f9c8', 'user1@example.com', FALSE, NULL, 'John', 'Doe', 'New York', FALSE, NULL, 'Johnny', NULL, NULL, NULL, NULL, FALSE, '/images/user1.jpg', '81132f79-a892-41c9-b2a8-8bb02244ea05', 'A gamer', FALSE, 'user1@example.com');
+2024-07-27 16:30:19.947 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (1, '/path/to/background1.jpg', 'Sample description for Game 1.', ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[], 49.99, DATE '2023-01-15', '15.5m', 'Sample system requirements for Game 1.', 'Sample Game 1', '/path/to/trailer1.mp4');
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (2, '/path/to/background2.jpg', 'Sample description for Game 2.', ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[], 39.99, DATE '2023-03-20', '12.0m', 'Sample system requirements for Game 2.', 'Sample Game 2', '/path/to/trailer2.mp4');
+2024-07-27 16:30:19.950 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (3, 'Role-playing');
+2024-07-27 16:30:19.953 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (1, NULL, 'English');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (2, NULL, 'French');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (3, NULL, 'Spanish');
+2024-07-27 16:30:19.956 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (3, 'RPG');
+2024-07-27 16:30:19.959 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 'Developer Y', 4.1);
+2024-07-27 16:30:22.173 +01:00 [ERR] Failed executing DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (3, 2);
+2024-07-27 16:33:11.720 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:33:23.427 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:33:24.423 +01:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:33:24.455 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:33:24.522 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:33:24.583 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-07-27 16:33:24.585 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-07-27 16:33:24.602 +01:00 [INF] Applying migration '20240727153313_initial giga migration'.
+2024-07-27 16:33:24.828 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'gam') THEN
+        CREATE SCHEMA gam;
+    END IF;
+END $EF$;
+2024-07-27 16:33:24.829 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'sho') THEN
+        CREATE SCHEMA sho;
+    END IF;
+END $EF$;
+2024-07-27 16:33:24.830 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'grp') THEN
+        CREATE SCHEMA grp;
+    END IF;
+END $EF$;
+2024-07-27 16:33:24.831 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usr') THEN
+        CREATE SCHEMA usr;
+    END IF;
+END $EF$;
+2024-07-27 16:33:24.832 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'usg') THEN
+        CREATE SCHEMA usg;
+    END IF;
+END $EF$;
+2024-07-27 16:33:24.852 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2024-07-27 16:33:24.865 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Games" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "BackgroundPath" text NOT NULL,
+    "TrailerPath" text NOT NULL,
+    "PicturesPaths" text[] NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "Size" text NOT NULL,
+    "Description" text NOT NULL,
+    "SysReq" text NOT NULL,
+    CONSTRAINT "PK_Games" PRIMARY KEY ("ID")
+);
+2024-07-27 16:33:24.875 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Genres" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Genres" PRIMARY KEY ("ID")
+);
+2024-07-27 16:33:24.885 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE grp."Groups" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Groups" PRIMARY KEY ("ID")
+);
+2024-07-27 16:33:24.895 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."ShoppingCarts" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "TotalPrice" numeric NOT NULL,
+    CONSTRAINT "PK_ShoppingCarts" PRIMARY KEY ("ID")
+);
+2024-07-27 16:33:24.906 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Tags" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Tags" PRIMARY KEY ("ID")
+);
+2024-07-27 16:33:24.918 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:24.928 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Achievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "PicturePath" text NOT NULL,
+    "Description" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Achievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Achievements_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:25.844 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."DLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    "Price" numeric(18,2) NOT NULL,
+    "ReleaseDate" date NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_DLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_DLCs_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:25.858 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Languages" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Languages" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Languages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:33:25.865 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameGenres" (
+    "GenreID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameGenres" PRIMARY KEY ("GenreID", "GameID"),
+    CONSTRAINT "FK_GameGenres_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameGenres_Genres_GenreID" FOREIGN KEY ("GenreID") REFERENCES gam."Genres" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:25.880 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "Fname" text NOT NULL,
+    "Lname" text NOT NULL,
+    "Birth" date NOT NULL,
+    "Location" text NOT NULL,
+    "Nickname" text,
+    "Summary" text,
+    "ProfilePicturePath" text,
+    "FavoriteGroupID" integer,
+    "UserName" character varying(256),
+    "NormalizedUserName" character varying(256),
+    "Email" character varying(256),
+    "NormalizedEmail" character varying(256),
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text,
+    "SecurityStamp" text,
+    "ConcurrencyStamp" text,
+    "PhoneNumber" text,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUsers_Groups_FavoriteGroupID" FOREIGN KEY ("FavoriteGroupID") REFERENCES grp."Groups" ("ID")
+);
+2024-07-27 16:33:25.893 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sho."CartItems" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Price" numeric NOT NULL,
+    "Quantity" integer NOT NULL,
+    "SubTotal" numeric NOT NULL,
+    "GameID" integer NOT NULL,
+    "ShoppingCartID" integer NOT NULL,
+    CONSTRAINT "PK_CartItems" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_CartItems_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_CartItems_ShoppingCarts_ShoppingCartID" FOREIGN KEY ("ShoppingCartID") REFERENCES sho."ShoppingCarts" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:25.902 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameTags" (
+    "TagID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameTags" PRIMARY KEY ("TagID", "GameID"),
+    CONSTRAINT "FK_GameTags_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameTags_Tags_TagID" FOREIGN KEY ("TagID") REFERENCES gam."Tags" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:25.911 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameLanguages" (
+    "LanguageID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameLanguages" PRIMARY KEY ("LanguageID", "GameID"),
+    CONSTRAINT "FK_GameLanguages_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameLanguages_Languages_LanguageID" FOREIGN KEY ("LanguageID") REFERENCES gam."Languages" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.026 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.038 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.053 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.068 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.082 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Developers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    CONSTRAINT "PK_Developers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Developers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.106 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."News" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "Author" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastUpdatedAt" timestamp with time zone,
+    "GameID" integer NOT NULL,
+    "AppUserID" integer NOT NULL,
+    "AppUserId" text NOT NULL,
+    CONSTRAINT "PK_News" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_News_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_News_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:29.123 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Publishers" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Rating" numeric(3,2) NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer,
+    CONSTRAINT "PK_Publishers" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Publishers_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Publishers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID")
+);
+2024-07-27 16:33:29.142 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."Reviews" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Content" text,
+    "Likes" integer NOT NULL,
+    "AppUserID" text NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_Reviews" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_Reviews_AspNetUsers_AppUserID" FOREIGN KEY ("AppUserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Reviews_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.733 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserGames" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "HoursPlayed" numeric,
+    "LastTimePlayed" date,
+    "AppUserId" text,
+    CONSTRAINT "PK_UserGames" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserGames_AspNetUsers_AppUserId" FOREIGN KEY ("AppUserId") REFERENCES "AspNetUsers" ("Id")
+);
+2024-07-27 16:33:31.746 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usg."UserGroups" (
+    "UserID" text NOT NULL,
+    "GroupID" integer NOT NULL,
+    CONSTRAINT "PK_UserGroups" PRIMARY KEY ("UserID", "GroupID"),
+    CONSTRAINT "FK_UserGroups_AspNetUsers_UserID" FOREIGN KEY ("UserID") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserGroups_Groups_GroupID" FOREIGN KEY ("GroupID") REFERENCES grp."Groups" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.761 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserNotification" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_UserNotification" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserNotification_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.768 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GameDevelopers" (
+    "DeveloperID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GameDevelopers" PRIMARY KEY ("DeveloperID", "GameID"),
+    CONSTRAINT "FK_GameDevelopers_Developers_DeveloperID" FOREIGN KEY ("DeveloperID") REFERENCES gam."Developers" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GameDevelopers_Games_GameID" FOREIGN KEY ("GameID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.774 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE gam."GamePublishers" (
+    "PublisherID" integer NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_GamePublishers" PRIMARY KEY ("PublisherID", "GameID"),
+    CONSTRAINT "FK_GamePublishers_Games_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Games" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_GamePublishers_Publishers_PublisherID" FOREIGN KEY ("PublisherID") REFERENCES gam."Publishers" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.781 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserAchievements" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "AchievementID" integer NOT NULL,
+    "IsAchieved" boolean NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserAchievements" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserAchievements_Achievements_AchievementID" FOREIGN KEY ("AchievementID") REFERENCES gam."Achievements" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAchievements_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.789 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE usr."UserDLCs" (
+    "ID" integer GENERATED BY DEFAULT AS IDENTITY,
+    "DLCID" integer NOT NULL,
+    "HasDLC" boolean NOT NULL,
+    "DatePurchased" timestamp with time zone NOT NULL,
+    "GameID" integer NOT NULL,
+    CONSTRAINT "PK_UserDLCs" PRIMARY KEY ("ID"),
+    CONSTRAINT "FK_UserDLCs_DLCs_DLCID" FOREIGN KEY ("DLCID") REFERENCES gam."DLCs" ("ID") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserDLCs_UserGames_GameID" FOREIGN KEY ("GameID") REFERENCES usr."UserGames" ("ID") ON DELETE CASCADE
+);
+2024-07-27 16:33:31.797 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('1', NULL, 'Admin', 'ADMIN');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('2', NULL, 'Publisher', 'PUBLISHER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('3', NULL, 'Developer', 'DEVELOPER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES ('4', NULL, 'User', 'USER');
+2024-07-27 16:33:34.612 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 0, DATE '1992-02-02', 'e46e5979-afb3-4084-a60b-0dd6db031d72', 'user2@example.com', FALSE, NULL, 'Jane', 'Doe', 'Los Angeles', FALSE, NULL, 'Janie', NULL, NULL, NULL, NULL, FALSE, '/images/user2.jpg', 'c6b0b50f-b938-453b-82a6-da1cad3531b5', 'Another gamer', FALSE, 'user2@example.com');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES ('a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 0, DATE '1990-01-01', '1d094706-4821-4c3d-96d4-66ed19292009', 'user1@example.com', FALSE, NULL, 'John', 'Doe', 'New York', FALSE, NULL, 'Johnny', NULL, NULL, NULL, NULL, FALSE, '/images/user1.jpg', '378213c4-b50a-434a-b551-8edbe1eabaf8', 'A gamer', FALSE, 'user1@example.com');
+2024-07-27 16:33:34.615 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (1, '/path/to/background1.jpg', 'Sample description for Game 1.', ARRAY['/path/to/picture1.jpg','/path/to/picture2.jpg']::text[], 49.99, DATE '2023-01-15', '15.5m', 'Sample system requirements for Game 1.', 'Sample Game 1', '/path/to/trailer1.mp4');
+INSERT INTO gam."Games" ("ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath")
+VALUES (2, '/path/to/background2.jpg', 'Sample description for Game 2.', ARRAY['/path/to/picture3.jpg','/path/to/picture4.jpg']::text[], 39.99, DATE '2023-03-20', '12.0m', 'Sample system requirements for Game 2.', 'Sample Game 2', '/path/to/trailer2.mp4');
+2024-07-27 16:33:34.618 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Genres" ("ID", "Name")
+VALUES (3, 'Role-playing');
+2024-07-27 16:33:34.621 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (1, NULL, 'English');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (2, NULL, 'French');
+INSERT INTO gam."Languages" ("ID", "GameID", "Name")
+VALUES (3, NULL, 'Spanish');
+2024-07-27 16:33:34.624 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (1, 'Action');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (2, 'Adventure');
+INSERT INTO gam."Tags" ("ID", "Name")
+VALUES (3, 'RPG');
+2024-07-27 16:33:34.626 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (1, '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', 'Developer X', 4.2);
+INSERT INTO gam."Developers" ("ID", "AppUserID", "Name", "Rating")
+VALUES (2, 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', 'Developer Y', 4.1);
+2024-07-27 16:33:37.067 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (1, 1);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (1, 2);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (2, 2);
+INSERT INTO gam."GameGenres" ("GameID", "GenreID")
+VALUES (2, 3);
+2024-07-27 16:33:37.071 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (1, 1);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (1, 2);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (2, 2);
+INSERT INTO gam."GameLanguages" ("GameID", "LanguageID")
+VALUES (2, 3);
+2024-07-27 16:33:37.074 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (1, 1);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (1, 2);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (2, 2);
+INSERT INTO gam."GameTags" ("GameID", "TagID")
+VALUES (2, 3);
+2024-07-27 16:33:37.078 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (1, '4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5', NULL, 'Publisher X', 2.1);
+INSERT INTO gam."Publishers" ("ID", "AppUserID", "GameID", "Name", "Rating")
+VALUES (2, 'a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d', NULL, 'Publisher Y', 3.8);
+2024-07-27 16:33:37.081 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (1, 1);
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (2, 1);
+INSERT INTO gam."GameDevelopers" ("DeveloperID", "GameID")
+VALUES (2, 2);
+2024-07-27 16:33:37.086 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Achievements_GameID" ON gam."Achievements" ("GameID");
+2024-07-27 16:33:37.090 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId");
+2024-07-27 16:33:37.100 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName");
+2024-07-27 16:33:37.106 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId");
+2024-07-27 16:33:37.112 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId");
+2024-07-27 16:33:37.117 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId");
+2024-07-27 16:33:37.127 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail");
+2024-07-27 16:33:37.132 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUsers_FavoriteGroupID" ON "AspNetUsers" ("FavoriteGroupID");
+2024-07-27 16:33:37.137 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_AspNetUsers_UserName" ON "AspNetUsers" ("UserName");
+2024-07-27 16:33:37.144 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName");
+2024-07-27 16:33:37.148 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CartItems_GameID" ON sho."CartItems" ("GameID");
+2024-07-27 16:33:37.152 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CartItems_ShoppingCartID" ON sho."CartItems" ("ShoppingCartID");
+2024-07-27 16:33:38.418 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Developers_AppUserID" ON gam."Developers" ("AppUserID");
+2024-07-27 16:33:38.423 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_DLCs_GameID" ON gam."DLCs" ("GameID");
+2024-07-27 16:33:38.428 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameDevelopers_GameID" ON gam."GameDevelopers" ("GameID");
+2024-07-27 16:33:38.433 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameGenres_GameID" ON gam."GameGenres" ("GameID");
+2024-07-27 16:33:38.439 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameLanguages_GameID" ON gam."GameLanguages" ("GameID");
+2024-07-27 16:33:38.444 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_GameTags_GameID" ON gam."GameTags" ("GameID");
+2024-07-27 16:33:38.450 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Languages_GameID" ON gam."Languages" ("GameID");
+2024-07-27 16:33:38.454 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_News_AppUserId" ON gam."News" ("AppUserId");
+2024-07-27 16:33:38.458 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_News_GameID" ON gam."News" ("GameID");
+2024-07-27 16:33:38.463 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Publishers_AppUserID" ON gam."Publishers" ("AppUserID");
+2024-07-27 16:33:38.468 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Publishers_GameID" ON gam."Publishers" ("GameID");
+2024-07-27 16:33:38.472 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Reviews_AppUserID" ON gam."Reviews" ("AppUserID");
+2024-07-27 16:33:38.476 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Reviews_GameID" ON gam."Reviews" ("GameID");
+2024-07-27 16:33:38.479 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAchievements_AchievementID" ON usr."UserAchievements" ("AchievementID");
+2024-07-27 16:33:38.484 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAchievements_GameID" ON usr."UserAchievements" ("GameID");
+2024-07-27 16:33:38.488 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserDLCs_DLCID" ON usr."UserDLCs" ("DLCID");
+2024-07-27 16:33:38.492 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserDLCs_GameID" ON usr."UserDLCs" ("GameID");
+2024-07-27 16:33:38.496 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserGames_AppUserId" ON usr."UserGames" ("AppUserId");
+2024-07-27 16:33:38.500 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserGroups_GroupID" ON usg."UserGroups" ("GroupID");
+2024-07-27 16:33:38.504 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserNotification_UserId" ON usr."UserNotification" ("UserId");
+2024-07-27 16:33:38.515 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('gam."Games"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Games") + 1,
+        nextval(pg_get_serial_sequence('gam."Games"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Genres"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Genres") + 1,
+        nextval(pg_get_serial_sequence('gam."Genres"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Languages"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Languages") + 1,
+        nextval(pg_get_serial_sequence('gam."Languages"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Tags"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Tags") + 1,
+        nextval(pg_get_serial_sequence('gam."Tags"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Developers"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Developers") + 1,
+        nextval(pg_get_serial_sequence('gam."Developers"', 'ID'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('gam."Publishers"', 'ID'),
+    GREATEST(
+        (SELECT MAX("ID") FROM gam."Publishers") + 1,
+        nextval(pg_get_serial_sequence('gam."Publishers"', 'ID'))),
+    false);
+2024-07-27 16:33:40.500 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240727153313_initial giga migration', '8.0.6');

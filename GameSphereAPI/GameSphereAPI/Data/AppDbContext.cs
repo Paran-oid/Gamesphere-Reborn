@@ -31,8 +31,6 @@ namespace GameSphereAPI.Data
 
         // Site-Models -> Game Related
         public DbSet<Achievement> Achievements { get; set; }
-
-        public DbSet<Developer> Developers { get; set; }
         public DbSet<DLC> DLCs { get; set; }
 
         public DbSet<Game> Games { get; set; }
@@ -40,6 +38,8 @@ namespace GameSphereAPI.Data
         public DbSet<Language> Languages { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
+        public DbSet<Developer> Developers { get; set; }
+
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Tag> Tags { get; set; }
 

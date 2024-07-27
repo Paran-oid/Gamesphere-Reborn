@@ -11,6 +11,7 @@ namespace GameSphereAPI.Data
     {
         public static void SeedData(ModelBuilder modelBuilder)
         {
+            SeedUsers(modelBuilder);
             SeedRoles(modelBuilder);
             SeedGenres(modelBuilder);
             SeedLanguages(modelBuilder);
@@ -19,6 +20,37 @@ namespace GameSphereAPI.Data
             SeedTags(modelBuilder);
             SeedGames(modelBuilder);
             SeedRelationships(modelBuilder);
+        }
+
+        private static void SeedUsers(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AppUser>()
+                 .HasData(new AppUser
+                 {
+                     Id = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
+                     UserName = "user1@example.com",
+                     Email = "user1@example.com",
+                     Fname = "John",
+                     Lname = "Doe",
+                     Birth = new DateOnly(1990, 1, 1),
+                     Location = "New York",
+                     Nickname = "Johnny",
+                     Summary = "A gamer",
+                     ProfilePicturePath = "/images/user1.jpg"
+                 },
+                new AppUser
+                {
+                    Id = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
+                    UserName = "user2@example.com",
+                    Email = "user2@example.com",
+                    Fname = "Jane",
+                    Lname = "Doe",
+                    Birth = new DateOnly(1992, 2, 2),
+                    Location = "Los Angeles",
+                    Nickname = "Janie",
+                    Summary = "Another gamer",
+                    ProfilePicturePath = "/images/user2.jpg"
+                });
         }
 
         private static void SeedRoles(ModelBuilder modelBuilder)
@@ -52,18 +84,16 @@ namespace GameSphereAPI.Data
         private static void SeedPublishers(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Publisher>().HasData(
-                new Publisher { ID = 1, Name = "Publisher X", Rating = 2.1M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
-                new Publisher { ID = 2, Name = "Publisher Y", Rating = 3.8M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
-                new Publisher { ID = 3, Name = "Publisher Z", Rating = 4.2M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" }
+                new Publisher { ID = 1, Name = "Publisher X", Rating = 2.1M, AppUserID = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5" },
+                new Publisher { ID = 2, Name = "Publisher Y", Rating = 3.8M, AppUserID = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d" }
             );
         }
 
         private static void SeedDevelopers(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Developer>().HasData(
-                new Developer { ID = 1, Name = "Developer X", Rating = 4.2M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
-                new Developer { ID = 2, Name = "Developer Y", Rating = 4.1M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" },
-                new Developer { ID = 3, Name = "Developer Z", Rating = 4.3M, AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e" }
+                new Developer { ID = 1, Name = "Developer X", Rating = 4.2M, AppUserID = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5" },
+                new Developer { ID = 2, Name = "Developer Y", Rating = 4.1M, AppUserID = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d" }
               );
         }
 
@@ -105,7 +135,7 @@ namespace GameSphereAPI.Data
                     Size = "12.0m",
                     Description = "Sample description for Game 2."
                 }
-                // Add more games as needed
+            // Add more games as needed
             );
         }
 
@@ -142,9 +172,9 @@ namespace GameSphereAPI.Data
                 .HasData(
                     new GameDeveloper { GameID = 1, DeveloperID = 1 },
                     new GameDeveloper { GameID = 1, DeveloperID = 2 },
-                    new GameDeveloper { GameID = 2, DeveloperID = 2 },
-                    new GameDeveloper { GameID = 2, DeveloperID = 3 }
+                    new GameDeveloper { GameID = 2, DeveloperID = 2 }
                 );
+
         }
     }
 }

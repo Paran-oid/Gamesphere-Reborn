@@ -10,6 +10,16 @@ namespace GameSphereAPI.Data
     {
         public static void program(ModelBuilder builder)
         {
+            //appuser, developer and publisher config
+            builder.Entity<Developer>()
+                .HasIndex(u => u.AppUserID)
+                .IsUnique();
+
+            builder.Entity<Publisher>()
+                .HasIndex(u => u.AppUserID)
+                .IsUnique();
+
+
             //game config
 
             builder.Entity<GameGenre>()

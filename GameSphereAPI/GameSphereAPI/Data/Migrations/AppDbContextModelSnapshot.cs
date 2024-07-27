@@ -106,7 +106,8 @@ namespace GameSphereAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AppUserID");
+                    b.HasIndex("AppUserID")
+                        .IsUnique();
 
                     b.ToTable("Developers", "gam");
 
@@ -114,23 +115,16 @@ namespace GameSphereAPI.Migrations
                         new
                         {
                             ID = 1,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
+                            AppUserID = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
                             Name = "Developer X",
                             Rating = 4.2m
                         },
                         new
                         {
                             ID = 2,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
+                            AppUserID = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
                             Name = "Developer Y",
                             Rating = 4.1m
-                        },
-                        new
-                        {
-                            ID = 3,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Developer Z",
-                            Rating = 4.3m
                         });
                 });
 
@@ -351,7 +345,8 @@ namespace GameSphereAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AppUserID");
+                    b.HasIndex("AppUserID")
+                        .IsUnique();
 
                     b.HasIndex("GameID");
 
@@ -361,23 +356,16 @@ namespace GameSphereAPI.Migrations
                         new
                         {
                             ID = 1,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
+                            AppUserID = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
                             Name = "Publisher X",
                             Rating = 2.1m
                         },
                         new
                         {
                             ID = 2,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
+                            AppUserID = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
                             Name = "Publisher Y",
                             Rating = 3.8m
-                        },
-                        new
-                        {
-                            ID = 3,
-                            AppUserID = "0b8cff9b-07a7-40ba-973a-ccb0cd04927e",
-                            Name = "Publisher Z",
-                            Rating = 4.2m
                         });
                 });
 
@@ -409,11 +397,6 @@ namespace GameSphereAPI.Migrations
                         new
                         {
                             DeveloperID = 2,
-                            GameID = 2
-                        },
-                        new
-                        {
-                            DeveloperID = 3,
                             GameID = 2
                         });
                 });
@@ -800,6 +783,48 @@ namespace GameSphereAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
+                            AccessFailedCount = 0,
+                            Birth = new DateOnly(1990, 1, 1),
+                            ConcurrencyStamp = "1d094706-4821-4c3d-96d4-66ed19292009",
+                            Email = "user1@example.com",
+                            EmailConfirmed = false,
+                            Fname = "John",
+                            Lname = "Doe",
+                            Location = "New York",
+                            LockoutEnabled = false,
+                            Nickname = "Johnny",
+                            PhoneNumberConfirmed = false,
+                            ProfilePicturePath = "/images/user1.jpg",
+                            SecurityStamp = "378213c4-b50a-434a-b551-8edbe1eabaf8",
+                            Summary = "A gamer",
+                            TwoFactorEnabled = false,
+                            UserName = "user1@example.com"
+                        },
+                        new
+                        {
+                            Id = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
+                            AccessFailedCount = 0,
+                            Birth = new DateOnly(1992, 2, 2),
+                            ConcurrencyStamp = "e46e5979-afb3-4084-a60b-0dd6db031d72",
+                            Email = "user2@example.com",
+                            EmailConfirmed = false,
+                            Fname = "Jane",
+                            Lname = "Doe",
+                            Location = "Los Angeles",
+                            LockoutEnabled = false,
+                            Nickname = "Janie",
+                            PhoneNumberConfirmed = false,
+                            ProfilePicturePath = "/images/user2.jpg",
+                            SecurityStamp = "c6b0b50f-b938-453b-82a6-da1cad3531b5",
+                            Summary = "Another gamer",
+                            TwoFactorEnabled = false,
+                            UserName = "user2@example.com"
+                        });
                 });
 
             modelBuilder.Entity("GameSphereAPI.Models.User.Group_Related.Group", b =>

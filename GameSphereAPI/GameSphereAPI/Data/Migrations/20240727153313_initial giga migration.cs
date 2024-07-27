@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace GameSphereAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class initialmigration : Migration
+    public partial class initialgigamigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,7 +35,6 @@ namespace GameSphereAPI.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    Discriminator = table.Column<string>(type: "character varying(13)", maxLength: 13, nullable: false),
                     Name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "text", nullable: true)
@@ -40,21 +42,6 @@ namespace GameSphereAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Developers",
-                schema: "gam",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Rating = table.Column<decimal>(type: "numeric(4,2)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Developers", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -67,10 +54,10 @@ namespace GameSphereAPI.Migrations
                     Title = table.Column<string>(type: "text", nullable: false),
                     BackgroundPath = table.Column<string>(type: "text", nullable: false),
                     TrailerPath = table.Column<string>(type: "text", nullable: false),
-                    PicturesPaths = table.Column<string[]>(type: "text[]", nullable: false),
+                    PicturesPaths = table.Column<List<string>>(type: "text[]", nullable: false),
                     ReleaseDate = table.Column<DateOnly>(type: "date", nullable: false),
                     Price = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
-                    Size = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
+                    Size = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
                     SysReq = table.Column<string>(type: "text", nullable: false)
                 },
@@ -107,21 +94,6 @@ namespace GameSphereAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Groups", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Publishers",
-                schema: "gam",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Rating = table.Column<decimal>(type: "numeric(1,2)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Publishers", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -223,33 +195,6 @@ namespace GameSphereAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GameDevelopers",
-                schema: "gam",
-                columns: table => new
-                {
-                    DeveloperID = table.Column<int>(type: "integer", nullable: false),
-                    GameID = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GameDevelopers", x => new { x.DeveloperID, x.GameID });
-                    table.ForeignKey(
-                        name: "FK_GameDevelopers_Developers_DeveloperID",
-                        column: x => x.DeveloperID,
-                        principalSchema: "gam",
-                        principalTable: "Developers",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_GameDevelopers_Games_GameID",
-                        column: x => x.GameID,
-                        principalSchema: "gam",
-                        principalTable: "Games",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Languages",
                 schema: "gam",
                 columns: table => new
@@ -268,32 +213,6 @@ namespace GameSphereAPI.Migrations
                         principalSchema: "gam",
                         principalTable: "Games",
                         principalColumn: "ID");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "News",
-                schema: "gam",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Title = table.Column<string>(type: "text", nullable: false),
-                    Content = table.Column<string>(type: "text", nullable: false),
-                    Author = table.Column<string>(type: "text", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    LastUpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    GameID = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_News", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_News_Games_GameID",
-                        column: x => x.GameID,
-                        principalSchema: "gam",
-                        principalTable: "Games",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -328,11 +247,11 @@ namespace GameSphereAPI.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    Discriminator = table.Column<string>(type: "character varying(13)", maxLength: 13, nullable: false),
-                    Fname = table.Column<string>(type: "text", nullable: true),
-                    Lname = table.Column<string>(type: "text", nullable: true),
+                    Fname = table.Column<string>(type: "text", nullable: false),
+                    Lname = table.Column<string>(type: "text", nullable: false),
+                    Birth = table.Column<DateOnly>(type: "date", nullable: false),
+                    Location = table.Column<string>(type: "text", nullable: false),
                     Nickname = table.Column<string>(type: "text", nullable: true),
-                    Location = table.Column<string>(type: "text", nullable: true),
                     Summary = table.Column<string>(type: "text", nullable: true),
                     ProfilePicturePath = table.Column<string>(type: "text", nullable: true),
                     FavoriteGroupID = table.Column<int>(type: "integer", nullable: true),
@@ -360,33 +279,6 @@ namespace GameSphereAPI.Migrations
                         principalSchema: "grp",
                         principalTable: "Groups",
                         principalColumn: "ID");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "GamePublisher",
-                schema: "gam",
-                columns: table => new
-                {
-                    PublishersID = table.Column<int>(type: "integer", nullable: false),
-                    gamesID = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GamePublisher", x => new { x.PublishersID, x.gamesID });
-                    table.ForeignKey(
-                        name: "FK_GamePublisher_Games_gamesID",
-                        column: x => x.gamesID,
-                        principalSchema: "gam",
-                        principalTable: "Games",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_GamePublisher_Publishers_PublishersID",
-                        column: x => x.PublishersID,
-                        principalSchema: "gam",
-                        principalTable: "Publishers",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -561,25 +453,111 @@ namespace GameSphereAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Developers",
+                schema: "gam",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Rating = table.Column<decimal>(type: "numeric(3,2)", nullable: false),
+                    AppUserID = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Developers", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Developers_AspNetUsers_AppUserID",
+                        column: x => x.AppUserID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "News",
+                schema: "gam",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Title = table.Column<string>(type: "text", nullable: false),
+                    Content = table.Column<string>(type: "text", nullable: false),
+                    Author = table.Column<string>(type: "text", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    LastUpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    GameID = table.Column<int>(type: "integer", nullable: false),
+                    AppUserID = table.Column<int>(type: "integer", nullable: false),
+                    AppUserId = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_News", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_News_AspNetUsers_AppUserId",
+                        column: x => x.AppUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_News_Games_GameID",
+                        column: x => x.GameID,
+                        principalSchema: "gam",
+                        principalTable: "Games",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Publishers",
+                schema: "gam",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Rating = table.Column<decimal>(type: "numeric(3,2)", nullable: false),
+                    AppUserID = table.Column<string>(type: "text", nullable: false),
+                    GameID = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Publishers", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Publishers_AspNetUsers_AppUserID",
+                        column: x => x.AppUserID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Publishers_Games_GameID",
+                        column: x => x.GameID,
+                        principalSchema: "gam",
+                        principalTable: "Games",
+                        principalColumn: "ID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reviews",
                 schema: "gam",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    ID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Content = table.Column<string>(type: "text", nullable: true),
                     Likes = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true),
+                    AppUserID = table.Column<string>(type: "text", nullable: false),
                     GameID = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reviews", x => x.Id);
+                    table.PrimaryKey("PK_Reviews", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Reviews_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Reviews_AspNetUsers_AppUserID",
+                        column: x => x.AppUserID,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Reviews_Games_GameID",
                         column: x => x.GameID,
@@ -645,7 +623,7 @@ namespace GameSphereAPI.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Content = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true)
+                    UserId = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -654,7 +632,62 @@ namespace GameSphereAPI.Migrations
                         name: "FK_UserNotification_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GameDevelopers",
+                schema: "gam",
+                columns: table => new
+                {
+                    DeveloperID = table.Column<int>(type: "integer", nullable: false),
+                    GameID = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GameDevelopers", x => new { x.DeveloperID, x.GameID });
+                    table.ForeignKey(
+                        name: "FK_GameDevelopers_Developers_DeveloperID",
+                        column: x => x.DeveloperID,
+                        principalSchema: "gam",
+                        principalTable: "Developers",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_GameDevelopers_Games_GameID",
+                        column: x => x.GameID,
+                        principalSchema: "gam",
+                        principalTable: "Games",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GamePublishers",
+                schema: "gam",
+                columns: table => new
+                {
+                    PublisherID = table.Column<int>(type: "integer", nullable: false),
+                    GameID = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GamePublishers", x => new { x.PublisherID, x.GameID });
+                    table.ForeignKey(
+                        name: "FK_GamePublishers_Games_PublisherID",
+                        column: x => x.PublisherID,
+                        principalSchema: "gam",
+                        principalTable: "Games",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_GamePublishers_Publishers_PublisherID",
+                        column: x => x.PublisherID,
+                        principalSchema: "gam",
+                        principalTable: "Publishers",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -718,6 +751,136 @@ namespace GameSphereAPI.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "1", null, "Admin", "ADMIN" },
+                    { "2", null, "Publisher", "PUBLISHER" },
+                    { "3", null, "Developer", "DEVELOPER" },
+                    { "4", null, "User", "USER" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName" },
+                values: new object[,]
+                {
+                    { "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5", 0, new DateOnly(1992, 2, 2), "e46e5979-afb3-4084-a60b-0dd6db031d72", "user2@example.com", false, null, "Jane", "Doe", "Los Angeles", false, null, "Janie", null, null, null, null, false, "/images/user2.jpg", "c6b0b50f-b938-453b-82a6-da1cad3531b5", "Another gamer", false, "user2@example.com" },
+                    { "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d", 0, new DateOnly(1990, 1, 1), "1d094706-4821-4c3d-96d4-66ed19292009", "user1@example.com", false, null, "John", "Doe", "New York", false, null, "Johnny", null, null, null, null, false, "/images/user1.jpg", "378213c4-b50a-434a-b551-8edbe1eabaf8", "A gamer", false, "user1@example.com" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Games",
+                columns: new[] { "ID", "BackgroundPath", "Description", "PicturesPaths", "Price", "ReleaseDate", "Size", "SysReq", "Title", "TrailerPath" },
+                values: new object[,]
+                {
+                    { 1, "/path/to/background1.jpg", "Sample description for Game 1.", new List<string> { "/path/to/picture1.jpg", "/path/to/picture2.jpg" }, 49.99m, new DateOnly(2023, 1, 15), "15.5m", "Sample system requirements for Game 1.", "Sample Game 1", "/path/to/trailer1.mp4" },
+                    { 2, "/path/to/background2.jpg", "Sample description for Game 2.", new List<string> { "/path/to/picture3.jpg", "/path/to/picture4.jpg" }, 39.99m, new DateOnly(2023, 3, 20), "12.0m", "Sample system requirements for Game 2.", "Sample Game 2", "/path/to/trailer2.mp4" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Genres",
+                columns: new[] { "ID", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Action" },
+                    { 2, "Adventure" },
+                    { 3, "Role-playing" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Languages",
+                columns: new[] { "ID", "GameID", "Name" },
+                values: new object[,]
+                {
+                    { 1, null, "English" },
+                    { 2, null, "French" },
+                    { 3, null, "Spanish" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Tags",
+                columns: new[] { "ID", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Action" },
+                    { 2, "Adventure" },
+                    { 3, "RPG" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Developers",
+                columns: new[] { "ID", "AppUserID", "Name", "Rating" },
+                values: new object[,]
+                {
+                    { 1, "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5", "Developer X", 4.2m },
+                    { 2, "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d", "Developer Y", 4.1m }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "GameGenres",
+                columns: new[] { "GameID", "GenreID" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 2, 2 },
+                    { 2, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "GameLanguages",
+                columns: new[] { "GameID", "LanguageID" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 2, 2 },
+                    { 2, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "GameTags",
+                columns: new[] { "GameID", "TagID" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 2, 2 },
+                    { 2, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "Publishers",
+                columns: new[] { "ID", "AppUserID", "GameID", "Name", "Rating" },
+                values: new object[,]
+                {
+                    { 1, "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5", null, "Publisher X", 2.1m },
+                    { 2, "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d", null, "Publisher Y", 3.8m }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "gam",
+                table: "GameDevelopers",
+                columns: new[] { "DeveloperID", "GameID" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 },
+                    { 2, 2 }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Achievements_GameID",
                 schema: "gam",
@@ -761,6 +924,12 @@ namespace GameSphereAPI.Migrations
                 column: "FavoriteGroupID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_UserName",
+                table: "AspNetUsers",
+                column: "UserName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
@@ -777,6 +946,13 @@ namespace GameSphereAPI.Migrations
                 schema: "sho",
                 table: "CartItems",
                 column: "ShoppingCartID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Developers_AppUserID",
+                schema: "gam",
+                table: "Developers",
+                column: "AppUserID",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_DLCs_GameID",
@@ -803,12 +979,6 @@ namespace GameSphereAPI.Migrations
                 column: "GameID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GamePublisher_gamesID",
-                schema: "gam",
-                table: "GamePublisher",
-                column: "gamesID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_GameTags_GameID",
                 schema: "gam",
                 table: "GameTags",
@@ -821,22 +991,41 @@ namespace GameSphereAPI.Migrations
                 column: "GameID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_News_AppUserId",
+                schema: "gam",
+                table: "News",
+                column: "AppUserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_News_GameID",
                 schema: "gam",
                 table: "News",
                 column: "GameID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Publishers_AppUserID",
+                schema: "gam",
+                table: "Publishers",
+                column: "AppUserID",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Publishers_GameID",
+                schema: "gam",
+                table: "Publishers",
+                column: "GameID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_AppUserID",
+                schema: "gam",
+                table: "Reviews",
+                column: "AppUserID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Reviews_GameID",
                 schema: "gam",
                 table: "Reviews",
                 column: "GameID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Reviews_UserId",
-                schema: "gam",
-                table: "Reviews",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserAchievements_AchievementID",
@@ -916,7 +1105,7 @@ namespace GameSphereAPI.Migrations
                 schema: "gam");
 
             migrationBuilder.DropTable(
-                name: "GamePublisher",
+                name: "GamePublishers",
                 schema: "gam");
 
             migrationBuilder.DropTable(
