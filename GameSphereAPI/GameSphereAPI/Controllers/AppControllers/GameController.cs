@@ -1,4 +1,5 @@
-﻿using GameSphereAPI.Data.Services.GameServices;
+﻿using AutoFixture.Xunit2;
+using GameSphereAPI.Data.Services.GameServices;
 using GameSphereAPI.Models.Site_Models.Game_Related;
 using GameSphereAPI.Models.Viewmodels.Game___Related;
 using Microsoft.AspNetCore.Authorization;
@@ -23,7 +24,7 @@ namespace GameSphereAPI.Controllers.GameController
         {
             var games = await _gameService.GetGames();
 
-            return games;
+            return Ok(games);
         }
 
         [HttpGet("{ID}")]
