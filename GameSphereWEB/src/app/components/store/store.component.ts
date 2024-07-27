@@ -21,6 +21,7 @@ export class StoreComponent implements OnInit {
     this.gameService.GetAll().subscribe({
       next: (response) => {
         this.games = response;
+        console.log(this.games);
       },
     });
   }

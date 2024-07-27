@@ -6313,3 +6313,135 @@ SELECT setval(
 2024-07-27 16:33:40.500 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20240727153313_initial giga migration', '8.0.6');
+2024-07-27 16:34:16.923 +01:00 [INF] User profile is available. Using 'C:\Users\azizh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-27 16:34:17.525 +01:00 [INF] Now listening on: https://localhost:7108
+2024-07-27 16:34:17.527 +01:00 [INF] Now listening on: http://localhost:5161
+2024-07-27 16:34:17.534 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-27 16:34:17.538 +01:00 [INF] Hosting environment: Development
+2024-07-27 16:34:17.541 +01:00 [INF] Content root path: C:\Users\azizh\OneDrive\Documents\Portfolio\Work\Programming\Projects\Solo Development\Projects\Gamesphere-Reborn\GameSphereAPI\GameSphereAPI
+2024-07-27 16:35:54.250 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/Register - null null
+2024-07-27 16:35:54.363 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:35:54.372 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/Register - 204 null null 128.4396ms
+2024-07-27 16:35:54.383 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/Register - application/json 149
+2024-07-27 16:35:54.404 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:35:54.440 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI)'
+2024-07-27 16:35:54.484 +01:00 [INF] Route matched with {action = "Register", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Microsoft.VisualStudio.Services.DelegatedAuthorization.AccessToken]] Register(GameSphereAPI.Models.Viewmodels.Registration.AppRegisterRequest) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-07-27 16:35:57.064 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-07-27 16:35:58.607 +01:00 [INF] Executed DbCommand (111ms) [Parameters=[@__email_0='azizhmid10000@gmail.com'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Email" = @__email_0
+LIMIT 1
+2024-07-27 16:35:58.676 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__username_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0
+LIMIT 1
+2024-07-27 16:35:58.917 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='PARANOID'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-07-27 16:35:59.327 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='8c536114-73e1-43ca-b536-b3aa5e3f0ace' (Nullable = false), @p1='0', @p2='08/02/2006' (DbType = Date), @p3='d1e17abf-ec9f-4ecb-8b72-4c0ff0c935d0', @p4='azizhmid10000@gmail.com', @p5='False', @p6=NULL (DbType = Int32), @p7='Aziz' (Nullable = false), @p8='Hmidi' (Nullable = false), @p9='TN' (Nullable = false), @p10='True', @p11=NULL (DbType = DateTime), @p12=NULL, @p13='AZIZHMID10000@GMAIL.COM', @p14='PARANOID', @p15='AQAAAAIAAYagAAAAEChc9banAXKK2p704fIaU+Aoy0p6kcARIfwUt6Cl0o28WfUdKlgDoEd4WeXrM/RCLQ==', @p16=NULL, @p17='False', @p18=NULL, @p19='7ZJMAUQJILWKQ7WL2MCBA6QU7JOTDHKL', @p20=NULL, @p21='False', @p22='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Birth", "ConcurrencyStamp", "Email", "EmailConfirmed", "FavoriteGroupID", "Fname", "Lname", "Location", "LockoutEnabled", "LockoutEnd", "Nickname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicturePath", "SecurityStamp", "Summary", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2024-07-27 16:35:59.369 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='USER'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2024-07-27 16:35:59.457 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='8c536114-73e1-43ca-b536-b3aa5e3f0ace', @__p_1='4'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2024-07-27 16:35:59.474 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='USER'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2024-07-27 16:35:59.507 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='PARANOID'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-07-27 16:35:59.570 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='4' (Nullable = false), @p1='8c536114-73e1-43ca-b536-b3aa5e3f0ace' (Nullable = false), @p24='8c536114-73e1-43ca-b536-b3aa5e3f0ace' (Nullable = false), @p2='0', @p3='08/02/2006' (DbType = Date), @p4='be934ca8-843f-4475-bb0e-ccd08f1c2aff', @p25='d1e17abf-ec9f-4ecb-8b72-4c0ff0c935d0', @p5='azizhmid10000@gmail.com', @p6='False', @p7=NULL (DbType = Int32), @p8='Aziz' (Nullable = false), @p9='Hmidi' (Nullable = false), @p10='TN' (Nullable = false), @p11='True', @p12=NULL (DbType = DateTime), @p13=NULL, @p14='AZIZHMID10000@GMAIL.COM', @p15='PARANOID', @p16='AQAAAAIAAYagAAAAEChc9banAXKK2p704fIaU+Aoy0p6kcARIfwUt6Cl0o28WfUdKlgDoEd4WeXrM/RCLQ==', @p17=NULL, @p18='False', @p19=NULL, @p20='7ZJMAUQJILWKQ7WL2MCBA6QU7JOTDHKL', @p21=NULL, @p22='False', @p23='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p0, @p1);
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p2, "Birth" = @p3, "ConcurrencyStamp" = @p4, "Email" = @p5, "EmailConfirmed" = @p6, "FavoriteGroupID" = @p7, "Fname" = @p8, "Lname" = @p9, "Location" = @p10, "LockoutEnabled" = @p11, "LockoutEnd" = @p12, "Nickname" = @p13, "NormalizedEmail" = @p14, "NormalizedUserName" = @p15, "PasswordHash" = @p16, "PhoneNumber" = @p17, "PhoneNumberConfirmed" = @p18, "ProfilePicturePath" = @p19, "SecurityStamp" = @p20, "Summary" = @p21, "TwoFactorEnabled" = @p22, "UserName" = @p23
+WHERE "Id" = @p24 AND "ConcurrencyStamp" = @p25;
+2024-07-27 16:35:59.783 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Viewmodels.Registration.AccessTokenResponse'.
+2024-07-27 16:35:59.810 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI) in 5316.6153ms
+2024-07-27 16:35:59.815 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.Register (GameSphereAPI)'
+2024-07-27 16:35:59.822 +01:00 [INF] HTTP POST /UserRegistration/Register responded 200 in 5384.0276 ms
+2024-07-27 16:35:59.843 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/Register - 200 null application/json; charset=utf-8 5460.5526ms
+2024-07-27 16:35:59.917 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/GetAll - null null
+2024-07-27 16:35:59.982 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:35:59.989 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:36:00.004 +01:00 [INF] Route matched with {action = "GetAll", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]]] GetAll() on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-27 16:36:00.178 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+2024-07-27 16:36:00.398 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameSphereAPI.Models.Site_Models.Game_Related.Game, GameSphereAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-27 16:36:00.433 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI) in 417.2927ms
+2024-07-27 16:36:00.437 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:36:00.440 +01:00 [INF] HTTP GET /Game/GetAll responded 200 in 451.5071 ms
+2024-07-27 16:36:00.446 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/GetAll - 499 null application/json; charset=utf-8 529.1668ms
+2024-07-27 16:36:02.864 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-07-27 16:36:02.866 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/GetAll - null null
+2024-07-27 16:36:02.871 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:36:02.880 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 17.2028ms
+2024-07-27 16:36:02.884 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:36:02.896 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:36:02.899 +01:00 [INF] Route matched with {action = "GetAll", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]]] GetAll() on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-27 16:36:02.928 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-07-27 16:36:02.935 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:36:02.937 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+2024-07-27 16:36:02.938 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-07-27 16:36:02.946 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameSphereAPI.Models.Site_Models.Game_Related.Game, GameSphereAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-27 16:36:02.952 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI) in 45.7384ms
+2024-07-27 16:36:02.957 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:36:02.960 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-07-27 16:36:02.960 +01:00 [INF] HTTP GET /Game/GetAll responded 200 in 64.1746 ms
+2024-07-27 16:36:02.986 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/GetAll - 200 null application/json; charset=utf-8 119.9989ms
+2024-07-27 16:36:03.124 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-07-27 16:36:03.177 +01:00 [INF] Executing ObjectResult, writing value of type 'GameSphereAPI.Models.User.AppUser'.
+2024-07-27 16:36:03.237 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 261.7056ms
+2024-07-27 16:36:03.241 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-07-27 16:36:03.244 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 200 in 305.1787 ms
+2024-07-27 16:36:03.249 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 200 null application/json; charset=utf-8 321.6209ms
+2024-07-27 16:37:51.879 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-07-27 16:37:51.896 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:37:51.898 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 19.3021ms
+2024-07-27 16:37:51.991 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-07-27 16:37:52.006 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:37:52.009 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-07-27 16:37:52.012 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-07-27 16:37:52.103 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-07-27 16:37:52.113 +01:00 [INF] Executing ObjectResult, writing value of type 'GameSphereAPI.Models.User.AppUser'.
+2024-07-27 16:37:52.117 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 100.3966ms
+2024-07-27 16:37:52.121 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-07-27 16:37:52.125 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 200 in 116.4228 ms
+2024-07-27 16:37:52.130 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 200 null application/json; charset=utf-8 139.2036ms
+2024-07-27 16:38:05.733 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/GetAll - null null
+2024-07-27 16:38:05.739 +01:00 [INF] CORS policy execution successful.
+2024-07-27 16:38:05.741 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:38:05.743 +01:00 [INF] Route matched with {action = "GetAll", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]]] GetAll() on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-07-27 16:38:05.753 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+2024-07-27 16:38:05.762 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameSphereAPI.Models.Site_Models.Game_Related.Game, GameSphereAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-27 16:38:05.766 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI) in 17.7125ms
+2024-07-27 16:38:05.769 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.GetAll (GameSphereAPI)'
+2024-07-27 16:38:05.772 +01:00 [INF] HTTP GET /Game/GetAll responded 200 in 31.0333 ms
+2024-07-27 16:38:05.777 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/GetAll - 200 null application/json; charset=utf-8 44.6994ms
