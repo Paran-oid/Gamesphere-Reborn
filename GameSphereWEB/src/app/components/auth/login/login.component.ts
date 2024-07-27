@@ -21,6 +21,8 @@ import { LoginUser } from '../../../models/auth/user.model';
 export class LoginComponent {
   form: FormGroup = new FormGroup({});
   hasSubmitted: boolean = false;
+  httpError: boolean = false;
+
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
@@ -62,7 +64,10 @@ export class LoginComponent {
             window.location.reload();
           });
         },
-        error: (error) => {
+        error: (error: any) => {
+          if ((error.error = 'Invalid Credentials')) {
+            this.httpError = true;
+          }
           console.log(error);
         },
       });

@@ -1,1 +1,9 @@
-<div class="container"></div>
+<div class="container">
+  <div class="wrapper">
+    <div class="grid">
+      <div class="game" *ngFor="let game of games">
+        {{ game.Title }}
+      </div>
+    </div>
+  </div>
+</div>

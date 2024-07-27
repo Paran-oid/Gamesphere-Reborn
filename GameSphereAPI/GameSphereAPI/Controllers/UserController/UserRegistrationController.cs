@@ -150,7 +150,7 @@ namespace GameSphereAPI.Controllers.UserController
             var isPersistent = useCookies == true && useSessionCookies != true;
 
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == login.UsernameOrEmail || u.Email == login.UsernameOrEmail);
-            var result = await _signInManager.PasswordSignInAsync(user.UserName, login.Password, isPersistent, lockoutOnFailure: true);
+            var result = await _signInManager.PasswordSignInAsync(login.UsernameOrEmail, login.Password, isPersistent, lockoutOnFailure: true);
 
             if (result.Succeeded)
             {

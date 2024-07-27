@@ -11,7 +11,8 @@
             formControlName="usernameOrEmail"
             class="error-input"
             [ngClass]="{
-              'error-input': usernameOrEmail?.invalid && hasSubmitted
+              'error-input':
+                (usernameOrEmail?.invalid && hasSubmitted) || httpError
             }"
           />
         </div>
@@ -21,7 +22,9 @@
             name="password"
             type="password"
             formControlName="password"
-            [ngClass]="{ 'error-input': password?.invalid && hasSubmitted }"
+            [ngClass]="{
+              'error-input': (password?.invalid && hasSubmitted) || httpError
+            }"
             ngDefaultControl
           />
         </div>
@@ -39,7 +42,7 @@
           <button type="submit" class="submit-btn">Sign in</button>
           <p class="error-text">
             {{
-              form.invalid && hasSubmitted
+              (form.invalid && hasSubmitted) || httpError
                 ? "Verify your email or your password"
                 : ""
             }}
