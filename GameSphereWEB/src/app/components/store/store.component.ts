@@ -47,6 +47,5 @@ export class StoreComponent implements OnInit {
       this.filteredGames = [...this.games];
     }
     this.submitted = true;
-    console.log(this.filteredGames);
   }
 }

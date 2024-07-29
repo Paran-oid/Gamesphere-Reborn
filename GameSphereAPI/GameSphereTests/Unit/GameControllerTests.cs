@@ -8,13 +8,8 @@ using GameSphereAPI.Controllers.GameController;
 using GameSphereAPI.Data.Services.GameServices;
 using GameSphereAPI.Models.Site_Models.Game_Related;
 using GameSphereAPI.Models.Viewmodels.Game___Related;
-using GameSphereTests.Utilities;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GameSphereTests.Utilities;
 
 namespace GameSphereTests.Unit
 {
@@ -25,17 +20,9 @@ namespace GameSphereTests.Unit
         private readonly GameController _gameController;
         private readonly IMapper _mapper;
 
-
         public GameControllerTests()
         {
-
-            _fixture = new Fixture()
-                .Customize(new AutoFakeItEasyCustomization())
-                //Date customization cuz dateonly doesnt work
-                .Customize(new DateOnlyCustomization())
-                //game customization to avoid circular error
-                .Customize(new GameCustomization());
-
+            _fixture = CustomizationConfig.CreateCustomizations();
 
             _gameService = _fixture.Freeze<IGameService>();
             _mapper = _fixture.Freeze<IMapper>();
@@ -63,7 +50,6 @@ namespace GameSphereTests.Unit
 
             var returnedGames = okResult.Value as List<Game>;
             returnedGames.Should().HaveCount(5);
-
 
             var returnGames = Assert.IsAssignableFrom<IEnumerable<Game>>(returnedGames);
             Assert.Equal(5, returnGames.Count());
@@ -111,15 +97,159 @@ namespace GameSphereTests.Unit
             var okResult = result.Result as OkObjectResult;
             okResult.Should().NotBeNull();
 
-
             var returnedGame = okResult.Value as Game;
             returnedGame.Should().NotBeNull();
             returnedGame.Should().Be(game);
             returnedGame.Should().BeAssignableTo<Game>();
             returnedGame.Should().NotBe(fakeGameDTO);
+        }
 
+        [Fact]
+        public async void GameController_AddPublisherToGame()
+        {
+            //Arrange
+            var game = _fixture.Create<Game>();
+            var publisher = _fixture.Create<Publisher>();
+            var expectedOutput = "Relationship added successfully";
+
+            A.CallTo(() => _gameService.AddPublisherToGame(game.ID, publisher.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            //Act
+
+            var result = await _gameController.AddPublisherToGame(game.ID, publisher.ID);
+
+            //Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as string;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<string>();
+            output.Should().Be(expectedOutput);
+            output.Should().StartWith("R");
+        }
+
+        [Fact]
+        public async void GameController_AddLanguageToGame()
+        {
+            // Arrange
+            var game = _fixture.Create<Game>();
+            var language = _fixture.Create<Language>();
+            var expectedOutput = "Relationship added successfully";
+
+            A.CallTo(() => _gameService.AddLanguageToGame(game.ID, language.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            // Act
+            var result = await _gameController.AddLanguageToGame(game.ID, language.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as string;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<string>();
+            output.Should().Be(expectedOutput);
+            output.Should().StartWith("R");
+        }
+
+        [Fact]
+        public async void GameController_AddDeveloperToGame()
+        {
+            // Arrange
+            var game = _fixture.Create<Game>();
+            var developer = _fixture.Create<Developer>(); // Ensure you have a Developer class
+            var expectedOutput = "Relationship added successfully";
+
+            A.CallTo(() => _gameService.AddDeveloperToGame(game.ID, developer.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            // Act
+            var result = await _gameController.AddDeveloperToGame(game.ID, developer.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as string;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<string>();
+            output.Should().Be(expectedOutput);
+            output.Should().StartWith("R");
+        }
+
+        [Fact]
+        public async void GameController_AddGenreToGame()
+        {
+            // Arrange
+            var game = _fixture.Create<Game>();
+            var genre = _fixture.Create<Genre>(); // Ensure you have a Genre class
+            var expectedOutput = "Relationship added successfully";
+
+            A.CallTo(() => _gameService.AddGenreToGame(game.ID, genre.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            // Act
+            var result = await _gameController.AddGenreToGame(game.ID, genre.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as string;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<string>();
+            output.Should().Be(expectedOutput);
+            output.Should().StartWith("R");
+        }
+
+        [Fact]
+        public async void GameController_AddTagToGame()
+        {
+            // Arrange
+            var game = _fixture.Create<Game>();
+            var tag = _fixture.Create<Tag>(); // Ensure you have a Tag class
+            var expectedOutput = "Relationship added successfully";
+
+            A.CallTo(() => _gameService.AddTagToGame(game.ID, tag.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            // Act
+            var result = await _gameController.AddTagToGame(game.ID, tag.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as string;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<string>();
+            output.Should().Be(expectedOutput);
+            output.Should().StartWith("R");
+        }
+
+        [Fact]
+        public async void GameController_Put()
+        {
+            // Arrange
+            Game oldGame = _fixture.Create<Game>();
+            UpdateGameDTO updatedGameDTO = _fixture.Create<UpdateGameDTO>();
+            Game newGame = _mapper.Map<Game>(updatedGameDTO);
+
+            A.CallTo(() => _gameService.Put(oldGame.ID, updatedGameDTO)).Returns(Task.FromResult(((Game)newGame)));
+
+            //Act
+
+            var result = await _gameController.Put(oldGame.ID, updatedGameDTO);
+
+            //Assert
+
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+
+            var output = okResult.Value as Game;
+            output.Should().NotBeNull();
+            output.Should().BeAssignableTo<Game>();
+            output.Should().Be(newGame);
+            output.Should().NotBe(oldGame);
+            output.Should().NotBeOfType<Publisher>();
         }
     }
-
 }
-
