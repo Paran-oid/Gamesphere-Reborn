@@ -1,0 +1,11 @@
+<nav>
+  <ul class="items">
+    <li [routerLink]="['/']">Your Store</li>
+    <li (click)="OnSearch('trending')">Trending</li>
+    <li (click)="OnSearch('free')">Free to play</li>
+  </ul>
+  <form (submit)="OnSearch()">
+    <input type="text" [(ngModel)]="query" name="query" placeholder="search" />
+    <button type="submit"><mat-icon>search</mat-icon></button>
+  </form>
+</nav>

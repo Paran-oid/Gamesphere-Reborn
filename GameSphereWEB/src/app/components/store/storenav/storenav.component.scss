@@ -1,0 +1,74 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/fonts";
+@import "../../../../sass/variables";
+
+nav {
+  @include flex(space-between, center);
+  user-select: none;
+
+  margin: 0px 20% 20px 20%;
+  height: 40px;
+
+  padding: 0px 20px 0px 0px;
+
+  background: linear-gradient(to right, $blue, $saturated-blue);
+
+  .items {
+    height: 100%;
+    width: 500px;
+
+    @include flex(center, center);
+
+    li {
+      @include flex(center, center);
+
+      list-style-type: none;
+
+      height: 100%;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light-blue;
+      }
+    }
+  }
+
+  form {
+    position: relative;
+
+    @include flex(center, center);
+
+    input {
+      background-color: $steel-blue;
+      border: none;
+      outline: none;
+      padding: 5px;
+      border-radius: 2px;
+
+      &::placeholder {
+        color: $stormy-blue;
+      }
+
+      &:focus {
+        &::placeholder {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 0px;
+
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      mat-icon {
+        font-size: 24px;
+      }
+    }
+  }
+  //   make that placeholder work
+}
