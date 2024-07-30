@@ -10,7 +10,7 @@ import { GameComponent } from './components/store/game/game.component';
 
 export const routes: Routes = [
   // main routes
-  { path: '', component: StoreComponent },
+  { path: '', component: StoreComponent, pathMatch: 'full' },
   { path: 'store', redirectTo: '' },
   { path: 'library', component: LibraryComponent },
   { path: 'community', component: CommunityComponent },

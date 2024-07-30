@@ -66,7 +66,6 @@ export class LoginComponent {
         .pipe(
           finalize(() => {
             this.isloading = false;
-            console.log(this.isloading);
           })
         )
         .subscribe({

@@ -91,7 +91,6 @@ export class RegisterComponent implements OnInit {
 
   FormBefore() {
     this.step--;
-    console.log(this.step);
   }
 
   FormNext(event: Event) {
@@ -147,7 +146,6 @@ export class RegisterComponent implements OnInit {
         },
         error: (error: any) => {
           const message = error.error;
-          console.log(message);
           if (message === 'Email already exists.') {
             this.email?.setErrors({ exists: true });
           } else if (message === 'Username already exists.') {

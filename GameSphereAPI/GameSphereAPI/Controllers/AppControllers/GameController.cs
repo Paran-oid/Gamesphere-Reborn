@@ -213,7 +213,7 @@ namespace GameSphereAPI.Controllers.GameController
                 return NotFound("Game not found");
             }
 
-            return result;
+            return Ok(result);
         }
 
 

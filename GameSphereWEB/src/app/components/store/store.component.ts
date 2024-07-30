@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { StorenavComponent } from './storenav/storenav.component';
 import { SpinnerComponent } from '../../shared/components/spinner/spinner.component';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { MainStoreComponent } from './main-store/main-store.component';
 
 @Component({
   selector: 'app-store',
@@ -16,11 +15,25 @@ import { MainStoreComponent } from './main-store/main-store.component';
     StorenavComponent,
     SpinnerComponent,
     RouterLink,
-    MainStoreComponent,
     RouterOutlet,
   ],
   templateUrl: './store.component.html',
   styleUrl: './store.component.scss',
   providers: [GameService],
 })
-export class StoreComponent {}
+export class StoreComponent {
+  games: Game[] = [];
+  filteredGames: Game[] = [];
+  submitted: boolean = false;
+
+  constructor(private gameService: GameService, private router: Router) {}
+
+  ngOnInit() {
+    this.gameService.GetAll().subscribe({
+      next: (response) => {
+        this.games = response;
+        this.filteredGames = response;
+      },
+    });
+  }
+}

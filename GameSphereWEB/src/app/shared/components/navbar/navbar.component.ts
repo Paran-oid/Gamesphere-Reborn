@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 import { AppUser } from '../../../models/auth/user.model';
@@ -44,7 +44,6 @@ export class NavbarComponent implements OnInit {
   CheckIsAdmin() {
     this.authService.IsAdmin(this.user?.id!).subscribe({
       next: (response) => {
-        console.log(response);
         this.isAdmin = response;
       },
     });
@@ -53,7 +52,6 @@ export class NavbarComponent implements OnInit {
   ToggleAdmin() {
     this.authService.ToggleAdmin(this.user?.id!).subscribe({
       next: (response) => {
-        console.log(response);
         this.CheckIsAdmin();
       },
       error: (error) => {

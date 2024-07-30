@@ -1,5 +1,35 @@
-<div class="giga-container">
-  <app-storenav (searchEvent)="Search($event)"></app-storenav>
-  <!-- implement this with events or something my head hurts I need a break -->
-  <router-outlet></router-outlet>
+<div class="comp-container">
+  <div class="nav-container">
+    <app-storenav></app-storenav>
+  </div>
+  <div class="container">
+    <div class="games-container">
+      <div class="games" *ngIf="filteredGames.length > 0">
+        <div
+          class="game"
+          *ngFor="let game of filteredGames"
+          [routerLink]="['/game', game.title.replaceAll(' ', '_')]"
+        >
+          <div class="game-img">
+            <img [src]="game.picturesPaths[0]" />
+          </div>
+          <div class="content-wrapper">
+            <div class="content">
+              <p>
+                {{ game.title }}
+              </p>
+              <p>{{ game.price == 0 ? "Free" : game.price + "$" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-spinner></app-spinner>
+      <div *ngIf="submitted === true && filteredGames.length === 0">
+        <div style="text-align: center">
+          <h1>No games found.</h1>
+          <p>Please try a different search term.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

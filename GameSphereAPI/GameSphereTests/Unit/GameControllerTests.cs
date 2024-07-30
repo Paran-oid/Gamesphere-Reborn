@@ -251,5 +251,165 @@ namespace GameSphereTests.Unit
             output.Should().NotBe(oldGame);
             output.Should().NotBeOfType<Publisher>();
         }
+        [Fact]
+        public async void GameController_Delete()
+        {
+            // Arrange
+
+            var game = _fixture.Create<Game>();
+            var expectedOutput = "Successfully deleted";
+
+            A.CallTo(() => _gameService.Delete(game.ID)).Returns(Task.FromResult((string)expectedOutput));
+
+            //Act
+
+            var result = await _gameController.Delete(game.ID);
+
+            //Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            string returnedValue = okResult.Value as string;
+            returnedValue.Should().BeEquivalentTo(expectedOutput);
+            returnedValue.Should().Be(expectedOutput);
+            returnedValue.Should().StartWith("S");
+            returnedValue.Should().NotBeNull();
+
+
+        }
+        [Fact]
+        public async void GameController_RemovePublisherFromGame()
+        {
+            // arrange
+
+            var publisher = _fixture.Create<Publisher>();
+            var game = _fixture.Create<Game>();
+
+            string expectedResult = "Relationship deleted";
+
+            A.CallTo(() => _gameService.RemovePublisherFromGame(game.ID, publisher.ID)).Returns(Task.FromResult((string)expectedResult));
+
+            // act
+            var result = await _gameController.RemovePublisherFromGame(game.ID, publisher.ID);
+
+            // assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            var returnedValue = okResult.Value as string;
+            returnedValue.Should().NotBeNull();
+            returnedValue.Should().Be(expectedResult);
+            Assert.Equal(returnedValue.Length, expectedResult.Length);
+            Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
+
+        }
+
+        [Fact]
+        public async void GameController_RemoveLanguageFromGame()
+        {
+            // Arrange
+            var language = _fixture.Create<Language>();
+            var game = _fixture.Create<Game>();
+
+            string expectedResult = "Relationship deleted";
+
+            A.CallTo(() => _gameService.RemoveLanguageFromGame(game.ID, language.ID)).Returns(Task.FromResult((string)expectedResult));
+
+            // Act
+            var result = await _gameController.RemoveLanguageFromGame(game.ID, language.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            var returnedValue = okResult.Value as string;
+            returnedValue.Should().NotBeNull();
+            returnedValue.Should().Be(expectedResult);
+            Assert.Equal(returnedValue.Length, expectedResult.Length);
+            Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
+        }
+
+        [Fact]
+        public async void GameController_RemoveDeveloperFromGame()
+        {
+            // Arrange
+            var developer = _fixture.Create<Developer>();
+            var game = _fixture.Create<Game>();
+
+            string expectedResult = "Relationship deleted";
+
+            A.CallTo(() => _gameService.RemoveDeveloperFromGame(game.ID, developer.ID)).Returns(Task.FromResult((string)expectedResult));
+
+            // Act
+            var result = await _gameController.RemoveDeveloperFromGame(game.ID, developer.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            var returnedValue = okResult.Value as string;
+            returnedValue.Should().NotBeNull();
+            returnedValue.Should().Be(expectedResult);
+            Assert.Equal(returnedValue.Length, expectedResult.Length);
+            Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
+        }
+
+        [Fact]
+        public async void GameController_RemoveGenreFromGame()
+        {
+            // Arrange
+            var genre = _fixture.Create<Genre>();
+            var game = _fixture.Create<Game>();
+
+            string expectedResult = "Relationship deleted";
+
+            A.CallTo(() => _gameService.RemoveGenreFromGame(game.ID, genre.ID)).Returns(Task.FromResult((string)expectedResult));
+
+            // Act
+            var result = await _gameController.RemoveGenreFromGame(game.ID, genre.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            var returnedValue = okResult.Value as string;
+            returnedValue.Should().NotBeNull();
+            returnedValue.Should().Be(expectedResult);
+            Assert.Equal(returnedValue.Length, expectedResult.Length);
+            Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
+        }
+
+
+
+        [Fact]
+        public async void GameController_RemoveTagFromGame()
+        {
+            // Arrange
+            var tag = _fixture.Create<Tag>();
+            var game = _fixture.Create<Game>();
+
+            string expectedResult = "Relationship deleted";
+
+            A.CallTo(() => _gameService.RemoveTagFromGame(game.ID, tag.ID)).Returns(Task.FromResult((string)expectedResult));
+
+            // Act
+            var result = await _gameController.RemoveTagFromGame(game.ID, tag.ID);
+
+            // Assert
+            var okResult = result.Result as OkObjectResult;
+            okResult.Should().NotBeNull();
+            okResult.Value.Should().BeAssignableTo<string>();
+
+            var returnedValue = okResult.Value as string;
+            returnedValue.Should().NotBeNull();
+            returnedValue.Should().Be(expectedResult);
+            Assert.Equal(returnedValue.Length, expectedResult.Length);
+            Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
+        }
     }
 }
