@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { AppUser, LoginUser, RegisterUser } from '../models/auth/user.model';
@@ -13,6 +13,7 @@ export class AuthService {
   baseUrl: string = environment.url;
   loggedIn: boolean = false;
   public user = new BehaviorSubject<AppUser | null>(null);
+  isAdmin: boolean = false;
 
   constructor(private http: HttpClient) {
     this.InitUser();
@@ -63,5 +64,26 @@ export class AuthService {
       model,
       {}
     );
+  }
+
+  public IsAdmin(ID: string) {
+    const headers = new HttpHeaders({
+      id: ID,
+    });
+
+    return this.http.get<boolean>(this.baseUrl + '/UserRegistration/IsAdmin', {
+      headers: headers,
+    });
+  }
+
+  public ToggleAdmin(ID: string) {
+    const headers = new HttpHeaders({
+      id: ID,
+    });
+
+    return this.http.get(this.baseUrl + '/UserRegistration/ToggleAdmin', {
+      responseType: 'text',
+      headers: headers,
+    });
   }
 }

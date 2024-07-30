@@ -150,7 +150,8 @@ namespace GameSphereAPI.Controllers.UserController
             var isPersistent = useCookies == true && useSessionCookies != true;
 
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == login.UsernameOrEmail || u.Email == login.UsernameOrEmail);
-            var result = await _signInManager.PasswordSignInAsync(login.UsernameOrEmail, login.Password, isPersistent, lockoutOnFailure: true);
+
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, login.Password, isPersistent, lockoutOnFailure: true);
 
             if (result.Succeeded)
             {
@@ -163,8 +164,11 @@ namespace GameSphereAPI.Controllers.UserController
                     ExpiresIn = (int)(DateTime.UtcNow.AddDays(1) - DateTime.UtcNow).TotalSeconds,
                 });
             }
+            else
+            {
+                return Conflict("Invalid credentials");
 
-            return Conflict("Invalid credentials");
+            }
         }
 
         [Authorize]
@@ -483,6 +487,47 @@ namespace GameSphereAPI.Controllers.UserController
             return Ok($"{phone} was added to your account");
         }
 
+        [HttpGet]
+        public async Task<ActionResult> IsAdmin([FromHeader] string ID)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == ID);
+            if (user == null)
+            {
+                return Conflict("User not found");
+            }
+
+            bool result = await _userManager.IsInRoleAsync(user, "Admin");
+
+            return Ok(result);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> ToggleAdmin([FromHeader]string ID)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == ID);
+
+            if(user == null)
+            {
+                return Conflict("No user found");
+            }
+
+            var isInRole = await _userManager.IsInRoleAsync(user, "Admin");
+            if (isInRole == true)
+            {
+                await _userManager.RemoveFromRoleAsync(user, "Admin");
+                return Ok("You are not an admin anymore");
+
+            }
+            else
+            {
+                await _userManager.AddToRoleAsync(user, "Admin");
+                return Ok("You are an admin now");
+            }
+        }
+
         //IMPLEMENT OAUTH2 STUFF
+
     }
+
+
 }

@@ -112,26 +112,52 @@ namespace GameSphereAPI.Data
                 new Game
                 {
                     ID = 1,
-                    Title = "Sample Game 1",
+                    Title = "Hearts of Iron 4",
                     BackgroundPath = "/path/to/background1.jpg",
                     TrailerPath = "/path/to/trailer1.mp4",
-                    PicturesPaths = new List<string> { "/path/to/picture1.jpg", "/path/to/picture2.jpg" },
+                    PicturesPaths = new List<string> { "/GameImages/hoi4.jpg", "/path/to/picture2.jpg" },
                     ReleaseDate = new DateOnly(2023, 1, 15),
                     SysReq = "Sample system requirements for Game 1.",
-                    Price = 49.99m,
+                    Price = 29.99m,
                     Size = "15.5m",
                     Description = "Sample description for Game 1."
                 },
                 new Game
                 {
                     ID = 2,
-                    Title = "Sample Game 2",
+                    Title = "Europa Universallis 4",
                     BackgroundPath = "/path/to/background2.jpg",
                     TrailerPath = "/path/to/trailer2.mp4",
-                    PicturesPaths = new List<string> { "/path/to/picture3.jpg", "/path/to/picture4.jpg" },
+                    PicturesPaths = new List<string> { "/GameImages/eu4.jpg", "/path/to/picture4.jpg" },
                     ReleaseDate = new DateOnly(2023, 3, 20),
                     SysReq = "Sample system requirements for Game 2.",
-                    Price = 39.99m,
+                    Price = 23.99m,
+                    Size = "12.0m",
+                    Description = "Sample description for Game 2."
+                },
+                new Game
+                {
+                    ID = 3,
+                    Title = "Team Fortress 2",
+                    BackgroundPath = "/path/to/background2.jpg",
+                    TrailerPath = "/path/to/trailer2.mp4",
+                    PicturesPaths = new List<string> { "/GameImages/tf2.jpg", "/path/to/picture4.jpg" },
+                    ReleaseDate = new DateOnly(2023, 3, 20),
+                    SysReq = "Sample system requirements for Game 2.",
+                    Price = 0m,
+                    Size = "12.0m",
+                    Description = "Sample description for Game 2."
+                },
+                new Game
+                {
+                    ID = 4,
+                    Title = "Stellaris",
+                    BackgroundPath = "/path/to/background2.jpg",
+                    TrailerPath = "/path/to/trailer2.mp4",
+                    PicturesPaths = new List<string> { "/GameImages/stellaris.jpg", "/path/to/picture4.jpg" },
+                    ReleaseDate = new DateOnly(2023, 3, 20),
+                    SysReq = "Sample system requirements for Game 2.",
+                    Price = 23.99m,
                     Size = "12.0m",
                     Description = "Sample description for Game 2."
                 }

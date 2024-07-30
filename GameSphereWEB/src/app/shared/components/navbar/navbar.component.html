@@ -42,5 +42,13 @@
         alt="Profile image"
       />
     </div>
+    <div class="admin-btn">
+      <button (click)="ToggleAdmin()" *ngIf="isLoggedIn">
+        toggle admin {{ user?.roles?.includes("Admin") }}
+        <mat-icon [ngStyle]="{ color: isAdmin ? 'green' : 'red' }"
+          >circle</mat-icon
+        >
+      </button>
+    </div>
   </div>
 </nav>

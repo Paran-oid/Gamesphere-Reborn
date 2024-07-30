@@ -13,11 +13,12 @@ import { AuthService } from '../../../services/auth.service';
 import { RegisterUser } from '../../../models/auth/user.model';
 import { Router } from '@angular/router';
 import { Capitalize } from '../../../utilities/functions/Capitalize';
+import { SpinnerComponent } from '../../../shared/components/spinner/spinner.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, SpinnerComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
   providers: [AuthService],

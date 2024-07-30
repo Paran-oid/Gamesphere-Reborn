@@ -63,6 +63,19 @@
         object-fit: cover;
       }
     }
+
+    .admin-btn {
+      margin-bottom: 100%;
+      margin-top: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      @include flex(center, center);
+
+      button {
+        color: $primary-color;
+        @include flex(center, center);
+      }
+    }
   }
 }
 

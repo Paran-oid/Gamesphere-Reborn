@@ -1,0 +1,8 @@
+@import "../../../../sass/variables";
+
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+    background-color: $secondary-color;
+  }
+}

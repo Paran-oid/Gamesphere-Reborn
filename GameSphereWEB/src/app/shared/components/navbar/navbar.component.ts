@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, DoCheck, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 import { AppUser } from '../../../models/auth/user.model';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, MatIconModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   providers: [AuthService],
@@ -15,6 +16,7 @@ import { AppUser } from '../../../models/auth/user.model';
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
   user: AppUser | null = null;
+  isAdmin: boolean = false;
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
@@ -24,6 +26,9 @@ export class NavbarComponent implements OnInit {
 
     this.authService.user.subscribe((user) => {
       this.user = user;
+      if (user) {
+        this.CheckIsAdmin();
+      }
     });
   }
 
@@ -34,5 +39,26 @@ export class NavbarComponent implements OnInit {
   Logout() {
     this.authService.Logout();
     window.location.reload();
+  }
+
+  CheckIsAdmin() {
+    this.authService.IsAdmin(this.user?.id!).subscribe({
+      next: (response) => {
+        console.log(response);
+        this.isAdmin = response;
+      },
+    });
+  }
+
+  ToggleAdmin() {
+    this.authService.ToggleAdmin(this.user?.id!).subscribe({
+      next: (response) => {
+        console.log(response);
+        this.CheckIsAdmin();
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
   }
 }

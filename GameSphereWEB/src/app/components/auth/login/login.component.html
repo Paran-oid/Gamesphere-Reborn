@@ -1,5 +1,5 @@
 <div class="container">
-  <main>
+  <main *ngIf="!isloading">
     <div class="title">Sign in</div>
     <div class="form">
       <form (submit)="OnSubmit($event)" [formGroup]="form">
@@ -39,7 +39,9 @@
           </label>
         </div>
         <div class="btns">
-          <button type="submit" class="submit-btn">Sign in</button>
+          <button type="submit" class="submit-btn">
+            <span *ngIf="!isloading">Sign in</span>
+          </button>
           <p class="error-text">
             {{
               (form.invalid && hasSubmitted) || httpError
@@ -54,6 +56,7 @@
       </form>
     </div>
   </main>
+  <app-spinner></app-spinner>
   <footer>
     <p>
       Don't have an account?

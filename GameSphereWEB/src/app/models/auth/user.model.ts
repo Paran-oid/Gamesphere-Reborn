@@ -10,6 +10,7 @@ export interface AppUser {
   nickname?: string;
   summary?: string;
   profilePicturePath?: string;
+  roles: string[];
 }
 
 export interface LoginUser {
