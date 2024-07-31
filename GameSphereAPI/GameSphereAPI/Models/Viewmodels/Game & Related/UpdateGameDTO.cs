@@ -7,11 +7,9 @@ namespace GameSphereAPI.Models.Viewmodels.Game___Related
         string BackgroundPath,
         string TrailerPath,
         List<string> PicturesPath,
-        DateOnly RekeaseDate,
+        DateOnly releaseDate,
         decimal Price,
         string Size,
         string Description,
-        string SysReq,
-        List<Language> Languages,
-        List<Publisher> Publishers);
+        string SysReq);
 }

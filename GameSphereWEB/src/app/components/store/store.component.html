@@ -23,15 +23,9 @@
           </div>
         </div>
       </div>
-      <div class="no-games" *ngIf="filteredGames.length === 0">
-        <p>No games available at the moment</p>
-      </div>
       <app-spinner></app-spinner>
-      <div *ngIf="submitted === true && filteredGames.length === 0">
-        <div style="text-align: center">
-          <h1>No games found.</h1>
-          <p>Please try a different search term.</p>
-        </div>
+      <div *ngIf="filteredGames.length === 0" class="loading-games">
+        <p>Games are being fetched...</p>
       </div>
     </div>
   </div>

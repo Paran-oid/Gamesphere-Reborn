@@ -14,6 +14,8 @@ using GameSphereAPI.Data.Services.LanguageServices;
 using GameSphereAPI.Data.Services.PublisherServices;
 using Serilog;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -126,4 +128,4 @@ app.UseSerilogRequestLogging();
 
 app.Run();
 
-//identity related
+public partial class Program { }

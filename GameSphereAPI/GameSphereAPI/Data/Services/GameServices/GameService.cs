@@ -250,10 +250,10 @@ namespace GameSphereAPI.Data.Services.GameServices
                 return null;
             }
 
-            _mapper.Map<Game>(model);
+            game = _mapper.Map<Game>(model);
             await _context.SaveChangesAsync();
 
-            Console.WriteLine($"{game.Title} was updated");
+            Log.Information($"{game.Title} was updated");
 
             return game;
         }
