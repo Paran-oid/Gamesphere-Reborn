@@ -1,8 +1,59 @@
 @import "../../../../sass/variables";
+@import "../../../../sass/mixins";
+@import "../../../../sass//fonts";
 
 @media (min-width: 768px) {
   .container {
     height: 100vh;
     background-color: $secondary-color;
+
+    .game-container {
+      margin: 50px 20% 0px 20%;
+
+      .title-element {
+        @include flex(space-between, center);
+        margin-bottom: 30px;
+
+        .title {
+          font-family: "MotivaSansBold";
+          font-size: 30px;
+        }
+
+        .community-hub-btn {
+          padding: 10px;
+          background-color: $darkish-cyan-color;
+          border-radius: 3px;
+          cursor: pointer;
+
+          h1 {
+            font-family: "MotivaSansBold";
+          }
+
+          button {
+            background-color: transparent;
+            border: none;
+            color: $cyan-color;
+            cursor: pointer;
+          }
+
+          &:hover {
+            background-color: $cyan-color;
+            button {
+              color: $white-color;
+            }
+          }
+        }
+      }
+
+      header {
+        @include grid(6, 2);
+
+        .medias {
+          img {
+            width: 300px;
+          }
+        }
+      }
+    }
   }
 }

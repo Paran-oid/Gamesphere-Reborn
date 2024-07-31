@@ -7,7 +7,7 @@ namespace GameSphereAPI.Data.Services.GameServices
     {
         public Task<List<Game>> GetGames();
 
-        public Task<Game?> Get(int ID);
+        public Task<Game?> Get(string ID);
 
         public Task<Game?> Post(CreateGameDTO model);
 
@@ -32,7 +32,7 @@ namespace GameSphereAPI.Data.Services.GameServices
         public Task<string?> RemoveTagFromGame(int GameID, int TagID);
 
         public Task<string?> RemoveGenreFromGame(int GameID, int GenreID);
-        public Task<string?> Delete(int ID);
 
+        public Task<string?> Delete(int ID);
     }
 }

@@ -4,6 +4,7 @@ using GameSphereAPI.Models.Site_Models.Game_Related.Relationships;
 using GameSphereAPI.Models.Viewmodels.Game___Related;
 using AutoMapper;
 using Serilog;
+using System.Security.Cryptography.Xml;
 
 namespace GameSphereAPI.Data.Services.GameServices
 {
@@ -24,11 +25,18 @@ namespace GameSphereAPI.Data.Services.GameServices
             return (games);
         }
 
-        public async Task<Game?> Get(int ID)
+        public async Task<Game?> Get(string ID)
         {
-            var game = await _context.Games.FirstOrDefaultAsync(x => x.ID == ID);
+            var result = int.TryParse(ID, out int gameId);
 
-            return game;
+            if (result == true)
+            {
+                return await _context.Games.FirstOrDefaultAsync(x => x.ID == gameId);
+            }
+            else
+            {
+                return await _context.Games.FirstOrDefaultAsync(x => x.Title == ID);
+            }
         }
 
         public async Task<Game?> Post(CreateGameDTO model)

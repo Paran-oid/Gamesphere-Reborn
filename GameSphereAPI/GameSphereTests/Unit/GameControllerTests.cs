@@ -61,10 +61,10 @@ namespace GameSphereTests.Unit
             //Arrange
             var game = _fixture.Create<Game>();
 
-            A.CallTo(() => _gameService.Get(game.ID)).Returns(Task.FromResult((Game?)game));
+            A.CallTo(() => _gameService.Get(Convert.ToString(game.ID))).Returns(Task.FromResult((Game?)game));
 
             //Act
-            var result = await _gameController.Get(game.ID);
+            var result = await _gameController.Get(Convert.ToString(game.ID));
 
             //Assert
 
@@ -251,6 +251,7 @@ namespace GameSphereTests.Unit
             output.Should().NotBe(oldGame);
             output.Should().NotBeOfType<Publisher>();
         }
+
         [Fact]
         public async void GameController_Delete()
         {
@@ -275,9 +276,8 @@ namespace GameSphereTests.Unit
             returnedValue.Should().Be(expectedOutput);
             returnedValue.Should().StartWith("S");
             returnedValue.Should().NotBeNull();
-
-
         }
+
         [Fact]
         public async void GameController_RemovePublisherFromGame()
         {
@@ -303,7 +303,6 @@ namespace GameSphereTests.Unit
             returnedValue.Should().Be(expectedResult);
             Assert.Equal(returnedValue.Length, expectedResult.Length);
             Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
-
         }
 
         [Fact]
@@ -383,8 +382,6 @@ namespace GameSphereTests.Unit
             Assert.Equal(returnedValue.Length, expectedResult.Length);
             Assert.EndsWith("d", expectedResult[expectedResult.Length - 1].ToString());
         }
-
-
 
         [Fact]
         public async void GameController_RemoveTagFromGame()

@@ -178,54 +178,54 @@ namespace GameSphereAPI.Migrations
                         new
                         {
                             ID = 1,
-                            BackgroundPath = "/path/to/background1.jpg",
-                            Description = "Sample description for Game 1.",
-                            PicturesPaths = new List<string> { "/GameImages/hoi4.jpg", "/path/to/picture2.jpg" },
-                            Price = 29.99m,
-                            ReleaseDate = new DateOnly(2023, 1, 15),
-                            Size = "15.5m",
-                            SysReq = "Sample system requirements for Game 1.",
+                            BackgroundPath = "/Games_Media/hoi4/Images/background1.jpg",
+                            Description = "Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.",
+                            PicturesPaths = new List<string> { "/Games_Media/hoi4/Images/hoi4.jpg", "/Games_Media/hoi4/Images/picture2.jpg" },
+                            Price = 39.99m,
+                            ReleaseDate = new DateOnly(2016, 6, 6),
+                            Size = "2.5GB",
+                            SysReq = "OS: Windows 10, Processor: Intel Core i5, Memory: 4 GB RAM, Graphics: ATI Radeon HD 6950, Storage: 2 GB available space",
                             Title = "Hearts of Iron 4",
-                            TrailerPath = "/path/to/trailer1.mp4"
+                            TrailerPath = "/Games_Media/hoi4/Videos/trailer1.mp4"
                         },
                         new
                         {
                             ID = 2,
-                            BackgroundPath = "/path/to/background2.jpg",
-                            Description = "Sample description for Game 2.",
-                            PicturesPaths = new List<string> { "/GameImages/eu4.jpg", "/path/to/picture4.jpg" },
-                            Price = 23.99m,
-                            ReleaseDate = new DateOnly(2023, 3, 20),
-                            Size = "12.0m",
-                            SysReq = "Sample system requirements for Game 2.",
-                            Title = "Europa Universallis 4",
-                            TrailerPath = "/path/to/trailer2.mp4"
+                            BackgroundPath = "/Games_Media/eu4/Images/background2.jpg",
+                            Description = "Europa Universalis IV gives you control of a nation to guide through the years in order to create a dominant global empire.",
+                            PicturesPaths = new List<string> { "/Games_Media/eu4/Images/eu4.jpg", "/Games_Media/eu4/Images/picture4.jpg" },
+                            Price = 39.99m,
+                            ReleaseDate = new DateOnly(2013, 8, 13),
+                            Size = "1.5GB",
+                            SysReq = "OS: Windows 7, Processor: Intel Pentium IV, Memory: 2 GB RAM, Graphics: NVIDIA GeForce 8800, Storage: 2 GB available space",
+                            Title = "Europa Universalis IV",
+                            TrailerPath = "/Games_Media/eu4/Videos/trailer2.mp4"
                         },
                         new
                         {
                             ID = 3,
-                            BackgroundPath = "/path/to/background2.jpg",
-                            Description = "Sample description for Game 2.",
-                            PicturesPaths = new List<string> { "/GameImages/tf2.jpg", "/path/to/picture4.jpg" },
-                            Price = 0m,
-                            ReleaseDate = new DateOnly(2023, 3, 20),
-                            Size = "12.0m",
-                            SysReq = "Sample system requirements for Game 2.",
+                            BackgroundPath = "/Games_Media/tf2/Images/background2.jpg",
+                            Description = "Team Fortress 2 is a team-based multiplayer first-person shooter game developed and published by Valve Corporation.",
+                            PicturesPaths = new List<string> { "/Games_Media/tf2/Images/tf2.jpg", "/Games_Media/tf2/Images/picture4.jpg" },
+                            Price = 0.00m,
+                            ReleaseDate = new DateOnly(2007, 10, 10),
+                            Size = "15GB",
+                            SysReq = "OS: Windows 7, Processor: 1.7 GHz Processor, Memory: 512 MB RAM, Graphics: DirectX 8.1 level Graphics Card, Storage: 15 GB available space",
                             Title = "Team Fortress 2",
-                            TrailerPath = "/path/to/trailer2.mp4"
+                            TrailerPath = "/Games_Media/tf2/Videos/trailer2.mp4"
                         },
                         new
                         {
                             ID = 4,
-                            BackgroundPath = "/path/to/background2.jpg",
-                            Description = "Sample description for Game 2.",
-                            PicturesPaths = new List<string> { "/GameImages/stellaris.jpg", "/path/to/picture4.jpg" },
-                            Price = 23.99m,
-                            ReleaseDate = new DateOnly(2023, 3, 20),
-                            Size = "12.0m",
-                            SysReq = "Sample system requirements for Game 2.",
+                            BackgroundPath = "/Games_Media/stellaris/Images/background2.jpg",
+                            Description = "Stellaris is a real-time grand strategy game set in space, beginning in the year 2200.",
+                            PicturesPaths = new List<string> { "/Games_Media/stellaris/Images/stellaris.jpg", "/Games_Media/stellaris/Images/picture4.jpg" },
+                            Price = 39.99m,
+                            ReleaseDate = new DateOnly(2016, 5, 9),
+                            Size = "10GB",
+                            SysReq = "OS: Windows 7 64-bit, Processor: Intel iCore i3-530, Memory: 4 GB RAM, Graphics: NVIDIA GeForce GTX 460, Storage: 10 GB available space",
                             Title = "Stellaris",
-                            TrailerPath = "/path/to/trailer2.mp4"
+                            TrailerPath = "/Games_Media/stellaris/Videos/trailer2.mp4"
                         });
                 });
 
@@ -816,7 +816,7 @@ namespace GameSphereAPI.Migrations
                             Id = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
                             AccessFailedCount = 0,
                             Birth = new DateOnly(1990, 1, 1),
-                            ConcurrencyStamp = "a0c16800-4b0d-4939-8392-a6b86ae81b56",
+                            ConcurrencyStamp = "2f49bc40-c334-434c-ad42-51db38040098",
                             Email = "user1@example.com",
                             EmailConfirmed = false,
                             Fname = "John",
@@ -826,7 +826,7 @@ namespace GameSphereAPI.Migrations
                             Nickname = "Johnny",
                             PhoneNumberConfirmed = false,
                             ProfilePicturePath = "/images/user1.jpg",
-                            SecurityStamp = "24ed1561-3077-48d9-99fd-6efedf6e409d",
+                            SecurityStamp = "19fa5b1b-3d84-4b06-8b5d-396f1656a324",
                             Summary = "A gamer",
                             TwoFactorEnabled = false,
                             UserName = "user1@example.com"
@@ -836,7 +836,7 @@ namespace GameSphereAPI.Migrations
                             Id = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
                             AccessFailedCount = 0,
                             Birth = new DateOnly(1992, 2, 2),
-                            ConcurrencyStamp = "1575f79c-e5b2-40c3-a9bd-a893ef69e13a",
+                            ConcurrencyStamp = "15d6f8ec-1ddf-42dd-bab6-3701ea6593be",
                             Email = "user2@example.com",
                             EmailConfirmed = false,
                             Fname = "Jane",
@@ -846,7 +846,7 @@ namespace GameSphereAPI.Migrations
                             Nickname = "Janie",
                             PhoneNumberConfirmed = false,
                             ProfilePicturePath = "/images/user2.jpg",
-                            SecurityStamp = "1757a6dd-b0bf-4b8b-a932-aa46309e5f07",
+                            SecurityStamp = "06d575c5-e7a3-471e-9dba-ae58dcb55dbe",
                             Summary = "Another gamer",
                             TwoFactorEnabled = false,
                             UserName = "user2@example.com"

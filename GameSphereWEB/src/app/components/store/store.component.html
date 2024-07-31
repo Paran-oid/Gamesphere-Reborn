@@ -23,6 +23,9 @@
           </div>
         </div>
       </div>
+      <div class="no-games" *ngIf="filteredGames.length === 0">
+        <p>No games available at the moment</p>
+      </div>
       <app-spinner></app-spinner>
       <div *ngIf="submitted === true && filteredGames.length === 0">
         <div style="text-align: center">
@@ -32,4 +35,5 @@
       </div>
     </div>
   </div>
+  <app-spinner></app-spinner>
 </div>

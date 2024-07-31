@@ -1,3 +1,73 @@
 <div class="container">
   <app-storenav></app-storenav>
+  <div class="game-container">
+    <div class="title-element">
+      <h1 class="title">{{ game.title }}</h1>
+      <div class="community-hub-btn">
+        <button>Community Hub</button>
+      </div>
+    </div>
+    <header>
+      <div class="medias">
+        <video width="400" controls>
+          <source [src]="game.trailerPath" type="video/mp4" />
+        </video>
+        <img [src]="game.picturesPaths[1]" />
+      </div>
+      <div class="about-game">
+        <div class="game-img">
+          <img [src]="game.backgroundPath" />
+        </div>
+        <div class="mini-description">
+          <p>{{ game.description }}</p>
+          <p>Release Date: {{ game.releaseDate }}</p>
+        </div>
+        <div class="tags">
+          <div class="tag">
+            <p>Action</p>
+            <p>Adventure</p>
+            <p>Singleplayer</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Forget about everything else just focus on header section and make it look 100% the same as steam -->
+    <!-- fix the video crap first -->
+    <!-- Add lots of pictures just to hoi4 so we can test it with horizantal bar (get all images from steam) -->
+    <!-- make a div that says sign in to add this item to wishlist, follow it or etc -->
+    <div class="game-content">
+      <div class="game-mega-description">
+        <div class="install-game">
+          <button>Play Game</button>
+        </div>
+        <div class="game-description">
+          <h1>About Game</h1>
+          <p>{{ game.description }}</p>
+        </div>
+        <div class="pc-requirements">
+          <h1>System Requirements</h1>
+          <p>{{ game.sysReq }}</p>
+        </div>
+      </div>
+      <div class="game-features">
+        <ul class="all-tags">
+          <li>Single Player</li>
+          <li>PS5 controller</li>
+          <li>Online PVP</li>
+        </ul>
+        <ul class="languages">
+          <li>English</li>
+          <li>French</li>
+          <li>German</li>
+          <li>Spanish</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="reviews">
+      <div class="review">review 1</div>
+      <div class="review">review 2</div>
+      <div class="review">review 3</div>
+    </div>
+  </div>
 </div>

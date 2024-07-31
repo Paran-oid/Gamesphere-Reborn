@@ -12,6 +12,7 @@
 
   .logo {
     @include logo;
+    cursor: pointer;
 
     img {
       @include logo-img;

@@ -11,4 +11,8 @@ export class GameService {
   public GetAll() {
     return this.http.get<Game[]>(this.baseUrl + '/Game/GetAll');
   }
+
+  public Get(ID: string) {
+    return this.http.get<Game>(this.baseUrl + '/Game/Get/' + ID);
+  }
 }

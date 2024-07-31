@@ -11,7 +11,7 @@ nav {
 
   padding: 0px 20px 0px 0px;
 
-  background: linear-gradient(to right, $blue, $saturated-blue);
+  background: linear-gradient(to right, $blue-color, $saturated-blue-color);
 
   .items {
     height: 100%;
@@ -29,7 +29,7 @@ nav {
 
       &:hover {
         cursor: pointer;
-        background-color: $light-blue;
+        background-color: $light-blue-color;
       }
     }
   }
@@ -40,14 +40,14 @@ nav {
     @include flex(center, center);
 
     input {
-      background-color: $steel-blue;
+      background-color: $steel-blue-color;
       border: none;
       outline: none;
       padding: 5px;
       border-radius: 2px;
 
       &::placeholder {
-        color: $stormy-blue;
+        color: $stormy-blue-color;
       }
 
       &:focus {

@@ -28,7 +28,7 @@ namespace GameSphereAPI.Controllers.GameController
         }
 
         [HttpGet("{ID}")]
-        public async Task<ActionResult<Game>> Get(int ID)
+        public async Task<ActionResult<Game>> Get(string ID)
         {
             var game = await _gameService.Get(ID);
 
@@ -36,7 +36,6 @@ namespace GameSphereAPI.Controllers.GameController
             {
                 return NotFound("Game not found");
             }
-
 
             return Ok(game);
         }
@@ -52,7 +51,6 @@ namespace GameSphereAPI.Controllers.GameController
                 {
                     return BadRequest("Please check your credentials");
                 }
-
 
                 return Ok(game);
             }
@@ -135,7 +133,6 @@ namespace GameSphereAPI.Controllers.GameController
                 return NotFound("Game not found");
             }
 
-
             return Ok(game);
         }
 
@@ -215,7 +212,5 @@ namespace GameSphereAPI.Controllers.GameController
 
             return Ok(result);
         }
-
-
     }
 }
