@@ -24,12 +24,14 @@ export class NavbarComponent implements OnInit {
       ? (this.isLoggedIn = true)
       : (this.isLoggedIn = false);
 
-    this.authService.user.subscribe((user) => {
-      this.user = user;
-      if (user) {
-        this.CheckIsAdmin();
-      }
-    });
+    if (this.isLoggedIn) {
+      this.authService.user.subscribe((user) => {
+        this.user = user;
+        if (user) {
+          this.CheckIsAdmin();
+        }
+      });
+    }
   }
 
   get UserName() {

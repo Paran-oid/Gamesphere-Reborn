@@ -9,10 +9,21 @@
     </div>
     <header>
       <div class="medias">
-        <video width="400" controls>
-          <source [src]="game.trailerPath" type="video/mp4" />
-        </video>
-        <img [src]="game.picturesPaths[1]" />
+        <div class="displayed-image">
+          <video controls [src]="game.trailerPath">
+            <source [type]="'video/mp4'" />
+          </video>
+        </div>
+        <div class="game-medias">
+          <div class="trailer">
+            <video height="65" width="115" [src]="game.trailerPath">
+              <source [type]="'video/mp4'" />
+            </video>
+          </div>
+          <div class="game-media" *ngFor="let picture of game.picturesPaths">
+            <img [src]="picture" class="game-picture" />
+          </div>
+        </div>
       </div>
       <div class="about-game">
         <div class="game-img">
@@ -20,14 +31,14 @@
         </div>
         <div class="mini-description">
           <p>{{ game.description }}</p>
+        </div>
+        <div class="release-date">
           <p>Release Date: {{ game.releaseDate }}</p>
         </div>
         <div class="tags">
-          <div class="tag">
-            <p>Action</p>
-            <p>Adventure</p>
-            <p>Singleplayer</p>
-          </div>
+          <p>Action</p>
+          <p>Adventure</p>
+          <p>Singleplayer</p>
         </div>
       </div>
     </header>
@@ -35,7 +46,7 @@
     <!-- fix the video crap first -->
     <!-- Add lots of pictures just to hoi4 so we can test it with horizantal bar (get all images from steam) -->
     <!-- make a div that says sign in to add this item to wishlist, follow it or etc -->
-    <div class="game-content">
+    <!-- <div class="game-content">
       <div class="game-mega-description">
         <div class="install-game">
           <button>Play Game</button>
@@ -69,5 +80,6 @@
       <div class="review">review 2</div>
       <div class="review">review 3</div>
     </div>
+  </div> -->
   </div>
 </div>

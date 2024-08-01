@@ -1,0 +1,1222 @@
+2024-08-02 00:00:30.500 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:00:30.541 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:30.544 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 43.4965ms
+2024-08-02 00:00:30.613 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:00:30.615 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:00:30.621 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:30.627 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:30.628 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:00:30.631 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:00:30.633 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:00:30.636 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:00:30.671 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:00:30.699 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:00:30.709 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:00:30.721 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:00:30.724 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 75.7217ms
+2024-08-02 00:00:30.727 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 86.4481ms
+2024-08-02 00:00:30.733 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:00:30.741 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:00:30.744 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 113.0961 ms
+2024-08-02 00:00:30.749 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 120.5680 ms
+2024-08-02 00:00:30.758 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 143.8074ms
+2024-08-02 00:00:30.797 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 184.7065ms
+2024-08-02 00:00:44.935 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:00:44.942 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:44.944 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.8358ms
+2024-08-02 00:00:44.980 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:00:44.984 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:00:44.988 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:44.995 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:00:44.997 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:00:44.999 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:00:45.002 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:00:45.006 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:00:45.013 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:00:45.037 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:00:45.046 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:00:45.046 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 35.7406ms
+2024-08-02 00:00:45.055 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:00:45.059 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:00:45.063 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 44.2938ms
+2024-08-02 00:00:45.065 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 68.7136 ms
+2024-08-02 00:00:45.069 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:00:45.073 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 94.3877ms
+2024-08-02 00:00:45.076 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 77.2660 ms
+2024-08-02 00:00:45.091 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 107.0102ms
+2024-08-02 00:01:26.273 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:01:26.281 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:01:26.297 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:26.308 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:26.309 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 35.7559ms
+2024-08-02 00:01:26.318 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:01:26.349 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:01:26.480 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:01:26.485 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:01:26.489 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 131.8623ms
+2024-08-02 00:01:26.493 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:01:26.496 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 177.3723 ms
+2024-08-02 00:01:26.500 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 219.9184ms
+2024-08-02 00:01:26.580 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:01:26.587 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:26.589 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:01:26.592 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:01:26.623 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:01:26.632 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:01:26.635 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 38.8326ms
+2024-08-02 00:01:26.639 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:01:26.642 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 52.6721 ms
+2024-08-02 00:01:26.647 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 66.507ms
+2024-08-02 00:01:43.446 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:01:43.453 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:43.455 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.4998ms
+2024-08-02 00:01:43.561 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:01:43.570 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:43.572 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:01:43.575 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:01:43.582 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:01:43.585 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:01:43.594 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:01:43.600 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:01:43.602 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:01:43.606 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 25.7987ms
+2024-08-02 00:01:43.609 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:01:43.612 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:01:43.619 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 46.7823 ms
+2024-08-02 00:01:43.629 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 67.9776ms
+2024-08-02 00:01:43.639 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:01:43.649 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:01:43.652 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 35.6239ms
+2024-08-02 00:01:43.658 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:01:43.661 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 58.2780 ms
+2024-08-02 00:01:43.665 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 83.4918ms
+2024-08-02 00:02:06.385 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:02:06.393 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:06.396 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 11.2379ms
+2024-08-02 00:02:06.406 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:02:06.413 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:06.416 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:06.419 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:02:06.444 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:02:06.454 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:02:06.457 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 33.5433ms
+2024-08-02 00:02:06.462 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:06.465 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 49.4241 ms
+2024-08-02 00:02:06.470 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 64.4342ms
+2024-08-02 00:02:06.529 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:02:06.537 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:06.539 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:06.542 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:02:06.550 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:02:06.561 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:02:06.565 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.8826ms
+2024-08-02 00:02:06.569 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:06.574 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 34.1389 ms
+2024-08-02 00:02:06.581 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 51.9083ms
+2024-08-02 00:02:45.822 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:02:45.831 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:45.834 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 11.7932ms
+2024-08-02 00:02:45.846 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:02:45.853 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:45.856 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:45.859 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:02:45.891 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:02:45.900 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:02:45.903 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 39.4979ms
+2024-08-02 00:02:45.907 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:45.910 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 54.1874 ms
+2024-08-02 00:02:45.914 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 68.2374ms
+2024-08-02 00:02:45.919 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:02:45.929 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:45.931 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:45.934 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:02:45.942 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:02:45.951 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:02:45.954 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 15.5931ms
+2024-08-02 00:02:45.958 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:45.961 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 29.1720 ms
+2024-08-02 00:02:45.965 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 46.2919ms
+2024-08-02 00:02:56.316 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:02:56.323 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:56.325 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:56.328 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:02:56.338 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:02:56.347 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:02:56.350 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 15.7401ms
+2024-08-02 00:02:56.353 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:02:56.355 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 30.1213 ms
+2024-08-02 00:02:56.360 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 44.2219ms
+2024-08-02 00:02:58.622 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:02:58.631 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:58.633 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 11.7701ms
+2024-08-02 00:02:58.974 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:02:58.981 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:02:58.984 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:58.987 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:02:59.008 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:02:59.018 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:02:59.022 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 29.6543ms
+2024-08-02 00:02:59.026 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:02:59.028 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 44.4734 ms
+2024-08-02 00:02:59.034 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 59.755ms
+2024-08-02 00:03:23.916 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:03:23.923 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:03:23.925 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.5428ms
+2024-08-02 00:03:23.949 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:03:23.957 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:03:23.959 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:03:23.963 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:03:24.000 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:03:24.009 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:03:24.013 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 45.0822ms
+2024-08-02 00:03:24.016 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:03:24.019 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 59.8871 ms
+2024-08-02 00:03:24.024 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 75.4296ms
+2024-08-02 00:03:24.043 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:03:24.050 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:03:24.053 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:03:24.055 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:03:24.064 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:03:24.073 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:03:24.076 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 15.7234ms
+2024-08-02 00:03:24.080 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:03:24.082 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 29.8836 ms
+2024-08-02 00:03:24.087 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 44.2576ms
+2024-08-02 00:04:35.590 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:04:35.597 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:04:35.599 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.4388ms
+2024-08-02 00:04:35.608 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:04:35.622 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:04:35.624 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:04:35.627 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:04:35.670 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:04:35.681 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:04:35.685 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 52.3962ms
+2024-08-02 00:04:35.688 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:04:35.692 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 67.8148 ms
+2024-08-02 00:04:35.697 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 89.1863ms
+2024-08-02 00:04:35.747 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:04:35.754 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:04:35.757 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:04:35.760 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:04:35.771 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:04:35.785 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:04:35.790 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 25.5756ms
+2024-08-02 00:04:35.793 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:04:35.796 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 39.3711 ms
+2024-08-02 00:04:35.801 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 54.9214ms
+2024-08-02 00:06:38.411 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:06:38.419 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:06:38.422 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:06:38.424 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:06:38.438 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:06:38.460 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:06:38.472 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 34.0763ms
+2024-08-02 00:06:38.516 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:06:38.524 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:06:38.526 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:06:38.527 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:06:38.529 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:06:38.535 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:06:38.545 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 114.9554ms
+2024-08-02 00:06:38.550 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:06:38.554 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 132.6697 ms
+2024-08-02 00:06:38.567 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:06:38.568 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 157.3656ms
+2024-08-02 00:06:38.578 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:06:38.592 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 53.3112ms
+2024-08-02 00:06:38.596 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:06:38.600 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 73.2716 ms
+2024-08-02 00:06:38.605 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 88.9453ms
+2024-08-02 00:07:19.926 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:07:19.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:07:19.935 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:19.942 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:19.944 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 17.8951ms
+2024-08-02 00:07:19.948 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:19.963 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:07:19.972 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:07:19.982 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:07:19.986 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.4941ms
+2024-08-02 00:07:19.990 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:19.992 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 45.0083 ms
+2024-08-02 00:07:19.997 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 64.0198ms
+2024-08-02 00:07:21.269 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:07:21.276 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:21.278 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:21.281 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:07:21.306 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:07:21.323 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:07:21.328 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 42.7119ms
+2024-08-02 00:07:21.334 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:21.340 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 61.7029 ms
+2024-08-02 00:07:21.347 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 78.5204ms
+2024-08-02 00:07:27.309 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:07:27.317 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:27.319 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:27.322 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:07:27.330 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:07:27.340 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:07:27.344 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.0625ms
+2024-08-02 00:07:27.349 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:27.352 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 33.4412 ms
+2024-08-02 00:07:27.358 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 48.8842ms
+2024-08-02 00:07:27.390 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:07:27.397 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:27.400 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.7772ms
+2024-08-02 00:07:29.816 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:07:29.823 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:29.825 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:29.827 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:07:29.850 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:07:29.859 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:07:29.865 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 31.7515ms
+2024-08-02 00:07:29.868 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:29.872 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 47.5661 ms
+2024-08-02 00:07:29.877 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 61.5724ms
+2024-08-02 00:07:56.144 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:07:56.151 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:56.153 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:56.156 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:07:56.166 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:07:56.175 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:07:56.179 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.1701ms
+2024-08-02 00:07:56.182 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:07:56.185 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.7377 ms
+2024-08-02 00:07:56.191 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 47.1117ms
+2024-08-02 00:07:57.938 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:07:57.946 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:57.948 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 10.796ms
+2024-08-02 00:07:58.037 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:07:58.043 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:07:58.046 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:58.048 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:07:58.071 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:07:58.081 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:07:58.085 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 31.5426ms
+2024-08-02 00:07:58.088 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:07:58.091 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 45.4073 ms
+2024-08-02 00:07:58.097 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 60.0713ms
+2024-08-02 00:08:48.638 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:08:48.645 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:08:48.648 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 10.6384ms
+2024-08-02 00:08:48.750 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:08:48.754 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:08:48.760 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:08:48.767 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:08:48.771 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:08:48.774 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:08:48.777 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:08:48.779 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:08:48.787 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:08:48.814 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:08:48.824 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 40.7718ms
+2024-08-02 00:08:48.833 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:08:48.838 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 66.6308 ms
+2024-08-02 00:08:48.843 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 93.5406ms
+2024-08-02 00:08:48.910 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:08:48.918 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:08:48.926 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 133.4353ms
+2024-08-02 00:08:48.931 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:08:48.935 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 160.3118 ms
+2024-08-02 00:08:48.942 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 188.9615ms
+2024-08-02 00:10:35.050 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:10:35.057 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:35.059 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 10.2065ms
+2024-08-02 00:10:35.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:10:35.139 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:35.140 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:10:35.142 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:10:35.148 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:35.151 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:10:35.153 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:10:35.162 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:10:35.165 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:10:35.177 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:10:35.190 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 32.2082ms
+2024-08-02 00:10:35.204 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:10:35.209 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:10:35.210 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 68.2647 ms
+2024-08-02 00:10:35.221 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:10:35.225 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 93.883ms
+2024-08-02 00:10:35.228 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 44.7279ms
+2024-08-02 00:10:35.239 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:10:35.242 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 89.2167 ms
+2024-08-02 00:10:35.250 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 109.6288ms
+2024-08-02 00:10:50.189 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:10:50.197 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:50.199 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 10.2021ms
+2024-08-02 00:10:50.217 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:10:50.225 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:50.227 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:10:50.231 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:10:50.255 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:10:50.265 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:10:50.269 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 32.4291ms
+2024-08-02 00:10:50.273 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:10:50.275 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 48.4453 ms
+2024-08-02 00:10:50.277 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:10:50.282 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 65.2956ms
+2024-08-02 00:10:50.288 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:10:50.298 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:10:50.301 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:10:50.311 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:10:50.320 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:10:50.323 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.8367ms
+2024-08-02 00:10:50.326 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:10:50.329 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.3463 ms
+2024-08-02 00:10:50.334 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 57.3599ms
+2024-08-02 00:11:18.931 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:11:18.940 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:18.943 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 12.0871ms
+2024-08-02 00:11:18.976 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:11:18.989 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:18.994 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:11:19.002 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:11:19.124 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:11:19.133 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:11:19.157 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 135.6838ms
+2024-08-02 00:11:19.176 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:11:19.191 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 197.8049 ms
+2024-08-02 00:11:19.200 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 224.3326ms
+2024-08-02 00:11:19.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:11:19.224 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:19.226 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:11:19.230 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:11:19.258 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:11:19.275 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:11:19.291 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 52.9383ms
+2024-08-02 00:11:19.299 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:11:19.306 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 79.6740 ms
+2024-08-02 00:11:19.326 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 110.227ms
+2024-08-02 00:11:46.719 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:11:46.726 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:46.728 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.5202ms
+2024-08-02 00:11:46.736 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:11:46.746 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:46.749 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:11:46.752 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:11:46.824 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:11:46.836 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:11:46.839 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:11:46.844 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:11:46.888 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:11:46.902 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:11:46.905 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 148.4816ms
+2024-08-02 00:11:46.909 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:11:46.912 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 162.9636 ms
+2024-08-02 00:11:46.917 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 181.2792ms
+2024-08-02 00:11:46.943 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:11:46.950 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:11:46.955 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 104.6707ms
+2024-08-02 00:11:46.958 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:11:46.961 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 122.4080 ms
+2024-08-02 00:11:46.966 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 141.8101ms
+2024-08-02 00:12:43.285 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:12:43.292 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:12:43.294 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 9.9588ms
+2024-08-02 00:12:43.320 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:12:43.329 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:12:43.331 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:12:43.335 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:12:43.345 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:12:43.358 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:12:43.361 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 21.8552ms
+2024-08-02 00:12:43.366 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:12:43.369 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 37.3686 ms
+2024-08-02 00:12:43.374 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 53.878ms
+2024-08-02 00:12:43.421 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:12:43.427 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:12:43.430 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:12:43.434 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:12:43.473 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:12:43.480 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:12:43.484 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 45.2339ms
+2024-08-02 00:12:43.487 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:12:43.491 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 60.7302 ms
+2024-08-02 00:12:43.495 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 75.1765ms
+2024-08-02 00:13:16.656 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - null null
+2024-08-02 00:13:16.663 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:13:16.666 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7108/UserRegistration/GetUser - 204 null null 10.0093ms
+2024-08-02 00:13:16.702 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - application/json 203
+2024-08-02 00:13:16.709 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:13:16.712 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:13:16.715 +01:00 [INF] Route matched with {action = "GetUser", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.User.AppUser]] GetUser(System.String) on controller GameSphereAPI.Controllers.UserController.UserRegistrationController (GameSphereAPI).
+2024-08-02 00:13:16.753 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__name_0='Paranoid'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Birth", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FavoriteGroupID", a."Fname", a."Lname", a."Location", a."LockoutEnabled", a."LockoutEnd", a."Nickname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePicturePath", a."SecurityStamp", a."Summary", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__name_0
+LIMIT 1
+2024-08-02 00:13:16.766 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-02 00:13:16.775 +01:00 [INF] Executed action GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI) in 54.3472ms
+2024-08-02 00:13:16.792 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.UserController.UserRegistrationController.GetUser (GameSphereAPI)'
+2024-08-02 00:13:16.795 +01:00 [INF] HTTP POST /UserRegistration/GetUser responded 404 in 83.2552 ms
+2024-08-02 00:13:16.803 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7108/UserRegistration/GetUser - 404 null application/problem+json; charset=utf-8 100.931ms
+2024-08-02 00:13:16.832 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:13:16.840 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:13:16.842 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:16.845 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:13:16.853 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:13:16.862 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:13:16.866 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.3086ms
+2024-08-02 00:13:16.870 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:16.875 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 33.3010 ms
+2024-08-02 00:13:16.880 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 48.8808ms
+2024-08-02 00:13:42.256 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:13:42.265 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:13:42.268 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:42.271 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:13:42.281 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:13:42.290 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:13:42.295 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.1638ms
+2024-08-02 00:13:42.299 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:42.301 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 33.8325 ms
+2024-08-02 00:13:42.306 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 50.0687ms
+2024-08-02 00:13:57.151 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:13:57.161 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:13:57.163 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:57.167 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:13:57.175 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:13:57.185 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:13:57.188 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.1802ms
+2024-08-02 00:13:57.191 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:13:57.194 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 30.7182 ms
+2024-08-02 00:13:57.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 50.3165ms
+2024-08-02 00:14:19.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:14:19.272 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:14:19.274 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:19.277 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:14:19.286 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:14:19.296 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:14:19.300 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.4029ms
+2024-08-02 00:14:19.304 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:19.307 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.6285 ms
+2024-08-02 00:14:19.312 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 49.4461ms
+2024-08-02 00:14:25.661 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:14:25.668 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:14:25.670 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:25.673 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:14:25.681 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:14:25.691 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:14:25.694 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.3513ms
+2024-08-02 00:14:25.698 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:25.701 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 30.4331 ms
+2024-08-02 00:14:25.706 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 44.7482ms
+2024-08-02 00:14:42.952 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:14:42.959 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:14:42.961 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:42.964 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:14:42.972 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:14:42.982 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:14:42.986 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.7646ms
+2024-08-02 00:14:42.989 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:14:42.992 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 30.8791 ms
+2024-08-02 00:14:42.997 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 45.5768ms
+2024-08-02 00:15:24.682 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:15:24.690 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:15:24.692 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:15:24.695 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:15:24.703 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:15:24.712 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:15:24.715 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 15.4886ms
+2024-08-02 00:15:24.718 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:15:24.723 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 29.9921 ms
+2024-08-02 00:15:24.731 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 49.4865ms
+2024-08-02 00:15:52.204 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:15:52.211 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:15:52.213 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:15:52.216 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:15:52.224 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:15:52.234 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:15:52.239 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.6839ms
+2024-08-02 00:15:52.243 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:15:52.246 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.8196 ms
+2024-08-02 00:15:52.251 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 47.5588ms
+2024-08-02 00:16:27.630 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:16:27.637 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:16:27.640 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:16:27.643 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:16:27.658 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:16:27.669 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:16:27.675 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 24.9658ms
+2024-08-02 00:16:27.678 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:16:27.682 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 42.6062 ms
+2024-08-02 00:16:27.691 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 62.6993ms
+2024-08-02 00:17:06.412 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:17:06.419 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:17:06.422 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:17:06.425 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:17:06.512 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:17:06.518 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:17:06.522 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 92.568ms
+2024-08-02 00:17:06.527 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:17:06.530 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 107.7403 ms
+2024-08-02 00:17:06.534 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 122.6846ms
+2024-08-02 00:19:12.705 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:19:12.713 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:19:12.716 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:19:12.722 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:19:12.732 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:19:12.743 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:19:12.747 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 19.2373ms
+2024-08-02 00:19:12.752 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:19:12.754 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 38.8739 ms
+2024-08-02 00:19:12.759 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 55.0818ms
+2024-08-02 00:21:22.138 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:21:22.146 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:21:22.149 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:21:22.152 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:21:22.160 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:21:22.179 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:21:22.187 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 30.0751ms
+2024-08-02 00:21:22.190 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:21:22.193 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 44.8437 ms
+2024-08-02 00:21:22.199 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 61.8355ms
+2024-08-02 00:23:12.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:23:12.926 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:23:12.930 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:12.932 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:23:13.040 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:23:13.051 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:23:13.055 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 118.4872ms
+2024-08-02 00:23:13.059 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:13.062 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 132.4130 ms
+2024-08-02 00:23:13.069 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 159.3467ms
+2024-08-02 00:23:20.982 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:23:20.990 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:23:20.993 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:20.998 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:23:21.008 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:23:21.019 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:23:21.024 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 20.4192ms
+2024-08-02 00:23:21.028 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:21.031 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 37.6209 ms
+2024-08-02 00:23:21.036 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 55.0625ms
+2024-08-02 00:23:37.181 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:23:37.188 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:23:37.190 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:37.193 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:23:37.202 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:23:37.212 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:23:37.216 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.5474ms
+2024-08-02 00:23:37.220 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:23:37.223 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.9035 ms
+2024-08-02 00:23:37.228 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 47.6069ms
+2024-08-02 00:24:10.821 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:24:10.828 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:24:10.830 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:24:10.833 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:24:10.843 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:24:10.852 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:24:10.856 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.3012ms
+2024-08-02 00:24:10.864 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:24:10.869 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 38.3825 ms
+2024-08-02 00:24:10.877 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 57.0903ms
+2024-08-02 00:25:23.557 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:25:23.572 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:25:23.576 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:25:23.579 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:25:23.588 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:25:23.599 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:25:23.602 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.5541ms
+2024-08-02 00:25:23.606 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:25:23.611 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 34.8184 ms
+2024-08-02 00:25:23.616 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 59.4054ms
+2024-08-02 00:26:30.007 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:26:30.015 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:26:30.017 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:26:30.020 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:26:30.028 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:26:30.040 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:26:30.043 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.5897ms
+2024-08-02 00:26:30.047 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:26:30.050 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.7780 ms
+2024-08-02 00:26:30.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 49.8697ms
+2024-08-02 00:27:18.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:27:18.951 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:27:18.954 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:18.958 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:27:18.966 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:27:18.989 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:27:18.997 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 34.0944ms
+2024-08-02 00:27:19.003 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:19.009 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 54.7533 ms
+2024-08-02 00:27:19.014 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 70.629ms
+2024-08-02 00:27:30.032 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:27:30.044 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:27:30.047 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:30.049 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:27:30.064 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:27:30.076 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:27:30.080 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.8212ms
+2024-08-02 00:27:30.084 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:30.087 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 40.1806 ms
+2024-08-02 00:27:30.092 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 60.9916ms
+2024-08-02 00:27:41.430 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:27:41.437 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:27:41.440 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:41.442 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:27:41.451 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:27:41.461 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:27:41.465 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.8323ms
+2024-08-02 00:27:41.469 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:27:41.472 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.0852 ms
+2024-08-02 00:27:41.477 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 47.1348ms
+2024-08-02 00:30:07.861 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:30:07.869 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:30:07.871 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:07.874 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:30:07.974 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:30:07.981 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:30:07.985 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 105.595ms
+2024-08-02 00:30:07.988 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:07.991 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 119.8307 ms
+2024-08-02 00:30:07.998 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 136.6621ms
+2024-08-02 00:30:46.452 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:30:46.464 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:30:46.470 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:46.473 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:30:46.481 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:30:46.493 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:30:46.496 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.9531ms
+2024-08-02 00:30:46.500 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:46.503 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.4074 ms
+2024-08-02 00:30:46.509 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 57.4054ms
+2024-08-02 00:30:52.367 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:30:52.374 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:30:52.377 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:52.380 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:30:52.391 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:30:52.402 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:30:52.406 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 20.3432ms
+2024-08-02 00:30:52.409 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:30:52.412 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 35.1064 ms
+2024-08-02 00:30:52.417 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 51.0674ms
+2024-08-02 00:35:42.293 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:35:42.301 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:35:42.304 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:35:42.307 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:35:42.393 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:35:42.400 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:35:42.403 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 91.096ms
+2024-08-02 00:35:42.407 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:35:42.410 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 106.0406 ms
+2024-08-02 00:35:42.415 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 122.9454ms
+2024-08-02 00:37:03.135 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:37:03.143 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:37:03.145 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:37:03.148 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:37:03.156 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:37:03.169 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:37:03.175 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 22.8993ms
+2024-08-02 00:37:03.179 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:37:03.181 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 36.3919 ms
+2024-08-02 00:37:03.186 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 51.4273ms
+2024-08-02 00:37:47.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:37:47.709 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:37:47.711 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:37:47.714 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:37:47.722 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:37:47.731 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:37:47.735 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.109ms
+2024-08-02 00:37:47.742 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:37:47.769 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 57.9341 ms
+2024-08-02 00:37:47.774 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 73.7335ms
+2024-08-02 00:38:01.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:38:01.676 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:38:01.678 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:38:01.681 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:38:01.690 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:38:01.700 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:38:01.703 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.2514ms
+2024-08-02 00:38:01.707 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:38:01.710 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.9120 ms
+2024-08-02 00:38:01.716 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 47.3451ms
+2024-08-02 00:38:33.926 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:38:33.933 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:38:33.935 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:38:33.937 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:38:33.947 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:38:33.973 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:38:33.979 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 36.4138ms
+2024-08-02 00:38:33.982 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:38:33.985 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 49.9871 ms
+2024-08-02 00:38:33.990 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 64.45ms
+2024-08-02 00:39:24.145 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:39:24.153 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:39:24.156 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:39:24.158 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:39:24.170 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:39:24.184 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:39:24.189 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 25.3408ms
+2024-08-02 00:39:24.193 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:39:24.195 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 39.5774 ms
+2024-08-02 00:39:24.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 54.9777ms
+2024-08-02 00:41:54.391 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:41:54.399 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:41:54.401 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:41:54.405 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:41:54.497 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:41:54.503 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:41:54.506 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 95.8838ms
+2024-08-02 00:41:54.510 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:41:54.513 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 112.3826 ms
+2024-08-02 00:41:54.518 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 127.9499ms
+2024-08-02 00:42:18.376 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:42:18.383 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:42:18.386 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:42:18.389 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:42:18.398 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:42:18.413 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:42:18.423 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 29.9634ms
+2024-08-02 00:42:18.431 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:42:18.434 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 48.0737 ms
+2024-08-02 00:42:18.439 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 63.3156ms
+2024-08-02 00:42:38.384 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:42:38.395 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:42:38.398 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:42:38.400 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:42:38.411 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:42:38.421 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:42:38.424 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.603ms
+2024-08-02 00:42:38.428 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:42:38.431 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 33.0806 ms
+2024-08-02 00:42:38.437 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 52.5952ms
+2024-08-02 00:45:35.774 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:45:35.783 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:45:35.786 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:45:35.791 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:45:35.804 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:45:35.815 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:45:35.818 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 19.9319ms
+2024-08-02 00:45:35.822 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:45:35.825 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 39.0793 ms
+2024-08-02 00:45:35.830 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 57.6776ms
+2024-08-02 00:45:55.534 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:45:55.541 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:45:55.544 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:45:55.547 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:45:55.556 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:45:55.565 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:45:55.569 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.8672ms
+2024-08-02 00:45:55.573 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:45:55.576 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.7814 ms
+2024-08-02 00:45:55.581 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 46.9841ms
+2024-08-02 00:46:09.694 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:46:09.701 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:46:09.704 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:09.706 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:46:09.715 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:46:09.724 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:46:09.728 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.616ms
+2024-08-02 00:46:09.732 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:09.735 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.3845 ms
+2024-08-02 00:46:09.740 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 45.7486ms
+2024-08-02 00:46:15.365 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:46:15.373 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:46:15.375 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:15.378 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:46:15.388 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:46:15.399 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:46:15.407 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 23.2396ms
+2024-08-02 00:46:15.413 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:15.417 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 41.0177 ms
+2024-08-02 00:46:15.422 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 56.8135ms
+2024-08-02 00:46:47.779 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:46:47.786 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:46:47.788 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:47.791 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:46:47.800 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:46:47.813 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:46:47.819 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 22.9716ms
+2024-08-02 00:46:47.823 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:46:47.826 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 37.7828 ms
+2024-08-02 00:46:47.831 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 52.4511ms
+2024-08-02 00:48:29.931 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:48:29.939 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:48:29.942 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:48:29.945 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:48:30.043 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:48:30.051 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:48:30.054 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 104.7691ms
+2024-08-02 00:48:30.058 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:48:30.061 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 118.9894 ms
+2024-08-02 00:48:30.066 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 135.2203ms
+2024-08-02 00:48:59.088 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:48:59.111 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:48:59.113 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:48:59.116 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:48:59.125 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:48:59.135 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:48:59.140 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 18.3957ms
+2024-08-02 00:48:59.143 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:48:59.146 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.3842 ms
+2024-08-02 00:48:59.151 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 64.214ms
+2024-08-02 00:50:17.720 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:50:17.734 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:50:17.737 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:17.740 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:50:17.748 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:50:17.758 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:50:17.761 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.9621ms
+2024-08-02 00:50:17.765 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:17.768 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 30.9157 ms
+2024-08-02 00:50:17.773 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 53.0061ms
+2024-08-02 00:50:27.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:50:27.644 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:50:27.646 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:27.649 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:50:27.658 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:50:27.667 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:50:27.671 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 16.4646ms
+2024-08-02 00:50:27.674 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:27.677 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 31.1294 ms
+2024-08-02 00:50:27.682 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 46.0571ms
+2024-08-02 00:50:32.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:50:32.579 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:50:32.581 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:32.585 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:50:32.593 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:50:32.603 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:50:32.607 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 17.4003ms
+2024-08-02 00:50:32.610 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:50:32.613 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 32.1857 ms
+2024-08-02 00:50:32.618 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 46.9152ms
+2024-08-02 00:51:01.947 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - null null
+2024-08-02 00:51:01.954 +01:00 [INF] CORS policy execution successful.
+2024-08-02 00:51:01.956 +01:00 [INF] Executing endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:51:01.959 +01:00 [INF] Route matched with {action = "Get", controller = "Game"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameSphereAPI.Models.Site_Models.Game_Related.Game]] Get(System.String) on controller GameSphereAPI.Controllers.GameController.GameController (GameSphereAPI).
+2024-08-02 00:51:01.966 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ID_0='Hearts of Iron 4'], CommandType='"Text"', CommandTimeout='30']
+SELECT g."ID", g."BackgroundPath", g."Description", g."PicturesPaths", g."Price", g."ReleaseDate", g."Size", g."SysReq", g."Title", g."TrailerPath"
+FROM gam."Games" AS g
+WHERE g."Title" = @__ID_0
+LIMIT 1
+2024-08-02 00:51:01.974 +01:00 [INF] Executing OkObjectResult, writing value of type 'GameSphereAPI.Models.Site_Models.Game_Related.Game'.
+2024-08-02 00:51:01.978 +01:00 [INF] Executed action GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI) in 14.3383ms
+2024-08-02 00:51:01.981 +01:00 [INF] Executed endpoint 'GameSphereAPI.Controllers.GameController.GameController.Get (GameSphereAPI)'
+2024-08-02 00:51:01.984 +01:00 [INF] HTTP GET /Game/Get/Hearts of Iron 4 responded 200 in 28.2217 ms
+2024-08-02 00:51:01.990 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7108/Game/Get/Hearts of Iron 4 - 200 null application/json; charset=utf-8 43.8605ms
