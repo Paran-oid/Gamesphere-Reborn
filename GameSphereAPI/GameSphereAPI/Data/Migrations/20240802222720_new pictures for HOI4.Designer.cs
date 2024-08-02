@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using GameSphereAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GameSphereAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240802222720_new pictures for HOI4")]
+    partial class newpicturesforHOI4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -180,7 +183,7 @@ namespace GameSphereAPI.Migrations
                             ID = 1,
                             BackgroundPath = "/Games_Media/hoi4/Images/background1.jpg",
                             Description = "Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.",
-                            PicturesPaths = new List<string> { "/Games_Media/hoi4/Images/hoi4.jpg", "/Games_Media/hoi4/Images/picture2.jpg", "/Games_Media/hoi4/Images/picture3.jpg", "/Games_Media/hoi4/Images/picture4.jpg", "/Games_Media/hoi4/Images/picture5.jpg", "/Games_Media/hoi4/Images/picture6.jpg", "/Games_Media/hoi4/Images/picture7.jpg" },
+                            PicturesPaths = new List<string> { "/Games_Media/hoi4/Images/hoi4.jpg", "/Games_Media/hoi4/Images/picture2.jpg", "/Games_Media/hoi4/Images/picture3.jpg", "/Games_Media/hoi4/Images/picture4.jpg", "/Games_Media/hoi4/Images/picture5.jpg" },
                             Price = 39.99m,
                             ReleaseDate = new DateOnly(2016, 6, 6),
                             Size = "2.5GB",
@@ -816,7 +819,7 @@ namespace GameSphereAPI.Migrations
                             Id = "a1c2b0a4-0d8a-453f-92b6-897bd9d21f9d",
                             AccessFailedCount = 0,
                             Birth = new DateOnly(1990, 1, 1),
-                            ConcurrencyStamp = "807e6ab7-bf4b-4843-8562-c1be315604ea",
+                            ConcurrencyStamp = "110e2552-9477-4966-ab11-db3c3904f1df",
                             Email = "user1@example.com",
                             EmailConfirmed = false,
                             Fname = "John",
@@ -826,7 +829,7 @@ namespace GameSphereAPI.Migrations
                             Nickname = "Johnny",
                             PhoneNumberConfirmed = false,
                             ProfilePicturePath = "/images/user1.jpg",
-                            SecurityStamp = "f0f8e576-cdbf-4a11-a7b4-ea2afb25d04a",
+                            SecurityStamp = "b50c6e6a-502e-4778-abcb-41a84c65337a",
                             Summary = "A gamer",
                             TwoFactorEnabled = false,
                             UserName = "user1@example.com"
@@ -836,7 +839,7 @@ namespace GameSphereAPI.Migrations
                             Id = "4f9d2f3b-ec85-44e8-b8ea-9a947bf2c9e5",
                             AccessFailedCount = 0,
                             Birth = new DateOnly(1992, 2, 2),
-                            ConcurrencyStamp = "dc8a52b9-7901-425a-91d9-0936e3667e92",
+                            ConcurrencyStamp = "40c57e1a-fb72-4a6a-9da5-ce74d5624c61",
                             Email = "user2@example.com",
                             EmailConfirmed = false,
                             Fname = "Jane",
@@ -846,7 +849,7 @@ namespace GameSphereAPI.Migrations
                             Nickname = "Janie",
                             PhoneNumberConfirmed = false,
                             ProfilePicturePath = "/images/user2.jpg",
-                            SecurityStamp = "8434e8c8-d0d0-4eab-9df6-ff980f29f17e",
+                            SecurityStamp = "0a655098-ec3b-4920-9325-7824f78fce25",
                             Summary = "Another gamer",
                             TwoFactorEnabled = false,
                             UserName = "user2@example.com"

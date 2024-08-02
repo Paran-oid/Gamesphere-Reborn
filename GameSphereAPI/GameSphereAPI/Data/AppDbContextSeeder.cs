@@ -115,7 +115,7 @@ namespace GameSphereAPI.Data
                     Title = "Hearts of Iron 4",
                     BackgroundPath = "/Games_Media/hoi4/Images/background1.jpg",
                     TrailerPath = "/Games_Media/hoi4/Videos/trailer1.mp4",
-                    PicturesPaths = new List<string> { "/Games_Media/hoi4/Images/hoi4.jpg", "/Games_Media/hoi4/Images/picture2.jpg" },
+                    PicturesPaths = new List<string> { "/Games_Media/hoi4/Images/hoi4.jpg", "/Games_Media/hoi4/Images/picture2.jpg", "/Games_Media/hoi4/Images/picture3.jpg", "/Games_Media/hoi4/Images/picture4.jpg", "/Games_Media/hoi4/Images/picture5.jpg", "/Games_Media/hoi4/Images/picture6.jpg", "/Games_Media/hoi4/Images/picture7.jpg" },
                     ReleaseDate = new DateOnly(2016, 6, 6),
                     SysReq = "OS: Windows 10, Processor: Intel Core i5, Memory: 4 GB RAM, Graphics: ATI Radeon HD 6950, Storage: 2 GB available space",
                     Price = 39.99m,

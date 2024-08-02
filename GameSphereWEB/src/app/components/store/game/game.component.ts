@@ -23,9 +23,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GameComponent implements OnInit {
   game!: Game;
-  imgDisplayed: number = 0;
-  trailerIsAdded: boolean = false;
+  trailerDisplayed: boolean = true;
   pics: string[] = [];
+
+  @ViewChild('displayed') mediaDisplayed!: ElementRef;
 
   constructor(
     private gameService: GameService,
@@ -39,12 +40,35 @@ export class GameComponent implements OnInit {
       this.gameService.Get(title.replaceAll('_', ' ')).subscribe({
         next: (response) => {
           this.game = response;
-          this.game.picturesPaths = response.picturesPaths.splice(1, 1);
+          this.game.picturesPaths = response.picturesPaths.filter(
+            (i) => i !== response.picturesPaths[0]
+          );
         },
         error: (error) => {
           console.log(error);
         },
       });
     });
+  }
+
+  DisplayItem(item: Event) {
+    const element = item.target as HTMLElement;
+    const display = this.mediaDisplayed.nativeElement as HTMLElement;
+
+    const clonedElement = element.cloneNode(true) as HTMLElement;
+
+    if (clonedElement.tagName === 'VIDEO') {
+      display.removeChild(display.children[0]);
+      this.trailerDisplayed = true;
+      return;
+    } else {
+      this.trailerDisplayed = false;
+    }
+
+    if (display.children.length !== 0) {
+      display.removeChild(display.children[0]);
+    }
+
+    display.append(clonedElement);
   }
 }

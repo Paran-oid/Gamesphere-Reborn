@@ -49,6 +49,7 @@
         display: grid;
         grid-template-columns: 1fr 324px;
         grid-template-rows: 444px;
+        height: 420px;
         gap: 15px;
         background-color: $very-dark-blue-color;
 
@@ -64,10 +65,15 @@
 
           .game-medias {
             @include flex(start, center);
+            width: 600px;
+            overflow-x: auto;
+            overflow-y: hidden;
 
             .game-media {
               width: 115px;
               height: 65px;
+              margin-right: 5px;
+
               img {
                 width: 115px;
                 height: 65px;
@@ -76,9 +82,9 @@
           }
         }
         .about-game {
-          width: 324px;
+          width: 300px;
           .game-img {
-            width: 324px;
+            width: 300px;
             height: 151px;
             margin-bottom: 15px;
             img {
@@ -86,6 +92,11 @@
               height: 100;
             }
           }
+
+          .mini-description {
+            font-size: 14 px;
+          }
+
           .mini-description,
           .tags,
           .release-date {
@@ -93,6 +104,45 @@
 
             p {
               margin-right: 10px;
+            }
+          }
+
+          .extra-info {
+            margin-top: 15px;
+            position: relative;
+            height: 150px;
+
+            .prop {
+              color: $gray-color;
+            }
+
+            .tags-section {
+              position: absolute;
+              bottom: 0px;
+
+              .tags-info {
+                p {
+                  font-size: 12px;
+                }
+              }
+
+              .tags {
+                margin-top: 10px;
+                * {
+                  color: $light-blue-color;
+                  background-color: $midnight-blue-color;
+                  padding: 5px;
+                  border-radius: 5px;
+                  margin-right: 5px;
+                  cursor: pointer;
+                  font-size: 12px;
+
+                  &:hover {
+                    background-color: $steel-blue-color;
+                    color: $white-color;
+                  }
+                }
+              }
             }
           }
         }

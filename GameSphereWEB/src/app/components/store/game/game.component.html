@@ -9,18 +9,39 @@
     </div>
     <header>
       <div class="medias">
-        <div class="displayed-image">
-          <video controls [src]="game.trailerPath">
-            <source [type]="'video/mp4'" />
-          </video>
-        </div>
-        <div class="game-medias">
-          <div class="trailer">
-            <video height="65" width="115" [src]="game.trailerPath">
+        <div class="displayed-image" #displayed>
+          <div class="trailer" *ngIf="trailerDisplayed">
+            <video
+              height="65"
+              width="115"
+              [src]="game.trailerPath"
+              (click)="DisplayItem($event)"
+              controls
+            >
               <source [type]="'video/mp4'" />
             </video>
           </div>
-          <div class="game-media" *ngFor="let picture of game.picturesPaths">
+        </div>
+        <div class="game-medias">
+          <div
+            class="trailer"
+            [class.trailer]="'trailer'"
+            [class.game-media]="'game-media'"
+          >
+            <video
+              height="65"
+              width="115"
+              [src]="game.trailerPath"
+              (click)="DisplayItem($event)"
+            >
+              <source [type]="'video/mp4'" />
+            </video>
+          </div>
+          <div
+            class="game-media"
+            *ngFor="let picture of game.picturesPaths"
+            (click)="DisplayItem($event)"
+          >
             <img [src]="picture" class="game-picture" />
           </div>
         </div>
@@ -32,13 +53,24 @@
         <div class="mini-description">
           <p>{{ game.description }}</p>
         </div>
-        <div class="release-date">
-          <p>Release Date: {{ game.releaseDate }}</p>
-        </div>
-        <div class="tags">
-          <p>Action</p>
-          <p>Adventure</p>
-          <p>Singleplayer</p>
+        <div class="extra-info">
+          <!-- Make reviews section -->
+          <div class="release-date">
+            <p>
+              <span class="prop">Release Date:</span> {{ game.releaseDate }}
+            </p>
+          </div>
+          <!-- Make developer and publisher sections -->
+          <div class="tags-section">
+            <div class="tags-info">
+              <p class="prop">Popular user-defined tags for this product:</p>
+            </div>
+            <div class="tags">
+              <p>Action</p>
+              <p>Adventure</p>
+              <p>Singleplayer</p>
+            </div>
+          </div>
         </div>
       </div>
     </header>

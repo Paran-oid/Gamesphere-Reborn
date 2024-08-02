@@ -13,6 +13,10 @@ using GameSphereAPI.Data.Services.GameServices;
 using GameSphereAPI.Data.Services.LanguageServices;
 using GameSphereAPI.Data.Services.PublisherServices;
 using Serilog;
+using GameSphereAPI.Utilities.Background;
+using Hangfire;
+using HangfireBasicAuthenticationFilter;
+using Hangfire.PostgreSql;
 
 
 
@@ -93,6 +97,15 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+//Hangfire
+builder.Services.AddHostedService<AppBackgroundService>();
+
+builder.Services.AddHangfire(x =>
+{
+    x.UsePostgreSqlStorage(builder.Configuration.GetConnectionString("Default"));
+});
+
+
 //Cores so the application could work
 builder.Services.AddCors(options =>
 {
@@ -125,6 +138,21 @@ app.MapControllers();
 
 //Logger
 app.UseSerilogRequestLogging();
+
+//HangFire Dashboard
+app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+    DashboardTitle = "GameSphere",
+    DarkModeEnabled = true,
+    Authorization = new[]
+    {
+        new HangfireCustomBasicAuthenticationFilter
+        {
+            User = "admin",
+            Pass = "admin123"
+        }
+    }
+});
 
 app.Run();
 
