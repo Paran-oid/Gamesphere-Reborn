@@ -6,6 +6,7 @@
   .container {
     height: 100vh;
     background-color: $secondary-color;
+    overflow-y: auto;
 
     .game-container {
       margin: 50px 20% 0px 20%;
@@ -19,26 +20,32 @@
           font-size: 30px;
         }
 
-        .community-hub-btn {
-          padding: 10px;
-          background-color: $darkish-cyan-color;
-          border-radius: 3px;
-          cursor: pointer;
-
-          h1 {
-            font-family: "MotivaSansBold";
-          }
-
-          button {
-            background-color: transparent;
+        .buttons {
+          .dev-btn {
+            margin-left: 10px;
+            padding: 10px;
+            background-color: $darkish-cyan-color;
+            border-radius: 3px;
             border: none;
             color: $cyan-color;
             cursor: pointer;
-          }
 
-          &:hover {
-            background-color: $cyan-color;
-            button {
+            &:hover {
+              background-color: $cyan-color;
+              color: $white-color;
+            }
+          }
+          .community-hub-btn {
+            margin-left: 10px;
+            padding: 10px;
+            background-color: $darkish-cyan-color;
+            border-radius: 3px;
+            border: none;
+            color: $cyan-color;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $cyan-color;
               color: $white-color;
             }
           }
@@ -66,6 +73,7 @@
           .game-medias {
             @include flex(start, center);
             width: 600px;
+            height: 80px;
             overflow-x: auto;
             overflow-y: hidden;
 
@@ -73,6 +81,7 @@
               width: 115px;
               height: 65px;
               margin-right: 5px;
+              cursor: pointer;
 
               img {
                 width: 115px;
@@ -82,10 +91,11 @@
           }
         }
         .about-game {
+          position: relative;
           width: 300px;
           .game-img {
             width: 300px;
-            height: 151px;
+            height: 150px;
             margin-bottom: 15px;
             img {
               width: 100%;
@@ -94,7 +104,8 @@
           }
 
           .mini-description {
-            font-size: 14 px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
           }
 
           .mini-description,
@@ -109,17 +120,18 @@
 
           .extra-info {
             margin-top: 15px;
-            position: relative;
-            height: 150px;
+            height: 100%;
 
             .prop {
               color: $gray-color;
             }
+            .value {
+              color: $dark-gray-color;
+            }
 
             .tags-section {
               position: absolute;
-              bottom: 0px;
-
+              bottom: 40px;
               .tags-info {
                 p {
                   font-size: 12px;
@@ -147,6 +159,136 @@
           }
         }
       }
+
+      .game-content {
+        margin-top: 20px;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+
+        .game-mega-description {
+          .install-game {
+            position: relative;
+            background: linear-gradient(
+              to right,
+              $darkish-cyan-color 40%,
+              $gray-color
+            );
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            .buy-title {
+              @include flex(space-between, center);
+              margin-bottom: 30px;
+              img {
+                width: 32px;
+                mix-blend-mode: multiply;
+              }
+            }
+            .buy-options {
+              @include flex(center, center);
+              position: absolute;
+              bottom: -50%;
+              transform: translateY(-50%);
+              right: 10px;
+              background-color: black;
+              padding: 2px;
+
+              .game-price {
+                padding: 10px;
+                background-color: $dark-blue-color;
+                border-radius: 2px;
+                margin-right: 5px;
+                width: 75px;
+                text-align: center;
+                height: 40px;
+              }
+              .buy-btn {
+                button {
+                  padding: 10px;
+                  background-color: rgba($green-color, 0.8);
+                  border: none;
+                  border-radius: 2px;
+                  width: 100px;
+                  cursor: pointer;
+                  height: 40px;
+
+                  &:hover {
+                    background-color: rgba($green-color, 1);
+                  }
+                }
+              }
+            }
+          }
+          .game-description {
+            margin-bottom: 50px;
+
+            .description-horizontal {
+              margin-bottom: 10px;
+            }
+          }
+          .pc-requirements {
+            .game-specs {
+              margin-top: 20px;
+
+              h5 {
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+
+        .game-features {
+          .all-tags {
+            background-color: $primary-color;
+            padding: 10px;
+            margin-bottom: 20px;
+            h5 {
+              margin-bottom: 10px;
+            }
+            ul {
+              li {
+                background-color: $light-primary-color;
+                color: $blue-color;
+                padding: 5px 2px;
+                margin-bottom: 2px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:hover {
+                  background-color: $cyan-color;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          .languages {
+            background-color: $primary-color;
+            padding: 10px;
+            h5 {
+              margin-bottom: 10px;
+            }
+            ul {
+              li {
+                @include flex(space-between, center);
+                width: 100px;
+              }
+            }
+          }
+          li {
+            list-style: none;
+          }
+        }
+      }
+      .reviews {
+        margin-top: 50px;
+      }
     }
+  }
+
+  .chosen {
+    border: 2px solid white;
   }
 }

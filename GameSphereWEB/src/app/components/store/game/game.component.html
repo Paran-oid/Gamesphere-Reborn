@@ -1,10 +1,11 @@
 <div class="container">
   <app-storenav></app-storenav>
-  <div class="game-container">
+  <div class="game-container" *ngIf="isLoading === false">
     <div class="title-element">
       <h1 class="title">{{ game.title }}</h1>
-      <div class="community-hub-btn">
-        <button>Community Hub</button>
+      <div class="buttons">
+        <button class="dev-btn" *ngIf="IsAdmin()">Edit Mode</button>
+        <button class="community-hub-btn">Community Hub</button>
       </div>
     </div>
     <header>
@@ -27,6 +28,7 @@
             class="trailer"
             [class.trailer]="'trailer'"
             [class.game-media]="'game-media'"
+            [ngClass]="{ chosen: IsChosen(game.trailerPath) }"
           >
             <video
               height="65"
@@ -42,7 +44,12 @@
             *ngFor="let picture of game.picturesPaths"
             (click)="DisplayItem($event)"
           >
-            <img [src]="picture" class="game-picture" />
+            <img
+              [src]="picture"
+              class="game-picture"
+              [id]="picture"
+              [ngClass]="{ chosen: IsChosen(picture) }"
+            />
           </div>
         </div>
       </div>
@@ -50,68 +57,89 @@
         <div class="game-img">
           <img [src]="game.backgroundPath" />
         </div>
-        <div class="mini-description">
-          <p>{{ game.description }}</p>
-        </div>
-        <div class="extra-info">
-          <!-- Make reviews section -->
-          <div class="release-date">
-            <p>
-              <span class="prop">Release Date:</span> {{ game.releaseDate }}
-            </p>
+        <div class="informations">
+          <div class="mini-description">
+            <p>{{ game.description }}</p>
           </div>
-          <!-- Make developer and publisher sections -->
-          <div class="tags-section">
-            <div class="tags-info">
-              <p class="prop">Popular user-defined tags for this product:</p>
+          <div class="extra-info">
+            <!-- Make reviews section -->
+            <div class="release-date">
+              <p>
+                <span class="prop">Release Date:</span
+                ><span class="value"> {{ game.releaseDate }}</span>
+              </p>
             </div>
-            <div class="tags">
-              <p>Action</p>
-              <p>Adventure</p>
-              <p>Singleplayer</p>
+            <!-- Make developer and publisher sections -->
+            <div class="tags-section">
+              <div class="tags-info">
+                <p class="prop">Popular user-defined tags for this product:</p>
+              </div>
+              <div class="tags">
+                <p>Action</p>
+                <p>Adventure</p>
+                <p>Singleplayer</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- Forget about everything else just focus on header section and make it look 100% the same as steam -->
-    <!-- fix the video crap first -->
-    <!-- Add lots of pictures just to hoi4 so we can test it with horizantal bar (get all images from steam) -->
-    <!-- make a div that says sign in to add this item to wishlist, follow it or etc -->
-    <!-- <div class="game-content">
+    <div class="game-content">
       <div class="game-mega-description">
         <div class="install-game">
-          <button>Play Game</button>
+          <div class="buy-title">
+            <p>Buy {{ game.title }} Now!</p>
+            <img src="/Images/Icons/OS/windows.jpg" />
+          </div>
+          <div class="buy-options">
+            <div class="game-price">${{ game.price }}</div>
+            <div class="buy-btn">
+              <button>
+                {{ game.price == 0 ? "free" : "Add To Cart" }}
+              </button>
+            </div>
+          </div>
         </div>
         <div class="game-description">
           <h1>About Game</h1>
+          <hr class="description-horizontal" />
           <p>{{ game.description }}</p>
         </div>
         <div class="pc-requirements">
           <h1>System Requirements</h1>
-          <p>{{ game.sysReq }}</p>
+          <hr />
+          <div class="game-specs">
+            <h5>Recommended:</h5>
+            <p>{{ game.sysReq }}</p>
+          </div>
         </div>
       </div>
       <div class="game-features">
-        <ul class="all-tags">
-          <li>Single Player</li>
-          <li>PS5 controller</li>
-          <li>Online PVP</li>
-        </ul>
-        <ul class="languages">
-          <li>English</li>
-          <li>French</li>
-          <li>German</li>
-          <li>Spanish</li>
-        </ul>
+        <div class="all-tags">
+          <h5>Tags:</h5>
+          <ul>
+            <li>Single Player</li>
+            <li>PS5 controller</li>
+            <li>Online PVP</li>
+          </ul>
+        </div>
+
+        <div class="languages">
+          <h5>Available Languages:</h5>
+          <ul>
+            <li>English <mat-icon>check</mat-icon></li>
+            <li>French <mat-icon>check</mat-icon></li>
+            <li>German <mat-icon>check</mat-icon></li>
+            <li>Spanish <mat-icon>check</mat-icon></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <hr />
     <div class="reviews">
       <div class="review">review 1</div>
       <div class="review">review 2</div>
       <div class="review">review 3</div>
     </div>
-  </div> -->
   </div>
+  <app-spinner *ngIf="isLoading"></app-spinner>
 </div>

@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
     if (this.isLoggedIn) {
       this.authService.user.subscribe((user) => {
         this.user = user;
+        this.authService.SetUser(user);
         if (user) {
           this.CheckIsAdmin();
         }
@@ -55,6 +56,7 @@ export class NavbarComponent implements OnInit {
     this.authService.ToggleAdmin(this.user?.id!).subscribe({
       next: (response) => {
         this.CheckIsAdmin();
+        window.location.reload();
       },
       error: (error) => {
         console.log(error);

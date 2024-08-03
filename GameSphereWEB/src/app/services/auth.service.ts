@@ -33,6 +33,10 @@ export class AuthService {
       });
     }
   }
+
+  SetUser(user: AppUser | null) {
+    this.user.next(user);
+  }
   public LoadUser(code: string) {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),

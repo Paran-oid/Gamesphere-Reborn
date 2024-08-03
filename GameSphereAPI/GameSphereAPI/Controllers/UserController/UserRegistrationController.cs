@@ -151,6 +151,11 @@ namespace GameSphereAPI.Controllers.UserController
 
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == login.UsernameOrEmail || u.Email == login.UsernameOrEmail);
 
+            if(user == null)
+            {
+                return NotFound("User not found");
+            }
+
             var result = await _signInManager.PasswordSignInAsync(user.UserName, login.Password, isPersistent, lockoutOnFailure: true);
 
             if (result.Succeeded)
